@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/1_Date/Date.h
+iostream
+-
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/1_Date/main.cpp
+Date.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/1_Date/Date.h
+

@@ -1,0 +1,3 @@
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/cmake-build-debug/CMakeFiles/2_YuGIOh.dir
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/cmake-build-debug/CMakeFiles/rebuild_cache.dir

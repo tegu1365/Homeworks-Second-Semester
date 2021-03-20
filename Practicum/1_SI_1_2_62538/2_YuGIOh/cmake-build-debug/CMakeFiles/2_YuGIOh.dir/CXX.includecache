@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/Deck.h
+MagicCard.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/MagicCard.h
+MonsterCard.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/MonsterCard.h
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/Duelist.cpp
+Duelist.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/Duelist.h
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/Duelist.h
+Deck.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/Deck.h
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/MagicCard.h
+iostream
+-
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/MonsterCard.h
+iostream
+-
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/main.cpp
+Duelist.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/Duelist.h
+
