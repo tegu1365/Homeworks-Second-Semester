@@ -17,16 +17,16 @@ int main() {
     cout<<d4.daysToNewYear()<<endl;
     cout<<d4.daysToXmas()<<endl;
      */
-
-    Date d=Date(26,12,2017);
-    cout<<"New Year: "<<d.daysToNewYear()<<endl;
-    cout<<"X-mas: "<<d.daysToXmas()<<endl;
-    Date d1=Date(31, 3, 2014);
-
-    d1.addDays(1);
-    d1.print();
-    d1.removeDays(1);
-    d1.print();
-    cout<<d1.daysToDate(d);
+//
+//    Date d=Date(26,12,2017);
+//    cout<<"New Year: "<<d.daysToNewYear()<<endl;
+//    cout<<"X-mas: "<<d.daysToXmas()<<endl;
+//    Date d1=Date(31, 3, 2014);
+//
+//    d1.addDays(1);
+//    d1.print();
+//    d1.removeDays(1);
+//    d1.print();
+//    cout<<d1.daysToDate(d);
     return 0;
 }
