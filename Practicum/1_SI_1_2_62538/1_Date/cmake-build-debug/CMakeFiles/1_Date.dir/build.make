@@ -64,38 +64,38 @@ include CMakeFiles\1_Date.dir\flags.make
 CMakeFiles\1_Date.dir\main.cpp.obj: CMakeFiles\1_Date.dir\flags.make
 CMakeFiles\1_Date.dir\main.cpp.obj: ..\main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\1_Date\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/1_Date.dir/main.cpp.obj"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\1_Date.dir\main.cpp.obj /FdCMakeFiles\1_Date.dir\ /FS -c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\1_Date\main.cpp
 <<
 
 CMakeFiles\1_Date.dir\main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/1_Date.dir/main.cpp.i"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\1_Date.dir\main.cpp.i @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\1_Date.dir\main.cpp.i @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\1_Date\main.cpp
 <<
 
 CMakeFiles\1_Date.dir\main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/1_Date.dir/main.cpp.s"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\1_Date.dir\main.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\1_Date\main.cpp
 <<
 
 CMakeFiles\1_Date.dir\Date.cpp.obj: CMakeFiles\1_Date.dir\flags.make
 CMakeFiles\1_Date.dir\Date.cpp.obj: ..\Date.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\1_Date\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/1_Date.dir/Date.cpp.obj"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\1_Date.dir\Date.cpp.obj /FdCMakeFiles\1_Date.dir\ /FS -c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\1_Date\Date.cpp
 <<
 
 CMakeFiles\1_Date.dir\Date.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/1_Date.dir/Date.cpp.i"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\1_Date.dir\Date.cpp.i @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\1_Date.dir\Date.cpp.i @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\1_Date\Date.cpp
 <<
 
 CMakeFiles\1_Date.dir\Date.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/1_Date.dir/Date.cpp.s"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\1_Date.dir\Date.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\1_Date\Date.cpp
 <<
 
@@ -112,7 +112,7 @@ CMakeFiles\1_Date.dir\Date.cpp.s: cmake_force
 1_Date.exe: CMakeFiles\1_Date.dir\build.make
 1_Date.exe: CMakeFiles\1_Date.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\1_Date\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable 1_Date.exe"
-	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\1_Date.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\1_Date.dir\objects1.rsp @<<
+	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\1_Date.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\1_Date.dir\objects1.rsp @<<
  /out:1_Date.exe /implib:1_Date.lib /pdb:C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\1_Date\cmake-build-debug\1_Date.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
 
