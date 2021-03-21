@@ -64,95 +64,95 @@ include CMakeFiles\2_YuGIOh.dir\flags.make
 CMakeFiles\2_YuGIOh.dir\main.cpp.obj: CMakeFiles\2_YuGIOh.dir\flags.make
 CMakeFiles\2_YuGIOh.dir\main.cpp.obj: ..\main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/2_YuGIOh.dir/main.cpp.obj"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\2_YuGIOh.dir\main.cpp.obj /FdCMakeFiles\2_YuGIOh.dir\ /FS -c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\main.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2_YuGIOh.dir/main.cpp.i"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\2_YuGIOh.dir\main.cpp.i @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\2_YuGIOh.dir\main.cpp.i @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\main.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2_YuGIOh.dir/main.cpp.s"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\2_YuGIOh.dir\main.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\main.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\MagicCard.cpp.obj: CMakeFiles\2_YuGIOh.dir\flags.make
 CMakeFiles\2_YuGIOh.dir\MagicCard.cpp.obj: ..\MagicCard.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/2_YuGIOh.dir/MagicCard.cpp.obj"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\2_YuGIOh.dir\MagicCard.cpp.obj /FdCMakeFiles\2_YuGIOh.dir\ /FS -c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\MagicCard.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\MagicCard.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2_YuGIOh.dir/MagicCard.cpp.i"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\2_YuGIOh.dir\MagicCard.cpp.i @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\2_YuGIOh.dir\MagicCard.cpp.i @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\MagicCard.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\MagicCard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2_YuGIOh.dir/MagicCard.cpp.s"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\2_YuGIOh.dir\MagicCard.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\MagicCard.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\MonsterCard.cpp.obj: CMakeFiles\2_YuGIOh.dir\flags.make
 CMakeFiles\2_YuGIOh.dir\MonsterCard.cpp.obj: ..\MonsterCard.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/2_YuGIOh.dir/MonsterCard.cpp.obj"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\2_YuGIOh.dir\MonsterCard.cpp.obj /FdCMakeFiles\2_YuGIOh.dir\ /FS -c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\MonsterCard.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\MonsterCard.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2_YuGIOh.dir/MonsterCard.cpp.i"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\2_YuGIOh.dir\MonsterCard.cpp.i @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\2_YuGIOh.dir\MonsterCard.cpp.i @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\MonsterCard.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\MonsterCard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2_YuGIOh.dir/MonsterCard.cpp.s"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\2_YuGIOh.dir\MonsterCard.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\MonsterCard.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\Deck.cpp.obj: CMakeFiles\2_YuGIOh.dir\flags.make
 CMakeFiles\2_YuGIOh.dir\Deck.cpp.obj: ..\Deck.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/2_YuGIOh.dir/Deck.cpp.obj"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\2_YuGIOh.dir\Deck.cpp.obj /FdCMakeFiles\2_YuGIOh.dir\ /FS -c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\Deck.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\Deck.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2_YuGIOh.dir/Deck.cpp.i"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\2_YuGIOh.dir\Deck.cpp.i @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\2_YuGIOh.dir\Deck.cpp.i @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\Deck.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\Deck.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2_YuGIOh.dir/Deck.cpp.s"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\2_YuGIOh.dir\Deck.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\Deck.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\Duelist.cpp.obj: CMakeFiles\2_YuGIOh.dir\flags.make
 CMakeFiles\2_YuGIOh.dir\Duelist.cpp.obj: ..\Duelist.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/2_YuGIOh.dir/Duelist.cpp.obj"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\2_YuGIOh.dir\Duelist.cpp.obj /FdCMakeFiles\2_YuGIOh.dir\ /FS -c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\Duelist.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\Duelist.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2_YuGIOh.dir/Duelist.cpp.i"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\2_YuGIOh.dir\Duelist.cpp.i @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\2_YuGIOh.dir\Duelist.cpp.i @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\Duelist.cpp
 <<
 
 CMakeFiles\2_YuGIOh.dir\Duelist.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2_YuGIOh.dir/Duelist.cpp.s"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\2_YuGIOh.dir\Duelist.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\Duelist.cpp
 <<
 
@@ -175,7 +175,7 @@ CMakeFiles\2_YuGIOh.dir\Duelist.cpp.s: cmake_force
 2_YuGIOh.exe: CMakeFiles\2_YuGIOh.dir\build.make
 2_YuGIOh.exe: CMakeFiles\2_YuGIOh.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable 2_YuGIOh.exe"
-	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\2_YuGIOh.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\2_YuGIOh.dir\objects1.rsp @<<
+	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\2_YuGIOh.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\2_YuGIOh.dir\objects1.rsp @<<
  /out:2_YuGIOh.exe /implib:2_YuGIOh.lib /pdb:C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\1_SI_1_2_62538\2_YuGIOh\cmake-build-debug\2_YuGIOh.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
 

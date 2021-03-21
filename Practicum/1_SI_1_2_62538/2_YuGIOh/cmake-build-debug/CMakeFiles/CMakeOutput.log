@@ -1,16 +1,16 @@
 The system is: Windows - 10.0.18363 - AMD64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/bin/Hostx86/x86/cl.exe 
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/bin/Hostx86/x86/cl.exe 
 Build flags: 
 Id flags:  
 
 The output was:
 0
-Microsoft (R) C/C++ Optimizing Compiler Version 19.26.28806 for x86
+Microsoft (R) C/C++ Optimizing Compiler Version 19.28.29913 for x86
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 CMakeCCompilerId.c
-Microsoft (R) Incremental Linker Version 14.26.28806.0
+Microsoft (R) Incremental Linker Version 14.28.29913.0
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 /out:CMakeCCompilerId.exe 
@@ -24,17 +24,17 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 The C compiler identification is MSVC, found in "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdC/CMakeCCompilerId.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/bin/Hostx86/x86/cl.exe 
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/bin/Hostx86/x86/cl.exe 
 Build flags: 
 Id flags:  
 
 The output was:
 0
-Microsoft (R) C/C++ Optimizing Compiler Version 19.26.28806 for x86
+Microsoft (R) C/C++ Optimizing Compiler Version 19.28.29913 for x86
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 CMakeCXXCompilerId.cpp
-Microsoft (R) Incremental Linker Version 14.26.28806.0
+Microsoft (R) Incremental Linker Version 14.28.29913.0
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 /out:CMakeCXXCompilerId.exe 
@@ -50,48 +50,48 @@ The CXX compiler identification is MSVC, found in "C:/Users/Tegu/Desktop/Program
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_7e712\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_7e712.dir\build.make /nologo -L                  CMakeFiles\cmTC_7e712.dir\build
-Building C object CMakeFiles/cmTC_7e712.dir/testCCompiler.c.obj
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @C:\Users\Tegu\AppData\Local\Temp\nm83C3.tmp
+Run Build Command(s):nmake /nologo cmTC_d03ac\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_d03ac.dir\build.make /nologo -L                  CMakeFiles\cmTC_d03ac.dir\build
+Building C object CMakeFiles/cmTC_d03ac.dir/testCCompiler.c.obj
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @C:\Users\Tegu\AppData\Local\Temp\nm817D.tmp
 testCCompiler.c
-Linking C executable cmTC_7e712.exe
-	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_7e712.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_7e712.dir\objects1.rsp @C:\Users\Tegu\AppData\Local\Temp\nm8432.tmp
+Linking C executable cmTC_d03ac.exe
+	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_d03ac.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_d03ac.dir\objects1.rsp @C:\Users\Tegu\AppData\Local\Temp\nm81BC.tmp
 
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_d44fe\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_d44fe.dir\build.make /nologo -L                  CMakeFiles\cmTC_d44fe.dir\build
-Building C object CMakeFiles/cmTC_d44fe.dir/CMakeCCompilerABI.c.obj
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @C:\Users\Tegu\AppData\Local\Temp\nm871F.tmp
+Run Build Command(s):nmake /nologo cmTC_31e5a\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_31e5a.dir\build.make /nologo -L                  CMakeFiles\cmTC_31e5a.dir\build
+Building C object CMakeFiles/cmTC_31e5a.dir/CMakeCCompilerABI.c.obj
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @C:\Users\Tegu\AppData\Local\Temp\nm8342.tmp
 CMakeCCompilerABI.c
-Linking C executable cmTC_d44fe.exe
-	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_d44fe.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_d44fe.dir\objects1.rsp @C:\Users\Tegu\AppData\Local\Temp\nm876E.tmp
+Linking C executable cmTC_31e5a.exe
+	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_31e5a.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_31e5a.dir\objects1.rsp @C:\Users\Tegu\AppData\Local\Temp\nm8362.tmp
 
 
 
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_33f48\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_33f48.dir\build.make /nologo -L                  CMakeFiles\cmTC_33f48.dir\build
-Building CXX object CMakeFiles/cmTC_33f48.dir/testCXXCompiler.cxx.obj
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @C:\Users\Tegu\AppData\Local\Temp\nm89FD.tmp
+Run Build Command(s):nmake /nologo cmTC_1a4b4\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_1a4b4.dir\build.make /nologo -L                  CMakeFiles\cmTC_1a4b4.dir\build
+Building CXX object CMakeFiles/cmTC_1a4b4.dir/testCXXCompiler.cxx.obj
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @C:\Users\Tegu\AppData\Local\Temp\nm8507.tmp
 testCXXCompiler.cxx
-Linking CXX executable cmTC_33f48.exe
-	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_33f48.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_33f48.dir\objects1.rsp @C:\Users\Tegu\AppData\Local\Temp\nm8A5C.tmp
+Linking CXX executable cmTC_1a4b4.exe
+	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_1a4b4.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_1a4b4.dir\objects1.rsp @C:\Users\Tegu\AppData\Local\Temp\nm8547.tmp
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/1_SI_1_2_62538/2_YuGIOh/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_129c0\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_129c0.dir\build.make /nologo -L                  CMakeFiles\cmTC_129c0.dir\build
-Building CXX object CMakeFiles/cmTC_129c0.dir/CMakeCXXCompilerABI.cpp.obj
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @C:\Users\Tegu\AppData\Local\Temp\nm8C4F.tmp
+Run Build Command(s):nmake /nologo cmTC_75160\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_75160.dir\build.make /nologo -L                  CMakeFiles\cmTC_75160.dir\build
+Building CXX object CMakeFiles/cmTC_75160.dir/CMakeCXXCompilerABI.cpp.obj
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @C:\Users\Tegu\AppData\Local\Temp\nm86BD.tmp
 CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_129c0.exe
-	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_129c0.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_129c0.dir\objects1.rsp @C:\Users\Tegu\AppData\Local\Temp\nm8CAE.tmp
+Linking CXX executable cmTC_75160.exe
+	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_75160.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_75160.dir\objects1.rsp @C:\Users\Tegu\AppData\Local\Temp\nm870C.tmp
 
 
 
