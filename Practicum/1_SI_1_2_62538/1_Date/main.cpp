@@ -1,7 +1,6 @@
 #include "Date.h"
 
 int main() {
-    /*
     Date d1=Date();
     d1.print();
     Date d2=Date(7,9,2001);
@@ -16,7 +15,6 @@ int main() {
 
     cout<<d4.daysToNewYear()<<endl;
     cout<<d4.daysToXmas()<<endl;
-     */
 //
 //    Date d=Date(26,12,2017);
 //    cout<<"New Year: "<<d.daysToNewYear()<<endl;
