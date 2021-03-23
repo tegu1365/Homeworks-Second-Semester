@@ -1,0 +1,3 @@
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/cmake-build-debug/CMakeFiles/1.dir
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
