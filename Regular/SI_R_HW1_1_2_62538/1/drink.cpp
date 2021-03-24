@@ -4,6 +4,14 @@
 
 #include "drink.h"
 
+//bool equal(char a[], char b[]) {
+//    for (int i = 0; a[i] != '\0'; i++) {
+//        if (a[i] != b[i])
+//            return 0;
+//    }
+//    return 1;
+//}
+
 Drink::Drink(const char *init_name, const int init_calories, const double &init_quantity, const double &init_price) {
     name = new char[strlen(init_name) + 1];
     strcpy(name, init_name);
@@ -61,3 +69,20 @@ void Drink::print() const {
     cout << name << endl << "Cal.:" << calories << "  " << quantity << " L.\n" << fixed << setprecision(2) << price
          << " lv." << endl;
 }
+
+Drink::~Drink() {
+    delete[] name;
+}
+
+Drink::Drink() {
+    name = nullptr;
+    calories = 0;
+    price = 0;
+    quantity = 0;
+}
+
+//bool operator==(const Drink &lhs, const Drink &rhs) {
+//
+//    return (equal(lhs.name, rhs.name) && lhs.calories == rhs.calories && lhs.quantity == rhs.quantity &&
+//            lhs.price == rhs.price);
+//}

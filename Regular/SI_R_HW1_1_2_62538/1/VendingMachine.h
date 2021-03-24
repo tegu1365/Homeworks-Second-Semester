@@ -22,7 +22,9 @@ public:
 
     double get_income() const;
 
+    void remove_drink(int index);
     void print()const;
+    ~VendingMachine();
 };
 
 
