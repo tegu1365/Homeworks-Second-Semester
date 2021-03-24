@@ -5,6 +5,8 @@
 #ifndef INC_1_DRINK_H
 #define INC_1_DRINK_H
 #include <iostream>
+#include <iomanip>
+
 using namespace std;
 
 class Drink {

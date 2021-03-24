@@ -3,7 +3,8 @@
 int main() {
 Drink d= Drink("Soda",1000,0.5,1.10);
 d.print();
-VendingMachine a=VendingMachine();
+Drink a=d;
 a.print();
+
     return 0;
 }
