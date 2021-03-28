@@ -18,7 +18,7 @@ class TestCase {
     /// Feel free to add additional private/public methods/fields
 public:
     /// Constructor we'll need to create a new TestCase
-    TestCase(const std::string& name = "", const Error& error = Error::newNone());
+    TestCase(const string& name = "", const Error& error = Error::newNone());
 
     /// Retrieve the name of the TestCase
     std::string getName() const;
@@ -37,7 +37,7 @@ public:
 
     /// Retrieve the message of the error if Error has one,
     /// otherwise return an empty string
-    std::string getErrorMessage() const;
+    string getErrorMessage() const;
 };
 
 #endif //INC_2_TESTCASE_H

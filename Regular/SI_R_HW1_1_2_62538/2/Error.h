@@ -8,7 +8,7 @@
 
 #pragma once
 #include <iostream>
-
+using namespace std;
 /// ErrorType represents all the different types of errors one might have
 /// including the `None` error, which signifies absense of an error.
 enum class ErrorType {
@@ -22,6 +22,8 @@ enum class ErrorType {
 /// It has a type and an optional message
 class Error {
     /// Feel free to add additional private/public methods/fields
+    ErrorType type;
+    char* message;
 public:
     /// Check if the error has a message
     bool hasMessage() const;
@@ -45,6 +47,10 @@ public:
 
     /// Create a new error of type FailedAssertion with a message
     static Error newFailedAssertion(const char* message);
+
+    Error();
+    Error(const char* _message,ErrorType _type);
+   // ~Error();
 };
 
 
