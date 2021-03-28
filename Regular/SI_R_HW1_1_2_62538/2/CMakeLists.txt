@@ -3,4 +3,4 @@ project(2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(2 main.cpp Error.cpp Error.h TestCase.cpp TestCase.h TestSuite.cpp TestSuite.h)
+add_executable(2 main.cpp Error.cpp Error.hpp TestCase.cpp TestCase.hpp TestSuite.cpp TestSuite.hpp)

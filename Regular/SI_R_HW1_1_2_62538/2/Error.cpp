@@ -2,7 +2,7 @@
 // Created by Tegu on 28.3.2021 г..
 //
 
-#include "Error.h"
+#include "Error.hpp"
 
 bool Error::hasMessage() const {
     bool flag=0;

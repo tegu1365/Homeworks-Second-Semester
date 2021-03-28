@@ -2,15 +2,15 @@
 // Created by Tegu on 28.3.2021 г..
 //
 
-#ifndef INC_2_TESTSUITE_H
-#define INC_2_TESTSUITE_H
+#ifndef INC_2_TESTSUITE_HPP
+#define INC_2_TESTSUITE_HPP
 
 
 #pragma once
 #include <string>
 #include <vector>
 
-#include "TestCase.h"
+#include "TestCase.hpp"
 
 /// TestSuite is a collection of many Test Cases
 /// A Test Suite has a name so we can know which problem it's from
@@ -43,4 +43,4 @@ public:
 };
 
 
-#endif //INC_2_TESTSUITE_H
+#endif //INC_2_TESTSUITE_HPP

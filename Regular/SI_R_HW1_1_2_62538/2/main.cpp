@@ -3,9 +3,9 @@
 #include <cstring>
 #include <iostream>
 
-#include "Error.h"
-#include "TestCase.h"
-#include "TestSuite.h"
+#include "Error.hpp"
+#include "TestCase.hpp"
+#include "TestSuite.hpp"
 
 void runTests() {
     Error errNone = Error::newNone();
@@ -18,13 +18,16 @@ void runTests() {
     //cout<<errBuild.getMessage()<<endl;
     assert(strcmp(errBuild.getMessage(), "Failed to build Homework5") == 0);
 
-//    TestCase testCaseNone("Passing test", errNone);
-//    assert(testCaseNone.getErrorType() == ErrorType::None);
-//    assert(testCaseNone.hasError() == false);
-//
-//    TestCase testCaseFailed("Failing test", Error::newFailedAssertion("Failed on Error::getType"));
-//    assert(testCaseFailed.getErrorMessage() == std::string("Failed on Error::getType"));
-//
+    TestCase testCaseNone("Passing test", errNone);
+    assert(testCaseNone.getErrorType() == ErrorType::None);
+    assert(testCaseNone.hasError() == false);
+    assert(testCaseNone.isPassing() == true);
+
+    TestCase testCaseFailed("Failing test", Error::newFailedAssertion("Failed on Error::getType"));
+    assert(testCaseFailed.getErrorMessage() == std::string("Failed on Error::getType"));
+    assert(testCaseFailed.hasError() == true);
+    assert(testCaseFailed.isPassing() == false);
+
 //    TestSuite suite("Suite 1");
 //    suite.add(testCaseNone);
 //    suite.add(testCaseNone);

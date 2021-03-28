@@ -2,26 +2,29 @@
 // Created by Tegu on 28.3.2021 г..
 //
 
-#ifndef INC_2_TESTCASE_H
-#define INC_2_TESTCASE_H
+#ifndef INC_2_TESTCASE_HPP
+#define INC_2_TESTCASE_HPP
 
 
 #pragma once
 #include <string>
 
-#include "Error.h"
+#include "Error.hpp"
 
 /// TestCase represents the result of a test that has been
 /// executed. It may be passing or failing and in the case
 /// of a failing test, there's some Error different from None
 class TestCase {
     /// Feel free to add additional private/public methods/fields
+    string name;
+    Error error;
 public:
     /// Constructor we'll need to create a new TestCase
-    TestCase(const string& name = "", const Error& error = Error::newNone());
+    TestCase();
+    TestCase(const string& name, const Error& error);
 
     /// Retrieve the name of the TestCase
-    std::string getName() const;
+    string getName() const;
 
     /// Check if the test is passing or failing. A test is passing if
     /// its Error is None or Warning
@@ -40,4 +43,4 @@ public:
     string getErrorMessage() const;
 };
 
-#endif //INC_2_TESTCASE_H
+#endif //INC_2_TESTCASE_HPP

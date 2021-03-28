@@ -2,8 +2,8 @@
 // Created by Tegu on 28.3.2021 г..
 //
 
-#ifndef INC_2_ERROR_H
-#define INC_2_ERROR_H
+#ifndef INC_2_ERROR_HPP
+#define INC_2_ERROR_HPP
 
 
 #pragma once
@@ -54,4 +54,4 @@ public:
 };
 
 
-#endif //INC_2_ERROR_H
+#endif //INC_2_ERROR_HPP
