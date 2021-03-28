@@ -54,7 +54,7 @@ public:
 
     Error(const char *_message, ErrorType _type);
 
-    // ~Error();
+    //~Error();
     void print() const;
 };
 

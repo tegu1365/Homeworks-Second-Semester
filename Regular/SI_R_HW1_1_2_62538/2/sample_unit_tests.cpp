@@ -40,4 +40,19 @@ void runTests() {
 int main() {
     runTests();
     std::cout << "Success!\n";
+
+//    Error errNone = Error::newNone();
+//    Error errBuild = Error::newBuildFailed("Failed to build Homework5");
+//
+//    TestCase testCaseNone("Passing test", errNone);
+//    TestCase testCaseFailed("Failing test", Error::newFailedAssertion("Failed on Error::getType"));
+//    TestCase testErrBuild("Failed Build",errBuild);
+//    TestSuite suite("Suite 1");
+//
+//    suite.add(testCaseFailed);
+//    suite.add(testErrBuild);
+//    suite.add(testCaseNone);
+//    suite.add(testCaseNone);
+//
+//    suite.print();
 }

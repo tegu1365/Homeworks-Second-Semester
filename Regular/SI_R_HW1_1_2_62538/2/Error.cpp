@@ -75,5 +75,9 @@ void Error::print() const {
             _type = "Build Failed";
             break;
     }
-    cout << "Type: " << _type << endl << message << endl;
+    if(this->hasMessage()) {
+        cout << "Type: " << _type << endl << message << endl;
+    }else{
+        cout << "Type: " << _type << endl << "NULL" << endl;
+    }
 }
