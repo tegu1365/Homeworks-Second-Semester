@@ -6,7 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/2.dir/Error.cpp.obj"
   "CMakeFiles/2.dir/TestCase.cpp.obj"
   "CMakeFiles/2.dir/TestSuite.cpp.obj"
-  "CMakeFiles/2.dir/main.cpp.obj"
+  "CMakeFiles/2.dir/sample_unit_tests.cpp.obj"
 )
 
 # Per-language clean rules from dependency scanning.

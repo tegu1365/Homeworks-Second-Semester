@@ -37,6 +37,6 @@ TestCase::TestCase(const string &name, const Error &error) {
 }
 
 void TestCase::print() const {
-    cout<<"Name of Test Case: "<<name<<endl;
+    cout << "Name of Test Case: " << name << endl;
     error.print();
 }

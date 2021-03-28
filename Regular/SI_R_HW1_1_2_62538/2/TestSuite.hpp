@@ -7,6 +7,7 @@
 
 
 #pragma once
+
 #include <string>
 #include <vector>
 
@@ -21,10 +22,11 @@ class TestSuite {
 public:
     /// Constructor we'll need for initializing the TestSuite
     TestSuite(const string name);
+
     TestSuite();
 
     /// Add a new test case to the collection of cases
-    void add(const TestCase&);
+    void add(const TestCase &);
 
     /// Retrieve the test cases, which are passing
     vector<TestCase> filterPassing() const;
@@ -42,9 +44,9 @@ public:
     string getName() const;
 
     /// Change the name of the TestSuite
-    void setName(const string&);
+    void setName(const string &);
 
-    void print()const;
+    void print() const;
 };
 
 

@@ -5,9 +5,9 @@
 #include "Error.hpp"
 
 bool Error::hasMessage() const {
-    bool flag=0;
-    if(message!= nullptr){
-        flag=1;
+    bool flag = 0;
+    if (message != nullptr) {
+        flag = 1;
     }
     return flag;
 }
@@ -21,30 +21,30 @@ ErrorType Error::getType() const {
 }
 
 Error Error::newNone() {
-    Error error=Error();
+    Error error = Error();
     return error;
 }
 
 Error Error::newBuildFailed(const char *message) {
-    Error error=Error(message,ErrorType::BuildFailed);
+    Error error = Error(message, ErrorType::BuildFailed);
     return error;
 }
 
 Error Error::newWarning(const char *message) {
-    Error error=Error(message,ErrorType::Warning);
+    Error error = Error(message, ErrorType::Warning);
     return error;
 }
 
 Error Error::newFailedAssertion(const char *message) {
-    Error error=Error(message,ErrorType::FailedAssertion);
+    Error error = Error(message, ErrorType::FailedAssertion);
     return error;
 }
 
 //_________________________________________
 
 Error::Error() {
-    message= nullptr;
-    type=ErrorType::None;
+    message = nullptr;
+    type = ErrorType::None;
 }
 
 //Error::~Error() {
@@ -52,28 +52,28 @@ Error::Error() {
 //}
 
 Error::Error(const char *_message, ErrorType _type) {
-    type=_type;
-   // cout<<_message<<endl;
-    message=new char[strlen(_message)+1];
-    strcpy(message,_message);
-  //  cout<<"--"<<message<<endl;
+    type = _type;
+    // cout<<_message<<endl;
+    message = new char[strlen(_message) + 1];
+    strcpy(message, _message);
+    //  cout<<"--"<<message<<endl;
 }
 
 void Error::print() const {
-    char* _type;
+    char *_type;
     switch (type) {
         case ErrorType::None:
-            _type="None";
+            _type = "None";
             break;
         case ErrorType::FailedAssertion:
-            _type="Failed Assertion";
+            _type = "Failed Assertion";
             break;
         case ErrorType::Warning:
-            _type="Warning";
+            _type = "Warning";
             break;
         case ErrorType::BuildFailed:
-            _type="Build Failed";
+            _type = "Build Failed";
             break;
     }
-    cout<<"Type: "<<_type<<endl<<message<<endl;
+    cout << "Type: " << _type << endl << message << endl;
 }

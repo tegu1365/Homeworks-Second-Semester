@@ -7,6 +7,7 @@
 
 
 #pragma once
+
 #include <string>
 
 #include "Error.hpp"
@@ -21,7 +22,8 @@ class TestCase {
 public:
     /// Constructor we'll need to create a new TestCase
     TestCase();
-    TestCase(const string& name, const Error& error);
+
+    TestCase(const string &name, const Error &error);
 
     /// Retrieve the name of the TestCase
     string getName() const;
@@ -42,7 +44,7 @@ public:
     /// otherwise return an empty string
     string getErrorMessage() const;
 
-    void print()const;
+    void print() const;
 };
 
 #endif //INC_2_TESTCASE_HPP

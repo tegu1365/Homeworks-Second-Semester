@@ -5,11 +5,11 @@
 #include "TestSuite.hpp"
 
 TestSuite::TestSuite() {
-    name= nullptr;
+    name = nullptr;
 }
 
 TestSuite::TestSuite(const string name) {
-    this->name=name;
+    this->name = name;
 }
 
 void TestSuite::add(const TestCase &_test) {
@@ -18,8 +18,8 @@ void TestSuite::add(const TestCase &_test) {
 
 vector<TestCase> TestSuite::filterPassing() const {
     vector<TestCase> passingTests;
-    for(int i=0;i<testCases.size();i++){
-        if(testCases[i].isPassing()){
+    for (int i = 0; i < testCases.size(); i++) {
+        if (testCases[i].isPassing()) {
             passingTests.push_back(testCases[i]);
         }
     }
@@ -28,8 +28,8 @@ vector<TestCase> TestSuite::filterPassing() const {
 
 vector<TestCase> TestSuite::filterFailing() const {
     vector<TestCase> failingTests;
-    for(int i=0;i<testCases.size();i++){
-        if(!testCases[i].isPassing()){
+    for (int i = 0; i < testCases.size(); i++) {
+        if (!testCases[i].isPassing()) {
             failingTests.push_back(testCases[i]);
         }
     }
@@ -38,8 +38,8 @@ vector<TestCase> TestSuite::filterFailing() const {
 
 vector<TestCase> TestSuite::filterByErrorType(ErrorType _type) const {
     vector<TestCase> thisTypeTests;
-    for(int i=0;i<testCases.size();i++){
-        if(testCases[i].getErrorType()==_type){
+    for (int i = 0; i < testCases.size(); i++) {
+        if (testCases[i].getErrorType() == _type) {
             thisTypeTests.push_back(testCases[i]);
         }
     }
@@ -47,9 +47,9 @@ vector<TestCase> TestSuite::filterByErrorType(ErrorType _type) const {
 }
 
 void TestSuite::removeByErrorType(ErrorType _type) {
-    for(int i=0;i<testCases.size();i++){
-        if(testCases[i].getErrorType()==_type){
-            testCases.erase(testCases.begin()+i);
+    for (int i = 0; i < testCases.size(); i++) {
+        if (testCases[i].getErrorType() == _type) {
+            testCases.erase(testCases.begin() + i);
         }
     }
 }
@@ -58,15 +58,15 @@ string TestSuite::getName() const {
     return name;
 }
 
-void TestSuite::setName(const string & _name) {
-    name=_name;
+void TestSuite::setName(const string &_name) {
+    name = _name;
 }
 
 void TestSuite::print() const {
-    cout<<"Name of Test Suite: "<<name<<endl<<"________________________________________\n";
-    for(int i=0;i<testCases.size();i++) {
+    cout << "Name of Test Suite: " << name << endl << "________________________________________\n";
+    for (int i = 0; i < testCases.size(); i++) {
         testCases[i].print();
-        cout<<endl;
+        cout << endl;
     }
 }
 

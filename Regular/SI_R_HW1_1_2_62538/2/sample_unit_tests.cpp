@@ -32,9 +32,9 @@ void runTests() {
     suite.add(testCaseNone);
     suite.add(testCaseFailed);
     assert(suite.filterPassing().size() == 2);
-    assert(suite.filterFailing().size()==1);
-    assert(suite.filterByErrorType(ErrorType::None).size()==2);
-    assert(suite.getName()!=string("Suite 2"));
+    assert(suite.filterFailing().size() == 1);
+    assert(suite.filterByErrorType(ErrorType::None).size() == 2);
+    assert(suite.getName() != string("Suite 2"));
 }
 
 int main() {

@@ -208,32 +208,32 @@ TestSuite.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\TestSuite.cpp.s
 .PHONY : TestSuite.cpp.s
 
-main.obj: main.cpp.obj
+sample_unit_tests.obj: sample_unit_tests.cpp.obj
 
-.PHONY : main.obj
+.PHONY : sample_unit_tests.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\main.cpp.obj
-.PHONY : main.cpp.obj
+sample_unit_tests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\sample_unit_tests.cpp.obj
+.PHONY : sample_unit_tests.cpp.obj
 
-main.i: main.cpp.i
+sample_unit_tests.i: sample_unit_tests.cpp.i
 
-.PHONY : main.i
+.PHONY : sample_unit_tests.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\main.cpp.i
-.PHONY : main.cpp.i
+sample_unit_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\sample_unit_tests.cpp.i
+.PHONY : sample_unit_tests.cpp.i
 
-main.s: main.cpp.s
+sample_unit_tests.s: sample_unit_tests.cpp.s
 
-.PHONY : main.s
+.PHONY : sample_unit_tests.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\main.cpp.s
-.PHONY : main.cpp.s
+sample_unit_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\sample_unit_tests.cpp.s
+.PHONY : sample_unit_tests.cpp.s
 
 # Help Target
 help:
@@ -253,9 +253,9 @@ help:
 	@echo ... TestSuite.obj
 	@echo ... TestSuite.i
 	@echo ... TestSuite.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... sample_unit_tests.obj
+	@echo ... sample_unit_tests.i
+	@echo ... sample_unit_tests.s
 .PHONY : help
 
 

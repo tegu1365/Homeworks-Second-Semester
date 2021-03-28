@@ -13,8 +13,8 @@ CMakeFiles\2.dir\TestSuite.cpp.obj: ..\TestCase.hpp
 CMakeFiles\2.dir\TestSuite.cpp.obj: ..\TestSuite.cpp
 CMakeFiles\2.dir\TestSuite.cpp.obj: ..\TestSuite.hpp
 
-CMakeFiles\2.dir\main.cpp.obj: ..\Error.hpp
-CMakeFiles\2.dir\main.cpp.obj: ..\TestCase.hpp
-CMakeFiles\2.dir\main.cpp.obj: ..\TestSuite.hpp
-CMakeFiles\2.dir\main.cpp.obj: ..\main.cpp
+CMakeFiles\2.dir\sample_unit_tests.cpp.obj: ..\Error.hpp
+CMakeFiles\2.dir\sample_unit_tests.cpp.obj: ..\TestCase.hpp
+CMakeFiles\2.dir\sample_unit_tests.cpp.obj: ..\TestSuite.hpp
+CMakeFiles\2.dir\sample_unit_tests.cpp.obj: ..\sample_unit_tests.cpp
 

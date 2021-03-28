@@ -61,23 +61,23 @@ include CMakeFiles\2.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\2.dir\flags.make
 
-CMakeFiles\2.dir\main.cpp.obj: CMakeFiles\2.dir\flags.make
-CMakeFiles\2.dir\main.cpp.obj: ..\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW1_1_2_62538\2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/2.dir/main.cpp.obj"
+CMakeFiles\2.dir\sample_unit_tests.cpp.obj: CMakeFiles\2.dir\flags.make
+CMakeFiles\2.dir\sample_unit_tests.cpp.obj: ..\sample_unit_tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW1_1_2_62538\2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/2.dir/sample_unit_tests.cpp.obj"
 	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\2.dir\main.cpp.obj /FdCMakeFiles\2.dir\ /FS -c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW1_1_2_62538\2\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\2.dir\sample_unit_tests.cpp.obj /FdCMakeFiles\2.dir\ /FS -c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW1_1_2_62538\2\sample_unit_tests.cpp
 <<
 
-CMakeFiles\2.dir\main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2.dir/main.cpp.i"
-	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\2.dir\main.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW1_1_2_62538\2\main.cpp
+CMakeFiles\2.dir\sample_unit_tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2.dir/sample_unit_tests.cpp.i"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\2.dir\sample_unit_tests.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW1_1_2_62538\2\sample_unit_tests.cpp
 <<
 
-CMakeFiles\2.dir\main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2.dir/main.cpp.s"
+CMakeFiles\2.dir\sample_unit_tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2.dir/sample_unit_tests.cpp.s"
 	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\2.dir\main.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW1_1_2_62538\2\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\2.dir\sample_unit_tests.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW1_1_2_62538\2\sample_unit_tests.cpp
 <<
 
 CMakeFiles\2.dir\Error.cpp.obj: CMakeFiles\2.dir\flags.make
@@ -139,7 +139,7 @@ CMakeFiles\2.dir\TestSuite.cpp.s: cmake_force
 
 # Object files for target 2
 2_OBJECTS = \
-"CMakeFiles\2.dir\main.cpp.obj" \
+"CMakeFiles\2.dir\sample_unit_tests.cpp.obj" \
 "CMakeFiles\2.dir\Error.cpp.obj" \
 "CMakeFiles\2.dir\TestCase.cpp.obj" \
 "CMakeFiles\2.dir\TestSuite.cpp.obj"
@@ -147,7 +147,7 @@ CMakeFiles\2.dir\TestSuite.cpp.s: cmake_force
 # External object files for target 2
 2_EXTERNAL_OBJECTS =
 
-2.exe: CMakeFiles\2.dir\main.cpp.obj
+2.exe: CMakeFiles\2.dir\sample_unit_tests.cpp.obj
 2.exe: CMakeFiles\2.dir\Error.cpp.obj
 2.exe: CMakeFiles\2.dir\TestCase.cpp.obj
 2.exe: CMakeFiles\2.dir\TestSuite.cpp.obj
