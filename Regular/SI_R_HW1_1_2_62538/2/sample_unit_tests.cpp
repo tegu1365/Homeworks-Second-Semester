@@ -17,6 +17,9 @@ void runTests() {
     assert(errBuild.hasMessage() == true);
     assert(strcmp(errBuild.getMessage(), "Failed to build Homework5") == 0);
 
+    Error errTest=Error::newFailedAssertion("");
+    assert(errTest.hasMessage()==true);
+
     TestCase testCaseNone("Passing test", errNone);
     assert(testCaseNone.getErrorType() == ErrorType::None);
     assert(testCaseNone.hasError() == false);
