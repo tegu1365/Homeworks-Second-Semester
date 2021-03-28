@@ -1,9 +1,7 @@
-//
-// Created by Tegu on 23.3.2021 г..
-//
 
-#ifndef INC_1_DRINK_H
-#define INC_1_DRINK_H
+
+#ifndef INC_1_DRINK_HPP
+#define INC_1_DRINK_HPP
 
 #include <iostream>
 #include <iomanip>
@@ -35,11 +33,14 @@ public:
     void set_name(const char *new_name);
 
     //______________________________________________________
-    friend bool operator==(const Drink &lhs, const Drink & rhs);
+    friend bool operator==(const Drink &lhs, const Drink &rhs);
+
     void print() const;
+
     Drink();
+
     ~Drink();
 };
 
 
-#endif //INC_1_DRINK_H
+#endif //INC_1_DRINK_HPP

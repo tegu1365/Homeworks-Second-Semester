@@ -1,4 +1,4 @@
-#include "VendingMachine.h"
+#include "VendingMachine.hpp"
 
 int main() {
     Drink d = Drink("Soda", 1000, 0.5, 1.1);

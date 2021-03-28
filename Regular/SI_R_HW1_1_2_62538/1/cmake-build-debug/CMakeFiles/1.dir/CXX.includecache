@@ -6,17 +6,25 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/VendingMachine.h
-drink.h
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/drink.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/VendingMachine.cpp
+VendingMachine.hpp
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/VendingMachine.hpp
 
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/drink.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/VendingMachine.hpp
+drink.hpp
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/drink.hpp
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/drink.cpp
+drink.hpp
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/drink.hpp
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/drink.hpp
 iostream
 -
 iomanip
 -
 
 C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/main.cpp
-VendingMachine.h
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/VendingMachine.h
+VendingMachine.hpp
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/1/VendingMachine.hpp
 

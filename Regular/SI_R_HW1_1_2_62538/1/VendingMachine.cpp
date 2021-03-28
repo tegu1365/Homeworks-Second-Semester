@@ -1,8 +1,6 @@
-//
-// Created by Tegu on 23.3.2021 г..
-//
 
-#include "VendingMachine.h"
+
+#include "VendingMachine.hpp"
 
 bool equal(const char a[], const char b[]) {
     for (int i = 0; a[i] != '\0'; i++) {
@@ -30,9 +28,9 @@ VendingMachine::VendingMachine(const VendingMachine &from) {
 VendingMachine &VendingMachine::operator=(const VendingMachine &from) {
     if (this != &from) {
         delete[] this->drinks;
-        this->numOfDrinks=from.numOfDrinks;
-        this->money=from.money;
-        this->drinks=new Drink[numOfDrinks];
+        this->numOfDrinks = from.numOfDrinks;
+        this->money = from.money;
+        this->drinks = new Drink[numOfDrinks];
         for (int i = 0; i < numOfDrinks; i++) {
             this->drinks[i] = from.drinks[i];
         }
@@ -80,12 +78,12 @@ bool VendingMachine::add_drink(const Drink &to_add) {
 int VendingMachine::buy_drink(const char *drink_name, const double money) {
     for (int i = 0; i < numOfDrinks; i++) {
         if (equal(drink_name, this->drinks[i].get_name())) {
-            if(drinks[i].get_price()<=money) {
+            if (drinks[i].get_price() <= money) {
                 this->remove_drink(i);
-                this->money+=money;
+                this->money += money;
                 return 0;
-            }else{
-                this->money+=money;
+            } else {
+                this->money += money;
                 return 1;
             }
         }
@@ -102,7 +100,7 @@ double VendingMachine::get_income() const {
 void VendingMachine::print() const {
     for (int i = 0; i < numOfDrinks; i++) {
         drinks[i].print();
-        cout<<"\n";
+        cout << "\n";
     }
     cout << "Total income: " << money << endl;
 }
@@ -112,10 +110,10 @@ VendingMachine::~VendingMachine() {
 }
 
 void VendingMachine::remove_drink(int index) {
-    Drink *d = new Drink[this->numOfDrinks-1];
+    Drink *d = new Drink[this->numOfDrinks - 1];
 
     for (int i = 0; i < numOfDrinks; i++) {
-        if(i!=index) {
+        if (i != index) {
             d[i] = this->drinks[i];
         }
     }

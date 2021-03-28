@@ -1,8 +1,5 @@
-//
-// Created by Tegu on 23.3.2021 г..
-//
 
-#include "drink.h"
+#include "drink.hpp"
 
 //bool equal(char a[], char b[]) {
 //    for (int i = 0; a[i] != '\0'; i++) {
