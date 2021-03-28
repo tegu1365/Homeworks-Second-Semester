@@ -41,6 +41,8 @@ public:
     /// Retrieve the message of the error if Error has one,
     /// otherwise return an empty string
     string getErrorMessage() const;
+
+    void print()const;
 };
 
 #endif //INC_2_TESTCASE_HPP

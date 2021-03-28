@@ -51,6 +51,7 @@ public:
     Error();
     Error(const char* _message,ErrorType _type);
    // ~Error();
+   void print()const;
 };
 
 

@@ -16,9 +16,12 @@
 /// A Test Suite has a name so we can know which problem it's from
 class TestSuite {
     /// Feel free to add additional private/public methods/fields
+    string name;
+    vector<TestCase> testCases;
 public:
     /// Constructor we'll need for initializing the TestSuite
-    TestSuite(string name);
+    TestSuite(const string name);
+    TestSuite();
 
     /// Add a new test case to the collection of cases
     void add(const TestCase&);
@@ -40,6 +43,8 @@ public:
 
     /// Change the name of the TestSuite
     void setName(const string&);
+
+    void print()const;
 };
 
 

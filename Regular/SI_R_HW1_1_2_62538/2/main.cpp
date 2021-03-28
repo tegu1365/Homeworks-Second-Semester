@@ -15,7 +15,6 @@ void runTests() {
     Error errBuild = Error::newBuildFailed("Failed to build Homework5");
     assert(errBuild.getType() == ErrorType::BuildFailed);
     assert(errBuild.hasMessage() == true);
-    //cout<<errBuild.getMessage()<<endl;
     assert(strcmp(errBuild.getMessage(), "Failed to build Homework5") == 0);
 
     TestCase testCaseNone("Passing test", errNone);
@@ -28,15 +27,17 @@ void runTests() {
     assert(testCaseFailed.hasError() == true);
     assert(testCaseFailed.isPassing() == false);
 
-//    TestSuite suite("Suite 1");
-//    suite.add(testCaseNone);
-//    suite.add(testCaseNone);
-//    suite.add(testCaseFailed);
-//    assert(suite.filterPassing().size() == 2);
+    TestSuite suite("Suite 1");
+    suite.add(testCaseNone);
+    suite.add(testCaseNone);
+    suite.add(testCaseFailed);
+    assert(suite.filterPassing().size() == 2);
+    assert(suite.filterFailing().size()==1);
+    assert(suite.filterByErrorType(ErrorType::None).size()==2);
+    assert(suite.getName()!=string("Suite 2"));
 }
 
 int main() {
-    //Error errBuild = Error::newBuildFailed("Failed to build Homework5");
     runTests();
     std::cout << "Success!\n";
 }

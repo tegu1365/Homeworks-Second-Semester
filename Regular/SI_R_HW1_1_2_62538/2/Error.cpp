@@ -58,3 +58,22 @@ Error::Error(const char *_message, ErrorType _type) {
     strcpy(message,_message);
   //  cout<<"--"<<message<<endl;
 }
+
+void Error::print() const {
+    char* _type;
+    switch (type) {
+        case ErrorType::None:
+            _type="None";
+            break;
+        case ErrorType::FailedAssertion:
+            _type="Failed Assertion";
+            break;
+        case ErrorType::Warning:
+            _type="Warning";
+            break;
+        case ErrorType::BuildFailed:
+            _type="Build Failed";
+            break;
+    }
+    cout<<"Type: "<<_type<<endl<<message<<endl;
+}
