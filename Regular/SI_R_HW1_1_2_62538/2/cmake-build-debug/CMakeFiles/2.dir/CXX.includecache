@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/2/Error.hpp
+iostream
+-
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/2/TestCase.hpp
+string
+-
+Error.hpp
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/2/Error.hpp
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/2/TestSuite.hpp
+string
+-
+vector
+-
+TestCase.hpp
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/2/TestCase.hpp
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/2/sample_unit_tests.cpp
+assert.h
+-
+cstring
+-
+iostream
+-
+Error.hpp
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/2/Error.hpp
+TestCase.hpp
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/2/TestCase.hpp
+TestSuite.hpp
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW1_1_2_62538/2/TestSuite.hpp
+
