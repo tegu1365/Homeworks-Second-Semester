@@ -127,6 +127,33 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\build
 .PHONY : 1\fast
 
+Backpack.obj: Backpack.cpp.obj
+
+.PHONY : Backpack.obj
+
+# target to build an object file
+Backpack.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Backpack.cpp.obj
+.PHONY : Backpack.cpp.obj
+
+Backpack.i: Backpack.cpp.i
+
+.PHONY : Backpack.i
+
+# target to preprocess a source file
+Backpack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Backpack.cpp.i
+.PHONY : Backpack.cpp.i
+
+Backpack.s: Backpack.cpp.s
+
+.PHONY : Backpack.s
+
+# target to generate assembly for a file
+Backpack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Backpack.cpp.s
+.PHONY : Backpack.cpp.s
+
 Materials.obj: Materials.cpp.obj
 
 .PHONY : Materials.obj
@@ -217,6 +244,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... 1
+	@echo ... Backpack.obj
+	@echo ... Backpack.i
+	@echo ... Backpack.s
 	@echo ... Materials.obj
 	@echo ... Materials.i
 	@echo ... Materials.s

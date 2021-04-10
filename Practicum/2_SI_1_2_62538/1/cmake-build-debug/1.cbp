@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Backpack.cpp">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Backpack.h">
+			<Option target="1"/>
+		</Unit>
 		<Unit filename="C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Materials.cpp">
 			<Option target="1"/>
 		</Unit>

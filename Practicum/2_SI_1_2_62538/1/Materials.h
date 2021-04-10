@@ -17,11 +17,14 @@ class Materials {
 private:
     MaterialType type;
     unsigned short quantityPerSlot;
+    unsigned short quantity;
 public:
     Materials();
-    Materials(MaterialType _type);
+    Materials(MaterialType _type, unsigned short _quantity);
     unsigned short getQuantityPerSlot();
     MaterialType getType();
+    unsigned short getQuantity();
+    void addMaterial(unsigned short q);
 };
 
 

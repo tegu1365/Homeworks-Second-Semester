@@ -7,8 +7,9 @@
 Materials::Materials() {
     type=none;
     quantityPerSlot=0;
+    quantity=0;
 }
-Materials::Materials(MaterialType _type) {
+Materials::Materials(MaterialType _type, unsigned short _quantity) {
     type=_type;
     switch (type) {
         case essence:
@@ -23,6 +24,7 @@ Materials::Materials(MaterialType _type) {
             quantityPerSlot=0;
             break;
     }
+    quantity=_quantity;
 }
 
 unsigned short Materials::getQuantityPerSlot() {
@@ -31,4 +33,12 @@ unsigned short Materials::getQuantityPerSlot() {
 
 MaterialType Materials::getType() {
     return type;
+}
+
+unsigned short Materials::getQuantity() {
+    return quantity;
+}
+
+void Materials::addMaterial(unsigned short q) {
+    quantity+=q;
 }
