@@ -9,13 +9,19 @@ enum MaterialType{
     herbs,
     ores ,
     cloth,
-    essence
+    essence,
+    none
 };
 
 class Materials {
 private:
     MaterialType type;
     unsigned short quantityPerSlot;
+public:
+    Materials();
+    Materials(MaterialType _type);
+    unsigned short getQuantityPerSlot();
+    MaterialType getType();
 };
 
 
