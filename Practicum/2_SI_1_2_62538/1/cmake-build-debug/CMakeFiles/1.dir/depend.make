@@ -7,6 +7,7 @@ CMakeFiles\1.dir\Materials.cpp.obj: ..\Materials.h
 CMakeFiles\1.dir\Money.cpp.obj: ..\Money.cpp
 CMakeFiles\1.dir\Money.cpp.obj: ..\Money.h
 
+CMakeFiles\1.dir\main.cpp.obj: ..\Materials.h
 CMakeFiles\1.dir\main.cpp.obj: ..\Money.h
 CMakeFiles\1.dir\main.cpp.obj: ..\main.cpp
 
