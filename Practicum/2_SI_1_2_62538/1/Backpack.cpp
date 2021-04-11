@@ -4,43 +4,61 @@
 
 #include "Backpack.h"
 
-template<> Backpack<Money>::Backpack() {
-    fullSlots=1;
-    maxSlots=1;
+template<>
+Backpack<Money>::Backpack() {
+    fullSlots = 1;
+    maxSlots = 1;
     slots.emplace_back();
 }
 
-template<> Backpack<Materials>::Backpack() {
-    fullSlots=0;
-    maxSlots=16;
+template<>
+Backpack<Materials>::Backpack() {
+    fullSlots = 0;
+    maxSlots = 16;
 }
 
-template<>bool Backpack<Money>::isFull() {//always false because we have infinity space for money
+template<>
+bool Backpack<Money>::isFull() {//always false because we have infinity space for money
     return false;
 }
 
-template<>bool Backpack<Money>::isEmpty() {
-    if(fullSlots==0){
+template<>
+bool Backpack<Money>::isEmpty() {
+    if (fullSlots == 0) {
         return true;
     }
-    return (slots[0].getBronzeCoins()+slots[0].getSilverCoins()+slots[0].getGoldCoins()==0);
+    return (slots[0].getBronzeCoins() + slots[0].getSilverCoins() + slots[0].getGoldCoins() == 0);
 }
 
 template<typename B>
 void Backpack<B>::Empty() {
     slots.clear();
-    fullSlots=0;
+    fullSlots = 0;
 }
 
-template<>unsigned short Backpack<Materials>::numOfFullSlots() {
-    return fullSlots;
-}
-template<>unsigned short Backpack<Money>::numOfFullSlots() {
+template<>
+unsigned short Backpack<Materials>::numOfFullSlots() {
     return fullSlots;
 }
 
-template<> int Backpack<Money>::addToBackpack(Money _sth) {
-    if(fullSlots==0){
+template<typename B>
+int Backpack<B>::removeFromBackpack(B _sth) {
+
+}
+
+template<typename B>
+int Backpack<B>::addToBackpack(B _sth) {
+    return 0;
+}
+
+template<>
+unsigned short Backpack<Money>::numOfFullSlots() {
+    return fullSlots;
+}
+
+template<>
+int Backpack<Money>::addToBackpack(Money _sth) {
+    if (fullSlots == 0) {
         slots.push_back(_sth);
         return 0;
     }
@@ -50,10 +68,11 @@ template<> int Backpack<Money>::addToBackpack(Money _sth) {
     return 1;
 }
 
-template<>int Backpack<Materials>::addToBackpack(Materials _sth) {
-    if(fullSlots!=maxSlots) {
+template<>
+int Backpack<Materials>::addToBackpack(Materials _sth) {
+    if (fullSlots != maxSlots) {
         unsigned short quantityPerSlot = _sth.getQuantityPerSlot();
-        if(fullSlots!=0) {
+        if (fullSlots != 0) {
             for (int i = 0; i < fullSlots; i++) {
                 if (slots[i].getType() == _sth.getType()) {
                     if (slots[i].getQuantity() != slots[i].getQuantityPerSlot()) {
@@ -91,7 +110,7 @@ template<>int Backpack<Materials>::addToBackpack(Materials _sth) {
             }
         }
 
-        unsigned int newQ=_sth.getQuantity();
+        unsigned int newQ = _sth.getQuantity();
         int j = newQ / quantityPerSlot;
 
         while (j > 0 && fullSlots != maxSlots) {
@@ -112,14 +131,61 @@ template<>int Backpack<Materials>::addToBackpack(Materials _sth) {
     return 0;
 }
 
-template<>bool Backpack<Materials>::isEmpty() {
-    return fullSlots==0;
+template<>
+int Backpack<Money>::removeFromBackpack(Money _sth) {
+    if (fullSlots != 0) {
+        unsigned int moneyToRemove = _sth.getGoldCoins() * 10000 + _sth.getSilverCoins() * 100 + _sth.getBronzeCoins();
+        slots[0].removeMoney(moneyToRemove);
+        return 1;
+    }
+    return 0;
 }
 
-template<>bool Backpack<Materials>::isFull() {//if all slots are on full capacity
-    if(fullSlots==maxSlots){
-        for(int i=0;i<maxSlots;i++){
-            if(slots[i].getQuantity()!=slots[i].getQuantityPerSlot()) {
+template<>
+int Backpack<Materials>::removeFromBackpack(Materials _sth) {
+    if (fullSlots != 0) {
+        unsigned int quantityToRemove = _sth.getQuantity();
+        vector<Materials> materialsWithType;
+        unsigned int currentQuantity = 0;
+        for (int i = 0; i < fullSlots; i++) {
+            if (slots[i].getType() == _sth.getType()) {
+                materialsWithType.push_back(slots[i]);
+                currentQuantity += slots[i].getQuantity();
+                slots.erase(slots.begin() + i);
+                fullSlots--;
+                i=0;
+            }
+        }
+
+        if (currentQuantity < quantityToRemove) {
+            return 1;
+        }
+        if (currentQuantity == quantityToRemove) {
+            return 2;
+        }
+        if (quantityToRemove < currentQuantity) {
+            currentQuantity -= quantityToRemove;
+            Materials toAddBack = Materials(_sth.getType(), currentQuantity);
+            addToBackpack(toAddBack);
+            return 3;
+        }
+
+
+    }
+
+    return 0;
+}
+
+template<>
+bool Backpack<Materials>::isEmpty() {
+    return fullSlots == 0;
+}
+
+template<>
+bool Backpack<Materials>::isFull() {//if all slots are on full capacity
+    if (fullSlots == maxSlots) {
+        for (int i = 0; i < maxSlots; i++) {
+            if (slots[i].getQuantity() != slots[i].getQuantityPerSlot()) {
                 return false;
             }
         }

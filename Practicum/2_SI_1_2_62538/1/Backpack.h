@@ -24,7 +24,7 @@ public:
     void Empty();
     unsigned short numOfFullSlots();
     int addToBackpack(B _sth);
-    void removeFromBackpack(B _sth);
+    int removeFromBackpack(B _sth);
 };
 
 

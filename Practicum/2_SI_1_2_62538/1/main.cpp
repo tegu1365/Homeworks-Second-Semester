@@ -37,6 +37,7 @@ void runTestForBackpack(){
     //moneyPoch.addToBackpack(money);
     assert(moneyPoch.addToBackpack(money)==1);
     assert(moneyPoch.numOfFullSlots()==1);
+    assert(moneyPoch.removeFromBackpack(Money(23))==1);
 
     Backpack<Materials> backpackMat=Backpack<Materials>();
     assert(backpackMat.isFull()==false);
@@ -49,10 +50,14 @@ void runTestForBackpack(){
     assert(backpackMat.numOfFullSlots()==4);
     assert(backpackMat.addToBackpack(materialEss)==1);
     assert(backpackMat.numOfFullSlots()==5);
+    assert(backpackMat.removeFromBackpack(materialEss)==3);
+    assert(backpackMat.numOfFullSlots()==4);
 }
 
 int main() {
+
     runTestForBackpack();
+
     cout << "End" <<endl;
     return 0;
 }

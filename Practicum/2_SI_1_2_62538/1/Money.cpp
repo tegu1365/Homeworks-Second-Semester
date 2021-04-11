@@ -46,3 +46,7 @@ void Money::print() {
     cout<<"Money: "<< this->getGoldCoins()<<"g. "<<this->getSilverCoins()<<"s. "<<this->getBronzeCoins()<<"br. \n";
 }
 
+void Money::removeMoney(unsigned int coins) {
+    numOfMoney-=coins;
+}
+

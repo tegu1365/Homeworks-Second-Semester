@@ -42,3 +42,9 @@ unsigned short Materials::getQuantity() {
 void Materials::addMaterial(unsigned short q) {
     quantity+=q;
 }
+
+void Materials::removeMaterial(unsigned short _quantity) {
+    if(_quantity<=quantity){
+        quantity-=_quantity;
+    }
+}

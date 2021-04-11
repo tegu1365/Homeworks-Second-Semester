@@ -21,6 +21,7 @@ public:
     void addSilver(unsigned int coins);
     void addGold(unsigned int coins);
     void addBronze(unsigned int coins);
+    void removeMoney(unsigned int coins);
     void print();
 };
 

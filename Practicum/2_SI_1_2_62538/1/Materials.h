@@ -24,6 +24,7 @@ public:
     unsigned short getQuantityPerSlot();
     MaterialType getType();
     unsigned short getQuantity();
+    void removeMaterial(unsigned short _quantity);
     void addMaterial(unsigned short q);
 };
 
