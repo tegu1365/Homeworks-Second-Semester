@@ -4,6 +4,7 @@
 
 #include "Backpack.h"
 #include "Weapon.h"
+#include "Armor.h"
 using namespace std;
 
 
@@ -84,6 +85,28 @@ void runTestForEquipment(){
     assert(newWeapon.getWeaponType()==WeaponType::two_handed);
     newWeapon.changeWeaponType(WeaponType::one_handed);
     assert(newWeapon.getWeaponType()==WeaponType::two_handed);
+    assert(newWeapon.getSlots()==2);
+
+    Armor nullArmor=Armor();
+    assert(nullArmor.getNumOfEffects()==0);
+    assert(nullArmor.getArmorType()==ArmorType::Null);
+    assert(nullArmor.getDefense()==0);
+    assert(nullArmor.getGearScore()==0);
+
+    Armor newArmor=Armor(ArmorType::Leather,200);
+    assert(newArmor.getNumOfEffects()==0);
+    assert(newArmor.getArmorType()==ArmorType::Leather);
+    assert(newArmor.getDefense()==200);
+    assert(newArmor.getGearScore()==0);
+    newArmor.addEffect("Wall",300);
+    assert(newArmor.getNumOfEffects()==1);
+    assert(newArmor.getGearScore()==300);
+    newArmor.changePowerOfEffect("Wall",350);
+    assert(newArmor.getNumOfEffects()==1);
+    assert(newArmor.getGearScore()==350);
+    newArmor.changeType(ArmorType::Mail);
+    assert(newArmor.getArmorType()==ArmorType::Mail);
+
 }
 
 int main() {

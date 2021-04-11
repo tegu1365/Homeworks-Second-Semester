@@ -56,6 +56,7 @@ public:
     void removeEffect(string name);
     void changePowerOfEffect(string name,unsigned int newPower);
 
+    unsigned short getSlots();
     int getNumOfEffects();
 };
 

@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Armor.cpp" "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/cmake-build-debug/CMakeFiles/1.dir/Armor.cpp.obj"
   "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Backpack.cpp" "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/cmake-build-debug/CMakeFiles/1.dir/Backpack.cpp.obj"
   "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Materials.cpp" "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/cmake-build-debug/CMakeFiles/1.dir/Materials.cpp.obj"
   "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Money.cpp" "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/cmake-build-debug/CMakeFiles/1.dir/Money.cpp.obj"

@@ -180,5 +180,9 @@ void Weapon::removeEffect(string name) {
     }
 }
 
+unsigned short Weapon::getSlots() {
+    return (short)type;
+}
+
 
 
