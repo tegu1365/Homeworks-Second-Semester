@@ -32,10 +32,6 @@ C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/
 vector
 -
 
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Inventory.cpp
-Inventory.h
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Inventory.h
-
 C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Inventory.h
 Backpack.h
 C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Backpack.h
@@ -59,4 +55,12 @@ vector
 -
 iostream
 -
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/main.cpp
+assert.h
+-
+iostream
+-
+Inventory.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Inventory.h
 

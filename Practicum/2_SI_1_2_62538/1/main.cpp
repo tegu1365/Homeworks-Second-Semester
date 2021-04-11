@@ -47,7 +47,6 @@ void runTestForBackpack(){
     assert(moneyPoch.addToBackpack(money)==1);
     assert(moneyPoch.numOfFullSlots()==1);
     assert(moneyPoch.removeFromBackpack(Money(23))==1);
-    Inventory<Backpack<Money>> forMoneyPoch=Inventory<Backpack<Money>>(moneyPoch);
 
     Backpack<Materials> backpackMat=Backpack<Materials>();
     assert(backpackMat.isFull()==false);
@@ -182,8 +181,26 @@ void runTestForEquipment(){
 }
 
 void runTestForInventory(){
-    Inventory<Backpack<Money>> money=Inventory<Backpack<Money>>();
+    Inventory<Backpack<Money>> moneyNull=Inventory<Backpack<Money>>();
+    Backpack<Money> moneyPoch =Backpack<Money>();
+    moneyPoch.addToBackpack(Money(12345));
+    Inventory<Backpack<Money>> moneyNew=Inventory<Backpack<Money>>(moneyPoch);
+    assert(moneyNew==moneyNull);
+    moneyNull.getInventory().addToBackpack(Money(1234));
+    assert(moneyNull.getInventory().isFull()==0);
 
+    Armor newArmor=Armor("Weightless vest",ArmorType::Leather,200);
+    Equipment<Armor> armorChest=Equipment<Armor>();
+    armorChest.addToEquipment(newArmor);
+    Armor kirishima=Armor("Eijiro Kirishima",ArmorType::Leather,300);
+    kirishima.addEffect("Rock",400);
+    kirishima.addEffect("Love Katsuki Bakugou",600);
+    armorChest.addToEquipment(kirishima);
+    Inventory<Equipment<Armor>> armorEqu=Inventory<Equipment<Armor>>(armorChest);
+    armorChest.removeFromEquipment(newArmor);
+    Inventory<Equipment<Armor>> armorEqu1=Inventory<Equipment<Armor>>(armorChest);
+    assert(armorEqu.getInventory().theBestEquipment()==kirishima);
+    assert(armorEqu!=armorEqu1);
 }
 int main() {
 

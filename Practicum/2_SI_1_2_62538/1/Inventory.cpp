@@ -85,6 +85,28 @@ bool operator==( Inventory<Equipment<Weapon>> &lhs,  Inventory<Equipment<Weapon>
 bool operator!=( Inventory<Backpack<Money>> &lhs,  Inventory<Backpack<Money>> &rhs) {
     return false;
 }
+
+template<class I>
+I Inventory<I>::getInventory() {
+    return inventory;
+}
+template<>
+Backpack<Money> Inventory<Backpack<Money>>::getInventory() {
+    return inventory;
+}
+template<>
+Backpack<Materials> Inventory<Backpack<Materials>>::getInventory() {
+    return inventory;
+}
+template<>
+Equipment<Weapon> Inventory<Equipment<Weapon>>::getInventory() {
+    return inventory;
+}
+template<>
+Equipment<Armor> Inventory<Equipment<Armor>>::getInventory() {
+    return inventory;
+}
+
 bool operator!=( Inventory<Backpack<Materials>> &lhs,  Inventory<Backpack<Materials>> &rhs) {
     return !(lhs==rhs);
 }

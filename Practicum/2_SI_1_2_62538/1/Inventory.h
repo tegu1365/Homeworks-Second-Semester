@@ -24,6 +24,7 @@ private:
 public:
     Inventory();
     Inventory( I& _inv);
+    I getInventory();
     friend ostream& operator<<(ostream& out, Inventory<I>& rhs);
     friend bool operator==( Inventory<I>& lhs,  Inventory<I>& rhs);
     friend bool operator!=( Inventory<I>& lhs,  Inventory<I>& rhs);
