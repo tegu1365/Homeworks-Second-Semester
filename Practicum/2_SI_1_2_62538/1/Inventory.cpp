@@ -28,24 +28,23 @@ Inventory<Backpack<Materials>>::Inventory() {
     inventory=Backpack<Materials>();
 }
 
-/*
 template<>
-Inventory<Equipment<Weapon>>::Inventory(const Equipment<Weapon>& _inv) {
+Inventory<Equipment<Weapon>>::Inventory( Equipment<Weapon>& _inv) {
     inventory=_inv;
 }
 template<>
-Inventory<Equipment<Armor>>::Inventory(const Equipment<Armor>& _inv) {
+Inventory<Equipment<Armor>>::Inventory( Equipment<Armor>& _inv) {
     inventory=_inv;
 }
 template<>
-Inventory<Backpack<Money>>::Inventory(const Backpack<Money>& _inv) {
+Inventory<Backpack<Money>>::Inventory( Backpack<Money>& _inv) {
     inventory=Backpack<Money>();
     inventory=_inv;
 }
 template<>
-Inventory<Backpack<Materials>>::Inventory(const Backpack<Materials>& _inv) {
+Inventory<Backpack<Materials>>::Inventory( Backpack<Materials>& _inv) {
     inventory=_inv;
-}*/
+}
 
 ostream &operator<<(ostream &out,Inventory<Backpack<Money>> &rhs) {
     out<<rhs.inventory;

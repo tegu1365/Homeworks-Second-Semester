@@ -70,7 +70,7 @@ Backpack<Money> &Backpack<Money>::operator=(const Backpack<Money> &other) {
 }
 
 ostream &operator<<(ostream &out, Backpack<Money> &rhs) {
-    out<<"Has "<<rhs.slots[0]<<"\n______________________________________\n";
+    out<<"Has "<<rhs.slots[0]<<"______________________________________\n";
     return out;
 }
 
