@@ -12,8 +12,12 @@ CMakeFiles\1.dir\Materials.cpp.obj: ..\Materials.h
 CMakeFiles\1.dir\Money.cpp.obj: ..\Money.cpp
 CMakeFiles\1.dir\Money.cpp.obj: ..\Money.h
 
+CMakeFiles\1.dir\Weapon.cpp.obj: ..\Weapon.cpp
+CMakeFiles\1.dir\Weapon.cpp.obj: ..\Weapon.h
+
 CMakeFiles\1.dir\main.cpp.obj: ..\Backpack.h
 CMakeFiles\1.dir\main.cpp.obj: ..\Materials.h
 CMakeFiles\1.dir\main.cpp.obj: ..\Money.h
+CMakeFiles\1.dir\main.cpp.obj: ..\Weapon.h
 CMakeFiles\1.dir\main.cpp.obj: ..\main.cpp
 

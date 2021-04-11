@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/1.dir/Backpack.cpp.obj"
   "CMakeFiles/1.dir/Materials.cpp.obj"
   "CMakeFiles/1.dir/Money.cpp.obj"
+  "CMakeFiles/1.dir/Weapon.cpp.obj"
   "CMakeFiles/1.dir/main.cpp.obj"
 )
 

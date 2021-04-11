@@ -208,6 +208,33 @@ Money.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Money.cpp.s
 .PHONY : Money.cpp.s
 
+Weapon.obj: Weapon.cpp.obj
+
+.PHONY : Weapon.obj
+
+# target to build an object file
+Weapon.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Weapon.cpp.obj
+.PHONY : Weapon.cpp.obj
+
+Weapon.i: Weapon.cpp.i
+
+.PHONY : Weapon.i
+
+# target to preprocess a source file
+Weapon.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Weapon.cpp.i
+.PHONY : Weapon.cpp.i
+
+Weapon.s: Weapon.cpp.s
+
+.PHONY : Weapon.s
+
+# target to generate assembly for a file
+Weapon.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Weapon.cpp.s
+.PHONY : Weapon.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -253,6 +280,9 @@ help:
 	@echo ... Money.obj
 	@echo ... Money.i
 	@echo ... Money.s
+	@echo ... Weapon.obj
+	@echo ... Weapon.i
+	@echo ... Weapon.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

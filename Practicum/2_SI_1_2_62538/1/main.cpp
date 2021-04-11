@@ -1,9 +1,9 @@
 #include <assert.h>
 #include <iostream>
 
-#include "Money.h"
-#include "Materials.h"
+
 #include "Backpack.h"
+#include "Weapon.h"
 using namespace std;
 
 
@@ -54,10 +54,42 @@ void runTestForBackpack(){
     assert(backpackMat.numOfFullSlots()==4);
 }
 
+void runTestForEquipment(){
+    Weapon nullWeapon=Weapon();
+    assert(nullWeapon.getHitDamage()[0]== 0 && nullWeapon.getHitDamage()[1]==0);
+    assert(nullWeapon.getNumOfEffects()==0);
+    assert(nullWeapon.getWeaponForm()==WeaponForm::null);
+    assert(nullWeapon.getWeaponType()==WeaponType::zero);
+    assert(nullWeapon.getWeaponScore()==0);
+
+    unsigned int newDam[]={50,200};
+    Weapon newWeapon=Weapon(WeaponType::one_handed,WeaponForm::dagger,newDam);
+    assert(newWeapon.getHitDamage()[0]== 50 && newWeapon.getHitDamage()[1]==200);
+    assert(newWeapon.getNumOfEffects()==0);
+    assert(newWeapon.getWeaponForm()==WeaponForm::dagger);
+    assert(newWeapon.getWeaponType()==WeaponType::one_handed);
+    assert(newWeapon.getWeaponScore()==93.75);
+    newWeapon.addEffect("Swash",100);
+    assert(newWeapon.getNumOfEffects()==1);
+    assert(newWeapon.getWeaponScore()==168.75);
+    newWeapon.changePowerOfEffect("Swash",200);
+    assert(newWeapon.getWeaponScore()==243.75);
+    newWeapon.addEffect("Swash",100);
+    assert(newWeapon.getWeaponScore()==168.75);
+    newWeapon.removeEffect("Swash");
+    assert(newWeapon.getNumOfEffects()==0);
+    assert(newWeapon.getWeaponScore()==93.75);
+    newWeapon.changeWeaponForm(WeaponForm::lance);
+    assert(newWeapon.getWeaponForm()==WeaponForm::lance);
+    assert(newWeapon.getWeaponType()==WeaponType::two_handed);
+    newWeapon.changeWeaponType(WeaponType::one_handed);
+    assert(newWeapon.getWeaponType()==WeaponType::two_handed);
+}
+
 int main() {
 
-    runTestForBackpack();
-
+    //runTestForBackpack();
+    runTestForEquipment();
     cout << "End" <<endl;
     return 0;
 }
