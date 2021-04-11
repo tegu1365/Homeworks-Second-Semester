@@ -6,27 +6,25 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Armor.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Backpack.cpp
+Backpack.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Backpack.h
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Backpack.h
+iostream
+-
 vector
 -
-string
+Materials.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Materials.h
+Money.h
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Money.h
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Materials.h
+iostream
 -
 
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Equipment.cpp
-Equipment.h
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Equipment.h
-
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Equipment.h
-Weapon.h
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Weapon.h
-Armor.h
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Armor.h
-vector
--
-
-C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Weapon.h
-string
--
-vector
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/2_SI_1_2_62538/1/Money.h
+iostream
 -
 
