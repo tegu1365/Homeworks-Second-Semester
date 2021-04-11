@@ -22,6 +22,7 @@ enum ArmorType{
 
 class Armor {
 private:
+    string name;
     ArmorType type;
     unsigned int defense;
     vector<pair<string,unsigned int>> effects;
@@ -30,12 +31,13 @@ private:
 
     unsigned long int gearScoreCal();
     int effectExist(string name);
+
+    int numOfSlots=1;
 public:
-    const unsigned short slot=1;
     Armor();
-    Armor(ArmorType _type, unsigned int _def);
-    Armor(ArmorType _type,unsigned int _def, pair<string,unsigned int> _effect);
-    Armor(ArmorType _type,unsigned int _def, vector<pair<string,unsigned int>> _effect);
+    Armor(string name,ArmorType _type, unsigned int _def);
+    Armor(string name,ArmorType _type,unsigned int _def, pair<string,unsigned int> _effect);
+    Armor(string name,ArmorType _type,unsigned int _def, vector<pair<string,unsigned int>> _effect);
     ArmorType getArmorType();
     unsigned long int getGearScore();
     unsigned int getDefense();
@@ -47,8 +49,12 @@ public:
     void changePowerOfEffect(string name,unsigned int newPower);
     void changeType(ArmorType _type);
     void changeDefense(unsigned int def);
-
+    string  getName();
+    void changeName(string newName);
     int getNumOfEffects();
+    int getSlots();
+    friend bool operator==(const Armor& _lhs,const Armor& _rhs);
+    friend bool operator!=(const Armor& _lhs,const Armor& _rhs);
 };
 
 

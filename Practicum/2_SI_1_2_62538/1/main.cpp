@@ -3,8 +3,7 @@
 
 
 #include "Backpack.h"
-#include "Weapon.h"
-#include "Armor.h"
+#include "Equipment.h"
 using namespace std;
 
 
@@ -64,7 +63,7 @@ void runTestForEquipment(){
     assert(nullWeapon.getWeaponScore()==0);
 
     unsigned int newDam[]={50,200};
-    Weapon newWeapon=Weapon(WeaponType::one_handed,WeaponForm::dagger,newDam);
+    Weapon newWeapon=Weapon("Assassin's blade",WeaponType::one_handed,WeaponForm::dagger,newDam);
     assert(newWeapon.getHitDamage()[0]== 50 && newWeapon.getHitDamage()[1]==200);
     assert(newWeapon.getNumOfEffects()==0);
     assert(newWeapon.getWeaponForm()==WeaponForm::dagger);
@@ -86,6 +85,7 @@ void runTestForEquipment(){
     newWeapon.changeWeaponType(WeaponType::one_handed);
     assert(newWeapon.getWeaponType()==WeaponType::two_handed);
     assert(newWeapon.getSlots()==2);
+    assert(newWeapon==newWeapon);
 
     Armor nullArmor=Armor();
     assert(nullArmor.getNumOfEffects()==0);
@@ -93,11 +93,12 @@ void runTestForEquipment(){
     assert(nullArmor.getDefense()==0);
     assert(nullArmor.getGearScore()==0);
 
-    Armor newArmor=Armor(ArmorType::Leather,200);
+    Armor newArmor=Armor("Weightless vest",ArmorType::Leather,200);
     assert(newArmor.getNumOfEffects()==0);
     assert(newArmor.getArmorType()==ArmorType::Leather);
     assert(newArmor.getDefense()==200);
     assert(newArmor.getGearScore()==0);
+    assert(newArmor.getName()=="Weightless vest");
     newArmor.addEffect("Wall",300);
     assert(newArmor.getNumOfEffects()==1);
     assert(newArmor.getGearScore()==300);
@@ -106,13 +107,74 @@ void runTestForEquipment(){
     assert(newArmor.getGearScore()==350);
     newArmor.changeType(ArmorType::Mail);
     assert(newArmor.getArmorType()==ArmorType::Mail);
+    assert(newArmor==newArmor);
+
+    Equipment<Armor> nullArmorChest=Equipment<Armor>();
+    assert(nullArmorChest.isEquipmentEmpty()==true);
+    assert(nullArmorChest.isEquipmentFull()==false);
+    assert(nullArmorChest.numOfFullSlots()==0);
+
+    Equipment<Weapon > nullWeaponChest=Equipment<Weapon>();
+    assert(nullWeaponChest.isEquipmentEmpty()==true);
+    assert(nullWeaponChest.isEquipmentFull()==false);
+    assert(nullWeaponChest.numOfFullSlots()==0);
+
+    Equipment<Armor> armorChest=Equipment<Armor>();
+    armorChest.addToEquipment(nullArmor);
+    armorChest.addToEquipment(newArmor);
+    assert(armorChest.isEquipmentEmpty()== false);
+    assert(armorChest.isEquipmentFull()==false);
+    assert(armorChest.numOfFullSlots()==1);
+    assert(armorChest.theBestEquipment()==newArmor);
+
+    Armor kirishima=Armor("Eijiro Kirishima",ArmorType::Leather,300);
+    kirishima.addEffect("Rock",400);
+    kirishima.addEffect("Love Katsuki Bakugou",600);
+    armorChest.addToEquipment(kirishima);
+    assert(armorChest.theBestEquipment()==kirishima);
+    assert(armorChest.numOfFullSlots()==2);
+    armorChest.removeFromEquipment(newArmor);
+    assert(armorChest.numOfFullSlots()==1);
+
+    assert(kirishima!=newArmor);
+
+    Equipment<Weapon> weaponChest=Equipment<Weapon>();
+    weaponChest.addToEquipment(nullWeapon);
+    weaponChest.addToEquipment(newWeapon);
+    weaponChest.addToEquipment(newWeapon);
+
+    assert(weaponChest.isEquipmentEmpty()== false);
+    assert(weaponChest.isEquipmentFull()==false);
+    assert(weaponChest.numOfFullSlots()==4);
+    assert(weaponChest.theBestEquipment()==newWeapon);
+
+    weaponChest.removeFromEquipment(newWeapon);
+    assert(weaponChest.numOfFullSlots()==0);
+
+    unsigned int dam[]={100,350};
+    Weapon wire=Weapon("Wire of death", WeaponType::two_handed, WeaponForm::garroteWire, dam);
+    weaponChest.addToEquipment(wire);
+    dam[0]=200;
+    dam[1]=400;
+    Weapon artur=Weapon("Artur's sword", WeaponType::one_handed, WeaponForm::sword, dam);
+    weaponChest.addToEquipment(artur);
+    assert(weaponChest.numOfFullSlots()==3);
+    assert(weaponChest.theBestEquipment()==wire);
+
+
+    assert(weaponChest!=nullWeaponChest);
+    assert(weaponChest==weaponChest);
+
+    assert(armorChest!=nullArmorChest);
+    assert(armorChest==armorChest);
+
 
 }
 
 int main() {
 
-    //runTestForBackpack();
+   //runTestForBackpack();
     runTestForEquipment();
-    cout << "End" <<endl;
+    cout << "End Successfully" <<endl;
     return 0;
 }

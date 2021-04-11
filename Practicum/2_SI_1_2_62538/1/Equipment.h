@@ -13,17 +13,22 @@ using namespace std;
 template<typename E>
 class Equipment {
 private:
-    vector<E> slots;
     const unsigned short maxSlots=24;
     unsigned short fullSlots;
+    vector<E> slots;
+
+    //bool isEven(int k, E _sth);
 public:
     Equipment();
-    bool isFull();
-    bool isEmpty();
+    bool isEquipmentFull();
+    bool isEquipmentEmpty();
     void Empty();
     unsigned short numOfFullSlots();
     int addToEquipment(E _sth);
     int removeFromEquipment(E _sth);
+    E theBestEquipment();
+    friend bool operator!=(const Equipment<E>& lhs, const Equipment<E>& rhs );
+    friend bool operator==(const Equipment<E>& lhs, const Equipment<E>& rhs );
 };
 
 
