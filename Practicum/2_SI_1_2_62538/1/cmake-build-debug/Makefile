@@ -181,6 +181,33 @@ Backpack.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Backpack.cpp.s
 .PHONY : Backpack.cpp.s
 
+Equipment.obj: Equipment.cpp.obj
+
+.PHONY : Equipment.obj
+
+# target to build an object file
+Equipment.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Equipment.cpp.obj
+.PHONY : Equipment.cpp.obj
+
+Equipment.i: Equipment.cpp.i
+
+.PHONY : Equipment.i
+
+# target to preprocess a source file
+Equipment.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Equipment.cpp.i
+.PHONY : Equipment.cpp.i
+
+Equipment.s: Equipment.cpp.s
+
+.PHONY : Equipment.s
+
+# target to generate assembly for a file
+Equipment.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Equipment.cpp.s
+.PHONY : Equipment.cpp.s
+
 Materials.obj: Materials.cpp.obj
 
 .PHONY : Materials.obj
@@ -304,6 +331,9 @@ help:
 	@echo ... Backpack.obj
 	@echo ... Backpack.i
 	@echo ... Backpack.s
+	@echo ... Equipment.obj
+	@echo ... Equipment.i
+	@echo ... Equipment.s
 	@echo ... Materials.obj
 	@echo ... Materials.i
 	@echo ... Materials.s
