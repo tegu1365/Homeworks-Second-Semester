@@ -40,6 +40,10 @@ template<>
 unsigned short Backpack<Materials>::numOfFullSlots() {
     return fullSlots;
 }
+template<>
+unsigned short Backpack<Money>::numOfFullSlots() {
+    return 0;
+}
 
 template<typename B>
 int Backpack<B>::removeFromBackpack(B _sth) {
@@ -49,6 +53,40 @@ int Backpack<B>::removeFromBackpack(B _sth) {
 template<typename B>
 int Backpack<B>::addToBackpack(B _sth) {
     return 0;
+}
+
+template<>
+Backpack<Money> &Backpack<Money>::operator=(const Backpack<Money> &other) {
+    if (this != &other) {
+        this->fullSlots = other.fullSlots;
+        this->maxSlots = other.maxSlots;
+        this->slots[0] = other.slots[0];
+    }
+    return *this;
+}
+
+ostream &operator<<(ostream &out, Backpack<Money> &rhs) {
+    out<<"Has "<<rhs.slots[0]<<"\n______________________________________\n";
+    return out;
+}
+
+ostream &operator<<(ostream &out, Backpack<Materials> &rhs) {
+    out<<"Has "<<rhs.fullSlots<<"slots with Materials:\n";
+    for(int i=0;i<rhs.fullSlots;i++) {
+        out << i << "______________________________\n" << rhs.slots[i] << "\n";
+    }
+    out<<"______________________________________\n";
+    return out;
+}
+
+template<>
+Backpack<Materials> &Backpack<Materials>::operator=(const Backpack<Materials> &other) {
+    if (this != &other) {
+        this->fullSlots = other.fullSlots;
+        this->maxSlots = other.maxSlots;
+        this->slots = other.slots;
+    }
+    return *this;
 }
 
 template<>
@@ -153,7 +191,7 @@ int Backpack<Materials>::removeFromBackpack(Materials _sth) {
                 currentQuantity += slots[i].getQuantity();
                 slots.erase(slots.begin() + i);
                 fullSlots--;
-                i=0;
+                i = 0;
             }
         }
 

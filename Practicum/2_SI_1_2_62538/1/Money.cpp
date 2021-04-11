@@ -42,11 +42,20 @@ void Money::addBronze(unsigned int coins) {
     addMoney(coins);
 }
 
-void Money::print() {
-    cout<<"Money: "<< this->getGoldCoins()<<"g. "<<this->getSilverCoins()<<"s. "<<this->getBronzeCoins()<<"br. \n";
-}
 
 void Money::removeMoney(unsigned int coins) {
     numOfMoney-=coins;
+}
+
+Money &Money::operator=(const Money &other) {
+    if(this != &other){
+        this->numOfMoney=other.numOfMoney;
+    }
+    return *this;
+}
+
+ostream &operator<<(ostream &out, Money &rhs) {
+    out<<"Money: "<<rhs.getGoldCoins()<<"g. "<<rhs.getSilverCoins()<<"s. "<<rhs.getBronzeCoins()<<"br. \n";
+    return out;
 }
 

@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -55,6 +56,9 @@ public:
     int getSlots();
     friend bool operator==(const Armor& _lhs,const Armor& _rhs);
     friend bool operator!=(const Armor& _lhs,const Armor& _rhs);
+    Armor& operator&(const Armor& other);
+    friend ostream& operator<<(ostream& out,  Armor& rhs);
+
 };
 
 

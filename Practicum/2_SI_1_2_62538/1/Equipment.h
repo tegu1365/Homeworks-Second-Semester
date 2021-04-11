@@ -13,7 +13,7 @@ using namespace std;
 template<typename E>
 class Equipment {
 private:
-    const unsigned short maxSlots=24;
+    unsigned short maxSlots=24;
     unsigned short fullSlots;
     vector<E> slots;
 
@@ -29,6 +29,8 @@ public:
     E theBestEquipment();
     friend bool operator!=(const Equipment<E>& lhs, const Equipment<E>& rhs );
     friend bool operator==(const Equipment<E>& lhs, const Equipment<E>& rhs );
+    Equipment<E>& operator=(const Equipment<E>& other);
+    friend ostream& operator<<(ostream& out,  Equipment<E>& rhs);
 };
 
 

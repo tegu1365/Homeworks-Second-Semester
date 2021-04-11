@@ -22,7 +22,10 @@ public:
     void addGold(unsigned int coins);
     void addBronze(unsigned int coins);
     void removeMoney(unsigned int coins);
-    void print();
+
+    Money& operator=(const Money& other);
+
+    friend ostream& operator<<(ostream& out,  Money& rhs);
 };
 
 

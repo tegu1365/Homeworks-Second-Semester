@@ -14,6 +14,15 @@ CMakeFiles\1.dir\Equipment.cpp.obj: ..\Equipment.cpp
 CMakeFiles\1.dir\Equipment.cpp.obj: ..\Equipment.h
 CMakeFiles\1.dir\Equipment.cpp.obj: ..\Weapon.h
 
+CMakeFiles\1.dir\Inventory.cpp.obj: ..\Armor.h
+CMakeFiles\1.dir\Inventory.cpp.obj: ..\Backpack.h
+CMakeFiles\1.dir\Inventory.cpp.obj: ..\Equipment.h
+CMakeFiles\1.dir\Inventory.cpp.obj: ..\Inventory.cpp
+CMakeFiles\1.dir\Inventory.cpp.obj: ..\Inventory.h
+CMakeFiles\1.dir\Inventory.cpp.obj: ..\Materials.h
+CMakeFiles\1.dir\Inventory.cpp.obj: ..\Money.h
+CMakeFiles\1.dir\Inventory.cpp.obj: ..\Weapon.h
+
 CMakeFiles\1.dir\Materials.cpp.obj: ..\Materials.cpp
 CMakeFiles\1.dir\Materials.cpp.obj: ..\Materials.h
 
@@ -26,6 +35,7 @@ CMakeFiles\1.dir\Weapon.cpp.obj: ..\Weapon.h
 CMakeFiles\1.dir\main.cpp.obj: ..\Armor.h
 CMakeFiles\1.dir\main.cpp.obj: ..\Backpack.h
 CMakeFiles\1.dir\main.cpp.obj: ..\Equipment.h
+CMakeFiles\1.dir\main.cpp.obj: ..\Inventory.h
 CMakeFiles\1.dir\main.cpp.obj: ..\Materials.h
 CMakeFiles\1.dir\main.cpp.obj: ..\Money.h
 CMakeFiles\1.dir\main.cpp.obj: ..\Weapon.h

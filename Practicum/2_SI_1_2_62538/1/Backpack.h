@@ -25,6 +25,9 @@ public:
     unsigned short numOfFullSlots();
     int addToBackpack(B _sth);
     int removeFromBackpack(B _sth);
+    Backpack<B>& operator=(const Backpack<B>& other);
+    friend ostream& operator<<(ostream& out,  Backpack<B>& rhs);
+
 };
 
 

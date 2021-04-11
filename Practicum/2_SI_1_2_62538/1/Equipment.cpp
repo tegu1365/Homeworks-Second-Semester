@@ -143,7 +143,7 @@ Weapon Equipment<Weapon>::theBestEquipment() {
 }
 
 bool operator==(const Equipment<Weapon> &lhs, const Equipment<Weapon> &rhs) {
-    if(lhs.fullSlots==rhs.fullSlots){
+    /*if(lhs.fullSlots==rhs.fullSlots){
         for(int i=0;i<lhs.fullSlots;i++){
             if(lhs.slots[i]!=rhs.slots[i]){
                 return false;
@@ -151,27 +151,94 @@ bool operator==(const Equipment<Weapon> &lhs, const Equipment<Weapon> &rhs) {
         }
         return true;
     }
-    return false;
+    return false;*/
+    double lhs_weaponScore = 0;
+    for (int i = 0; i < lhs.fullSlots; i++) {
+        Weapon current = lhs.slots[i];
+        lhs_weaponScore += current.getWeaponScore();
+    }
+
+    double rhs_weaponScore = 0;
+    for (int i = 0; i < rhs.fullSlots; i++) {
+        Weapon current = rhs.slots[i];
+        rhs_weaponScore += current.getWeaponScore();
+    }
+
+    return (lhs_weaponScore == rhs_weaponScore);
+
+
 }
 
 bool operator!=(const Equipment<Weapon> &lhs, const Equipment<Weapon> &rhs) {
-    return !(lhs==rhs);
+    return !(lhs == rhs);
+}
+
+
+template<>
+Equipment<Weapon> &Equipment<Weapon>::operator=(const Equipment<Weapon> &other) {
+    if (this != &other) {
+        this->fullSlots = other.fullSlots;
+        this->slots = other.slots;
+    }
+    return *this;
+}
+
+ostream &operator<<(ostream &out, Equipment<Weapon> &rhs) {
+    out<<"Has "<<rhs.fullSlots<<" Weapons: \n";
+    for (int i = 0; i < rhs.fullSlots; i++) {
+       out<<i<<"_______________________________\n"<<rhs.slots[i];
+    }
+    out<<"_______________________________________\n";
+    return out;
+}
+
+ostream &operator<<(ostream &out, Equipment<Armor> &rhs) {
+    out<<"Has "<<rhs.fullSlots<<" Armors: \n";
+    for (int i = 0; i < rhs.fullSlots; i++) {
+        out<<i<<"_______________________________\n"<<rhs.slots[i];
+    }
+    out<<"_______________________________________\n";
+    return out;
+}
+
+template<>
+Equipment<Armor> &Equipment<Armor>::operator=(const Equipment<Armor> &other) {
+    if (this != &other) {
+        this->fullSlots = other.fullSlots;
+        this->slots = other.slots;
+    }
+    return *this;
 }
 
 bool operator==(const Equipment<Armor> &lhs, const Equipment<Armor> &rhs) {
-    if(lhs.fullSlots==rhs.fullSlots){
-        for(int i=0;i<lhs.fullSlots;i++){
-            if(lhs.slots[i]!=rhs.slots[i]){
+    //the comment is where every item needs to be the same
+ /*   if (lhs.fullSlots == rhs.fullSlots) {
+        for (int i = 0; i < lhs.fullSlots; i++) {
+            if (lhs.slots[i] != rhs.slots[i]) {
                 return false;
             }
         }
         return true;
     }
-    return false;
+    return false;*/
+
+    double lhs_GearScore = 0;
+    for (int i = 0; i < lhs.fullSlots; i++) {
+        Armor current = lhs.slots[i];
+        lhs_GearScore += current.getGearScore();
+    }
+
+    double rhs_GearScore = 0;
+    for (int i = 0; i < rhs.fullSlots; i++) {
+        Armor current = rhs.slots[i];
+        rhs_GearScore += current.getGearScore();
+    }
+
+    return (lhs_GearScore == rhs_GearScore);
 }
 
 bool operator!=(const Equipment<Armor> &lhs, const Equipment<Armor> &rhs) {
-    return !(lhs==rhs);
+    return !(lhs == rhs);
 }
 
 template<>

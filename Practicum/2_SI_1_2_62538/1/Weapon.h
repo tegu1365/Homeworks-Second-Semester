@@ -6,6 +6,7 @@
 #define INC_1_WEAPON_H
 #include <string>
 #include <vector>
+#include <iostream>
 using namespace std;
 
 enum WeaponType{//=numOfSlots
@@ -65,6 +66,9 @@ public:
 
     friend bool operator==(const Weapon &_lhs, const Weapon &_rhs);
     friend bool operator!=(const Weapon &_lhs, const Weapon &_rhs);
+    Weapon& operator=(const Weapon& other);
+
+    friend ostream& operator<<(ostream& out, const Weapon& rhs);
 
 };
 

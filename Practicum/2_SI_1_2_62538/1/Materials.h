@@ -4,7 +4,8 @@
 
 #ifndef INC_1_MATERIALS_H
 #define INC_1_MATERIALS_H
-
+#include <iostream>
+using namespace std;
 enum MaterialType{
     herbs,
     ores ,
@@ -26,6 +27,9 @@ public:
     unsigned short getQuantity();
     void removeMaterial(unsigned short _quantity);
     void addMaterial(unsigned short q);
+
+    Materials& operator=(const Materials& other);
+    friend ostream& operator<<(ostream& out,  Materials& rhs);
 };
 
 

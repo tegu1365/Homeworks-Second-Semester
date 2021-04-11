@@ -2,8 +2,7 @@
 #include <iostream>
 
 
-#include "Backpack.h"
-#include "Equipment.h"
+#include "Inventory.h"
 using namespace std;
 
 
@@ -38,6 +37,7 @@ void runTestForBackpack(){
     assert(moneyPoch.addToBackpack(money)==1);
     assert(moneyPoch.numOfFullSlots()==1);
     assert(moneyPoch.removeFromBackpack(Money(23))==1);
+    //Inventory<Backpack<Money>> forMoneyPoch=Inventory<Backpack<Money>>(moneyPoch);
 
     Backpack<Materials> backpackMat=Backpack<Materials>();
     assert(backpackMat.isFull()==false);
@@ -171,10 +171,15 @@ void runTestForEquipment(){
 
 }
 
+void runTestForInventory(){
+    Inventory<Backpack<Money>> money=Inventory<Backpack<Money>>();
+
+}
 int main() {
 
-   //runTestForBackpack();
+    runTestForBackpack();
     runTestForEquipment();
+    runTestForInventory();
     cout << "End Successfully" <<endl;
     return 0;
 }

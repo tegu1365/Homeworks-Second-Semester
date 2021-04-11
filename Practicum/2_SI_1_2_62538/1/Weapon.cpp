@@ -216,5 +216,67 @@ bool operator!=(const Weapon &_lhs, const Weapon &_rhs) {
     return !(_lhs==_rhs);
 }
 
+Weapon &Weapon::operator=(const Weapon &other) {
+    if(this != &other){
+        this->type=other.type;
+        this->form=other.form;
+        this->hitDamage[0]=other.hitDamage[0];
+        this->hitDamage[1]=other.hitDamage[1];
+        this->numOfEffects=other.numOfEffects;
+        this->effect=other.effect;
+        this->name=other.name;
+        this->weaponScore=other.weaponScore;
+    }
+    return *this;
+}
+
+ostream &operator<<(ostream &out,const Weapon &rhs) {
+    string _type="";
+    string _form="";
+    switch(rhs.type){
+        case one_handed:
+            _type="one handed";
+            break;
+        case two_handed:
+            _type="two handed";
+            break;
+    }
+    switch(rhs.form){
+        case axe:
+            _form="axe";
+            break;
+        case sword:
+            _form="sword";
+            break;
+        case dagger:
+            _form="dagger";
+            break;
+        case mace:
+            _form="mace";
+            break;
+        case staff:
+            _form="staff";
+            break;
+        case lance:
+            _form="lance";
+            break;
+            case bow:
+                _form="bow";
+            break;
+        case garroteWire:
+            _form="Garrote Wire";
+            break;
+    }
+
+    out << rhs.name << "\nType:" << _type << "\nForm: " << _form<<"\n Hit Damage between "
+    <<rhs.hitDamage[0]<<" and "<<rhs.hitDamage[1]<<" EXP\n EFFECTS: \n";
+    for(int i=0;i<rhs.numOfEffects;i++){
+       out<<i<<". "<<rhs.effect[i].first << " with power " << rhs.effect[i].second<<" EXP\n";
+    }
+    out<<"TOTAL WEAPON SCORE:"<<rhs.weaponScore<<"\n";
+
+    return out;
+}
+
 
 

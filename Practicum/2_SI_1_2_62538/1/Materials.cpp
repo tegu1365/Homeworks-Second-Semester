@@ -48,3 +48,32 @@ void Materials::removeMaterial(unsigned short _quantity) {
         quantity-=_quantity;
     }
 }
+
+Materials &Materials::operator=(const Materials &other) {
+    if(this != &other){
+       this->type=other.type;
+       this->quantity=other.quantity;
+       this->quantityPerSlot=other.quantityPerSlot;
+    }
+    return *this;
+}
+
+ostream &operator<<(ostream &out, Materials &rhs) {
+    string _type="";
+    switch (rhs.type) {
+        case cloth:
+            _type="cloth";
+            break;
+        case ores:
+            _type="ores";
+            break;
+        case herbs:
+            _type="herbs";
+            break;
+        case essence:
+            _type="essence";
+            break;
+    }
+    out<<_type<<"\n Quantity: "<<rhs.quantity<<"/"<<rhs.getQuantityPerSlot()<<"\n";
+    return out;
+}

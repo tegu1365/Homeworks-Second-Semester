@@ -208,6 +208,33 @@ Equipment.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Equipment.cpp.s
 .PHONY : Equipment.cpp.s
 
+Inventory.obj: Inventory.cpp.obj
+
+.PHONY : Inventory.obj
+
+# target to build an object file
+Inventory.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Inventory.cpp.obj
+.PHONY : Inventory.cpp.obj
+
+Inventory.i: Inventory.cpp.i
+
+.PHONY : Inventory.i
+
+# target to preprocess a source file
+Inventory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Inventory.cpp.i
+.PHONY : Inventory.cpp.i
+
+Inventory.s: Inventory.cpp.s
+
+.PHONY : Inventory.s
+
+# target to generate assembly for a file
+Inventory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Inventory.cpp.s
+.PHONY : Inventory.cpp.s
+
 Materials.obj: Materials.cpp.obj
 
 .PHONY : Materials.obj
@@ -334,6 +361,9 @@ help:
 	@echo ... Equipment.obj
 	@echo ... Equipment.i
 	@echo ... Equipment.s
+	@echo ... Inventory.obj
+	@echo ... Inventory.i
+	@echo ... Inventory.s
 	@echo ... Materials.obj
 	@echo ... Materials.i
 	@echo ... Materials.s
