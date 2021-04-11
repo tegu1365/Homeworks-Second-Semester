@@ -1,6 +1,13 @@
-//
-// Created by Tegu on 11.4.2021 г..
-//
+/**
+*	Solution to homework assignment 2
+*	Object Oriented Programming Course
+*	Faculty of Mathematics and Informatics of Sofia University
+*	Summer semester 2020/2021 *
+*	@author Teodora Petkova
+*	@idnumber 62538
+*	@task 1
+*	@compiler VC
+*/
 
 #ifndef INC_1_EQUIPMENT_H
 #define INC_1_EQUIPMENT_H
