@@ -36,6 +36,9 @@ void runTest(){
     Vector4D k=Vector4D();
     k=-b;
     assert(k==Vector4D(-1,-2,-3,-4));
+    assert(k<b);
+    assert((k<Vector4D(-1,-2,-3,-4))== false);
+
 }
 
 int main() {
