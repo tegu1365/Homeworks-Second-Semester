@@ -6,8 +6,14 @@
 #define INC_1_ERROR_HPP
 
 
-class Error {
-
+#include <string>
+using  namespace std;
+class Error{
+private:
+    string message;
+public:
+    Error(const string& message = "");
+    string get_message() const;
 };
 
 
