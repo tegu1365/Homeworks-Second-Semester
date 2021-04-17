@@ -2,7 +2,7 @@
 // Created by Tegu on 17.4.2021 г..
 //
 
-#include "Vector4D.h"
+#include "Vector4D.hpp"
 
 Vector4D::Vector4D() {
     a = 0;

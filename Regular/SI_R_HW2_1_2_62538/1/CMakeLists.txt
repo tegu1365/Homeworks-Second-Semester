@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
-project(3)
+project(1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(3 main.cpp Vector4D.cpp Vector4D.hpp)
+add_executable(1 main.cpp Error.cpp Error.hpp)

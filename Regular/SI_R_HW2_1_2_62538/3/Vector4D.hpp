@@ -2,8 +2,8 @@
 // Created by Tegu on 17.4.2021 г..
 //
 
-#ifndef INC_3_VECTOR4D_H
-#define INC_3_VECTOR4D_H
+#ifndef INC_3_VECTOR4D_HPP
+#define INC_3_VECTOR4D_HPP
 
 
 class Vector4D {
@@ -34,4 +34,4 @@ public:
     Vector4D& operator=(const Vector4D& _sth);};
 
 
-#endif //INC_3_VECTOR4D_H
+#endif //INC_3_VECTOR4D_HPP
