@@ -188,6 +188,7 @@ void runTestForInventory(){
     assert(moneyNew==moneyNull);
     moneyNull.getInventory().addToBackpack(Money(1234));
     assert(moneyNull.getInventory().isFull()==0);
+   // cout<<moneyNew;
 
     Armor newArmor=Armor("Weightless vest",ArmorType::Leather,200);
     Equipment<Armor> armorChest=Equipment<Armor>();
@@ -201,9 +202,10 @@ void runTestForInventory(){
     Inventory<Equipment<Armor>> armorEqu1=Inventory<Equipment<Armor>>(armorChest);
     assert(armorEqu.getInventory().theBestEquipment()==kirishima);
     assert(armorEqu!=armorEqu1);
+
+    //cout<<armorEqu;
 }
 int main() {
-
     runTestForBackpack();
     runTestForEquipment();
     runTestForInventory();
