@@ -90,99 +90,103 @@ Vector4D &Vector4D::operator/=(const Vector4D &_rhs) {
     this->b /= _rhs.b;
     this->c /= _rhs.c;
     this->d /= _rhs.d;
-    return *this;}
+    return *this;
+}
 
 bool operator==(const Vector4D &_lhs, const Vector4D &_rhs) {
     return (_lhs.a == _rhs.a && _lhs.b == _rhs.b && _lhs.c == _rhs.c && _lhs.d == _rhs.d);
 }
 
 bool operator!=(const Vector4D &_lhs, const Vector4D &_rhs) {
-    return !(_lhs==_rhs);
+    return !(_lhs == _rhs);
 }
 
 bool operator>(const Vector4D &_lhs, const Vector4D &_rhs) {
-    if(_lhs.a!=_rhs.a){
-        if(_lhs.a>_rhs.a){
+    if (_lhs == _rhs) { return false; }
+    if (_lhs.a != _rhs.a) {
+        if (_lhs.a > _rhs.a) {
             return true;
-        } else{
+        } else {
             return false;
         }
     }
-    if(_lhs.b!=_rhs.b){
-        if(_lhs.b>_rhs.b){
+    if (_lhs.b != _rhs.b) {
+        if (_lhs.b > _rhs.b) {
             return true;
-        } else{
+        } else {
             return false;
         }
     }
-    if(_lhs.c!=_rhs.c){
-        if(_lhs.c>_rhs.c){
+    if (_lhs.c != _rhs.c) {
+        if (_lhs.c > _rhs.c) {
             return true;
-        } else{
+        } else {
             return false;
         }
     }
-    if(_lhs.d!=_rhs.d){
-        if(_lhs.d>_rhs.d){
+    if (_lhs.d != _rhs.d) {
+        if (_lhs.d > _rhs.d) {
             return true;
-        } else{
+        } else {
             return false;
         }
     }
 }
 
 bool operator<(const Vector4D &_lhs, const Vector4D &_rhs) {
-    if(_lhs.a!=_rhs.a){
-        if(_lhs.a<_rhs.a){
+    if (_lhs == _rhs) { return false; }
+    if (_lhs.a != _rhs.a) {
+        if (_lhs.a < _rhs.a) {
             return true;
-        } else{
+        } else {
             return false;
         }
     }
-    if(_lhs.b!=_rhs.b){
-        if(_lhs.b<_rhs.b){
+    if (_lhs.b != _rhs.b) {
+        if (_lhs.b < _rhs.b) {
             return true;
-        } else{
+        } else {
             return false;
         }
     }
-    if(_lhs.c!=_rhs.c){
-        if(_lhs.c<_rhs.c){
+    if (_lhs.c != _rhs.c) {
+        if (_lhs.c < _rhs.c) {
             return true;
-        } else{
+        } else {
             return false;
         }
     }
-    if(_lhs.d!=_rhs.d){
-        if(_lhs.d<_rhs.d){
+    if (_lhs.d != _rhs.d) {
+        if (_lhs.d < _rhs.d) {
             return true;
-        } else{
+        } else {
             return false;
         }
-    }}
+    }
+}
 
 bool operator>=(const Vector4D &_lhs, const Vector4D &_rhs) {
-    return (_lhs>_rhs||_lhs==_rhs);
+    return (_lhs > _rhs || _lhs == _rhs);
 }
 
 bool operator<=(const Vector4D &_lhs, const Vector4D &_rhs) {
-    return (_lhs<_rhs||_lhs==_rhs);
+    return (_lhs < _rhs || _lhs == _rhs);
 }
 
 bool operator!(const Vector4D &_sth) {
-    return _sth==Vector4D(0,0,0,0);
+    return _sth == Vector4D(0, 0, 0, 0);
 }
 
 Vector4D operator-(const Vector4D &_rhs) {
-    return Vector4D(-_rhs.a,-_rhs.b,-_rhs.c,-_rhs.d);
+    return Vector4D(-_rhs.a, -_rhs.b, -_rhs.c, -_rhs.d);
 }
 
 Vector4D &Vector4D::operator=(const Vector4D &_sth) {
-    if(this != &_sth){
-        this->a=_sth.a;
-        this->b=_sth.b;
-        this->c=_sth.c;
-        this->d=_sth.d;
+    if (this != &_sth) {
+        this->a = _sth.a;
+        this->b = _sth.b;
+        this->c = _sth.c;
+        this->d = _sth.d;
     }
     return *this;
 }
