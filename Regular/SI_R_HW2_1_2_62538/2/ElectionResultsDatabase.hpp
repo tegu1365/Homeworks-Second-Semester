@@ -4,12 +4,14 @@
 
 #ifndef INC_2_ELECTIONRESULTSDATABASE_HPP
 #define INC_2_ELECTIONRESULTSDATABASE_HPP
+
 #include <vector>
 #include <iostream>
 #include <fstream>
+
 #include "SectionVotes.hpp"
 
-using  namespace std;
+using namespace std;
 
 class ElectionResultsDatabase {
 private:
