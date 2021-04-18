@@ -55,16 +55,14 @@ ostream &operator<<(ostream &out, const ElectionResultsDatabase &rhs) {
 }
 
 istream &operator>>(istream &in, ElectionResultsDatabase &rhs) {
-    int i=rhs.numOfSections+1;
-    int a,b,c;
-    while(in>>a>>b>>c) {
-        rhs.sections.push_back(SectionVotes(a,b,c));
-        rhs.totalVotesForParty1+=a;
-        rhs.totalVotesForParty2+=b;
-        rhs.totalVotesForParty3+=c;
-        i++;
+    SectionVotes a=SectionVotes();
+    while(in>>a){
+        rhs.sections.push_back(a);
+        rhs.numOfSections++;
+        rhs.totalVotesForParty1+=a.votesForParty(PARTY1);
+        rhs.totalVotesForParty2+=a.votesForParty(PARTY2);
+        rhs.totalVotesForParty3+=a.votesForParty(PARTY3);
     }
-    rhs.numOfSections=i;
     return in;
 }
 
