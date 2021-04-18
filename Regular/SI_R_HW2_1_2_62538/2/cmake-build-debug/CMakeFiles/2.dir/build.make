@@ -80,17 +80,59 @@ CMakeFiles\2.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\2.dir\main.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW2_1_2_62538\2\main.cpp
 <<
 
+CMakeFiles\2.dir\SectionVotes.cpp.obj: CMakeFiles\2.dir\flags.make
+CMakeFiles\2.dir\SectionVotes.cpp.obj: ..\SectionVotes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW2_1_2_62538\2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/2.dir/SectionVotes.cpp.obj"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\2.dir\SectionVotes.cpp.obj /FdCMakeFiles\2.dir\ /FS -c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW2_1_2_62538\2\SectionVotes.cpp
+<<
+
+CMakeFiles\2.dir\SectionVotes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2.dir/SectionVotes.cpp.i"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\2.dir\SectionVotes.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW2_1_2_62538\2\SectionVotes.cpp
+<<
+
+CMakeFiles\2.dir\SectionVotes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2.dir/SectionVotes.cpp.s"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\2.dir\SectionVotes.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW2_1_2_62538\2\SectionVotes.cpp
+<<
+
+CMakeFiles\2.dir\ElectionResultsDatabase.cpp.obj: CMakeFiles\2.dir\flags.make
+CMakeFiles\2.dir\ElectionResultsDatabase.cpp.obj: ..\ElectionResultsDatabase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW2_1_2_62538\2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/2.dir/ElectionResultsDatabase.cpp.obj"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\2.dir\ElectionResultsDatabase.cpp.obj /FdCMakeFiles\2.dir\ /FS -c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW2_1_2_62538\2\ElectionResultsDatabase.cpp
+<<
+
+CMakeFiles\2.dir\ElectionResultsDatabase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2.dir/ElectionResultsDatabase.cpp.i"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\2.dir\ElectionResultsDatabase.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW2_1_2_62538\2\ElectionResultsDatabase.cpp
+<<
+
+CMakeFiles\2.dir\ElectionResultsDatabase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2.dir/ElectionResultsDatabase.cpp.s"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\2.dir\ElectionResultsDatabase.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW2_1_2_62538\2\ElectionResultsDatabase.cpp
+<<
+
 # Object files for target 2
 2_OBJECTS = \
-"CMakeFiles\2.dir\main.cpp.obj"
+"CMakeFiles\2.dir\main.cpp.obj" \
+"CMakeFiles\2.dir\SectionVotes.cpp.obj" \
+"CMakeFiles\2.dir\ElectionResultsDatabase.cpp.obj"
 
 # External object files for target 2
 2_EXTERNAL_OBJECTS =
 
 2.exe: CMakeFiles\2.dir\main.cpp.obj
+2.exe: CMakeFiles\2.dir\SectionVotes.cpp.obj
+2.exe: CMakeFiles\2.dir\ElectionResultsDatabase.cpp.obj
 2.exe: CMakeFiles\2.dir\build.make
 2.exe: CMakeFiles\2.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW2_1_2_62538\2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable 2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW2_1_2_62538\2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable 2.exe"
 	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\2.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\2.dir\objects1.rsp @<<
  /out:2.exe /implib:2.lib /pdb:C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Regular\SI_R_HW2_1_2_62538\2\cmake-build-debug\2.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

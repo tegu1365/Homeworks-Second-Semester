@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW2_1_2_62538/2/SectionVotes.hpp
+iostream
+-
+
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW2_1_2_62538/2/main.cpp
+iostream
+-
+assert.h
+-
+fstream
+-
+vector
+-
+SectionVotes.hpp
+C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW2_1_2_62538/2/SectionVotes.hpp
+

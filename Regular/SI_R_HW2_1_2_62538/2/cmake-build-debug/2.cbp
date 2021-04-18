@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW2_1_2_62538/2/ElectionResultsDatabase.cpp">
+			<Option target="2"/>
+		</Unit>
+		<Unit filename="C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW2_1_2_62538/2/ElectionResultsDatabase.hpp">
+			<Option target="2"/>
+		</Unit>
+		<Unit filename="C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW2_1_2_62538/2/SectionVotes.cpp">
+			<Option target="2"/>
+		</Unit>
+		<Unit filename="C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW2_1_2_62538/2/SectionVotes.hpp">
+			<Option target="2"/>
+		</Unit>
 		<Unit filename="C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Regular/SI_R_HW2_1_2_62538/2/main.cpp">
 			<Option target="2"/>
 		</Unit>

@@ -127,6 +127,60 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\build
 .PHONY : 2\fast
 
+ElectionResultsDatabase.obj: ElectionResultsDatabase.cpp.obj
+
+.PHONY : ElectionResultsDatabase.obj
+
+# target to build an object file
+ElectionResultsDatabase.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\ElectionResultsDatabase.cpp.obj
+.PHONY : ElectionResultsDatabase.cpp.obj
+
+ElectionResultsDatabase.i: ElectionResultsDatabase.cpp.i
+
+.PHONY : ElectionResultsDatabase.i
+
+# target to preprocess a source file
+ElectionResultsDatabase.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\ElectionResultsDatabase.cpp.i
+.PHONY : ElectionResultsDatabase.cpp.i
+
+ElectionResultsDatabase.s: ElectionResultsDatabase.cpp.s
+
+.PHONY : ElectionResultsDatabase.s
+
+# target to generate assembly for a file
+ElectionResultsDatabase.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\ElectionResultsDatabase.cpp.s
+.PHONY : ElectionResultsDatabase.cpp.s
+
+SectionVotes.obj: SectionVotes.cpp.obj
+
+.PHONY : SectionVotes.obj
+
+# target to build an object file
+SectionVotes.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\SectionVotes.cpp.obj
+.PHONY : SectionVotes.cpp.obj
+
+SectionVotes.i: SectionVotes.cpp.i
+
+.PHONY : SectionVotes.i
+
+# target to preprocess a source file
+SectionVotes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\SectionVotes.cpp.i
+.PHONY : SectionVotes.cpp.i
+
+SectionVotes.s: SectionVotes.cpp.s
+
+.PHONY : SectionVotes.s
+
+# target to generate assembly for a file
+SectionVotes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\2.dir\SectionVotes.cpp.s
+.PHONY : SectionVotes.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -163,6 +217,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... 2
+	@echo ... ElectionResultsDatabase.obj
+	@echo ... ElectionResultsDatabase.i
+	@echo ... ElectionResultsDatabase.s
+	@echo ... SectionVotes.obj
+	@echo ... SectionVotes.i
+	@echo ... SectionVotes.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
