@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/3_SI_1_2_62538/1/Card.cpp" "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/3_SI_1_2_62538/1/cmake-build-debug/CMakeFiles/1.dir/Card.cpp.obj"
+  "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/3_SI_1_2_62538/1/Deck.cpp" "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/3_SI_1_2_62538/1/cmake-build-debug/CMakeFiles/1.dir/Deck.cpp.obj"
   "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/3_SI_1_2_62538/1/MagicCard.cpp" "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/3_SI_1_2_62538/1/cmake-build-debug/CMakeFiles/1.dir/MagicCard.cpp.obj"
   "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/3_SI_1_2_62538/1/MonsterCard.cpp" "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/3_SI_1_2_62538/1/cmake-build-debug/CMakeFiles/1.dir/MonsterCard.cpp.obj"
   "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/3_SI_1_2_62538/1/PendulumCard.cpp" "C:/Users/Tegu/Desktop/Programming/Homeworks/Homeworks-Second-Semester/Practicum/3_SI_1_2_62538/1/cmake-build-debug/CMakeFiles/1.dir/PendulumCard.cpp.obj"

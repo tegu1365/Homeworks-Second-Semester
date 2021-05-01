@@ -15,6 +15,7 @@
 #include "MonsterCard.h"
 #include "MagicCard.h"
 #include "PendulumCard.h"
+#include "Deck.h"
 
 void Test() {
     MonsterCard m = MonsterCard("Backup Secretary",
@@ -50,6 +51,13 @@ void Test() {
     assert(pc.getName()._Equal("Timegazer Magician"));
     assert(p.toString()._Equal(
             "Speedroid Dominobutterfly|You cannot Pendulum Summon monsters, except WIND monsters. This effect cannot be negated.|100|300|8|SPELL"));
+
+    Deck deck=Deck("Deck 1");
+    deck.addMonsterCard(m);
+    deck.changeMonsterCard(k,1);
+    assert(deck.getNumberOfMonsterCards()==2);
+    deck.clear();
+    assert(deck.getNumberOfMonsterCards()==0);
 }
 
 int main() {

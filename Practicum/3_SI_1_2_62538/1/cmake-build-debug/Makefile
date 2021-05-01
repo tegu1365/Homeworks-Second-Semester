@@ -154,6 +154,33 @@ Card.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Card.cpp.s
 .PHONY : Card.cpp.s
 
+Deck.obj: Deck.cpp.obj
+
+.PHONY : Deck.obj
+
+# target to build an object file
+Deck.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Deck.cpp.obj
+.PHONY : Deck.cpp.obj
+
+Deck.i: Deck.cpp.i
+
+.PHONY : Deck.i
+
+# target to preprocess a source file
+Deck.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Deck.cpp.i
+.PHONY : Deck.cpp.i
+
+Deck.s: Deck.cpp.s
+
+.PHONY : Deck.s
+
+# target to generate assembly for a file
+Deck.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Deck.cpp.s
+.PHONY : Deck.cpp.s
+
 MagicCard.obj: MagicCard.cpp.obj
 
 .PHONY : MagicCard.obj
@@ -274,6 +301,9 @@ help:
 	@echo ... Card.obj
 	@echo ... Card.i
 	@echo ... Card.s
+	@echo ... Deck.obj
+	@echo ... Deck.i
+	@echo ... Deck.s
 	@echo ... MagicCard.obj
 	@echo ... MagicCard.i
 	@echo ... MagicCard.s

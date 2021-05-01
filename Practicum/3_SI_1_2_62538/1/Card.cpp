@@ -13,8 +13,8 @@
 #include "Card.h"
 
 Card::Card(const string name, const string effect) {
-    this->name=name;
-    this->effect=effect;
+    this->name = name;
+    this->effect = effect;
 }
 
 string Card::getName() const {
@@ -26,14 +26,14 @@ string Card::getEffect() const {
 }
 
 void Card::setName(const string name) {
-    this->name=name;
+    this->name = name;
 }
 
 void Card::setEffect(const string effect) {
-    this->effect=effect;
+    this->effect = effect;
 }
 
 string Card::toString() const {
-    string result=name+"|"+effect;
+    string result = name + "|" + effect;
     return result;
 }
