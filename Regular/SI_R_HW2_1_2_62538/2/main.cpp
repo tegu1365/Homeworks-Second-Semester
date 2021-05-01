@@ -21,20 +21,20 @@ int main() {
     runTest();
     std::cout << "End" << std::endl;
 //
-//    string filename = "text.txt";
-//    ifstream infile;
-//    infile.open(filename);
-//
-//    if (!infile.is_open()) {
-//        cerr << "Could not open the file - '" << filename << "'" << endl;
-//    }
-//
-//    int number;
-//    while (infile >> number) {
-//        cout << number << "; ";
-//    }
-//
-//    cout << endl;
-//    infile.close();
+    string filename = "text.txt";
+    ifstream infile;
+    infile.open(filename);
+
+    if (!infile.is_open()) {
+        cerr << "Could not open the file - '" << filename << "'" << endl;
+    }
+
+    int number;
+    while (infile >> number) {
+        cout << number << "; ";
+    }
+
+    cout << endl;
+    infile.close();
     return 0;
 }
