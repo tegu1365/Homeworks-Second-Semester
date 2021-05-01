@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/1.dir/Card.cpp.obj"
   "CMakeFiles/1.dir/MagicCard.cpp.obj"
   "CMakeFiles/1.dir/MonsterCard.cpp.obj"
+  "CMakeFiles/1.dir/PendulumCard.cpp.obj"
   "CMakeFiles/1.dir/main.cpp.obj"
 )
 

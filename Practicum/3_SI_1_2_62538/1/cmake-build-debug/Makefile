@@ -208,6 +208,33 @@ MonsterCard.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\MonsterCard.cpp.s
 .PHONY : MonsterCard.cpp.s
 
+PendulumCard.obj: PendulumCard.cpp.obj
+
+.PHONY : PendulumCard.obj
+
+# target to build an object file
+PendulumCard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\PendulumCard.cpp.obj
+.PHONY : PendulumCard.cpp.obj
+
+PendulumCard.i: PendulumCard.cpp.i
+
+.PHONY : PendulumCard.i
+
+# target to preprocess a source file
+PendulumCard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\PendulumCard.cpp.i
+.PHONY : PendulumCard.cpp.i
+
+PendulumCard.s: PendulumCard.cpp.s
+
+.PHONY : PendulumCard.s
+
+# target to generate assembly for a file
+PendulumCard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\PendulumCard.cpp.s
+.PHONY : PendulumCard.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -253,6 +280,9 @@ help:
 	@echo ... MonsterCard.obj
 	@echo ... MonsterCard.i
 	@echo ... MonsterCard.s
+	@echo ... PendulumCard.obj
+	@echo ... PendulumCard.i
+	@echo ... PendulumCard.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

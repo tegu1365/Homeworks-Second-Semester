@@ -12,8 +12,15 @@ CMakeFiles\1.dir\MonsterCard.cpp.obj: ..\Card.h
 CMakeFiles\1.dir\MonsterCard.cpp.obj: ..\MonsterCard.cpp
 CMakeFiles\1.dir\MonsterCard.cpp.obj: ..\MonsterCard.h
 
+CMakeFiles\1.dir\PendulumCard.cpp.obj: ..\Card.h
+CMakeFiles\1.dir\PendulumCard.cpp.obj: ..\MagicCard.h
+CMakeFiles\1.dir\PendulumCard.cpp.obj: ..\MonsterCard.h
+CMakeFiles\1.dir\PendulumCard.cpp.obj: ..\PendulumCard.cpp
+CMakeFiles\1.dir\PendulumCard.cpp.obj: ..\PendulumCard.h
+
 CMakeFiles\1.dir\main.cpp.obj: ..\Card.h
 CMakeFiles\1.dir\main.cpp.obj: ..\MagicCard.h
 CMakeFiles\1.dir\main.cpp.obj: ..\MonsterCard.h
+CMakeFiles\1.dir\main.cpp.obj: ..\PendulumCard.h
 CMakeFiles\1.dir\main.cpp.obj: ..\main.cpp
 

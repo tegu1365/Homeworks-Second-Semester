@@ -14,6 +14,7 @@
 #include <assert.h>
 #include "MonsterCard.h"
 #include "MagicCard.h"
+#include "PendulumCard.h"
 
 void Test() {
     MonsterCard m = MonsterCard("Backup Secretary",
@@ -37,6 +38,18 @@ void Test() {
     MagicCard mc = MagicCard("Swords of Revealing Light|Your opponent's monsters cannot declare an attack.|SPELL");
     assert(mc.getType() == Type::spell);
     assert(mc.toString()._Equal("Swords of Revealing Light|Your opponent's monsters cannot declare an attack.|SPELL"));
+
+    PendulumCard p = PendulumCard("Speedroid Dominobutterfly",
+                                  "You cannot Pendulum Summon monsters, except WIND monsters. This effect cannot be negated.",
+                                  100, 300, spell, 8);
+    assert(p.getScale() == 8);
+
+    PendulumCard pc = PendulumCard(
+            "Timegazer Magician|Your opponent cannot activate Trap Magic Cards|1200|600|8|SPELL");
+    assert(pc.getScale() == 8);
+    assert(pc.getName()._Equal("Timegazer Magician"));
+    assert(p.toString()._Equal(
+            "Speedroid Dominobutterfly|You cannot Pendulum Summon monsters, except WIND monsters. This effect cannot be negated.|100|300|8|SPELL"));
 }
 
 int main() {
