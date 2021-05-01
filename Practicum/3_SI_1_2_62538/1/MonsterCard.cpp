@@ -1,17 +1,17 @@
-//
-// Created by Tegu on 1.5.2021 г..
-//
+/**
+*	Solution to homework assignment 3
+*	Object Oriented Programming Course
+*	Faculty of Mathematics and Informatics of Sofia University
+*	Summer semester 2020/2021
+*
+*	@author Teodora Dimitrova Petkova
+*	@idnumber 62538
+*	@task 1
+*	@compiler VC
+*/
 
 #include "MonsterCard.h"
 #include <vector>
-
-int getSize(const char* str){
-    int i=0;
-    while(str[i]!='\0'){
-        i++;
-    }
-    return i;
-}
 
 MonsterCard::MonsterCard(const string name, const string effect, const unsigned int atk, const unsigned int def)
 :Card(name,effect) {
@@ -25,22 +25,6 @@ unsigned int MonsterCard::getATK() const {
 
 unsigned int MonsterCard::getDEF() const {
     return def;
-}
-
-string MonsterCard::getName() const {
-    return Card::getName();
-}
-
-string MonsterCard::getEffect() const {
-    return Card::getEffect();
-}
-
-void MonsterCard::setName(const string name) {
-    Card::setName(name);
-}
-
-void MonsterCard::setEffect(const string effect) {
-    Card::setEffect(effect);
 }
 
 void MonsterCard::setATK(const unsigned int atk) {

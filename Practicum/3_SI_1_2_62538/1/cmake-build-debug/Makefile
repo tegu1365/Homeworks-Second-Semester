@@ -154,6 +154,33 @@ Card.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Card.cpp.s
 .PHONY : Card.cpp.s
 
+MagicCard.obj: MagicCard.cpp.obj
+
+.PHONY : MagicCard.obj
+
+# target to build an object file
+MagicCard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\MagicCard.cpp.obj
+.PHONY : MagicCard.cpp.obj
+
+MagicCard.i: MagicCard.cpp.i
+
+.PHONY : MagicCard.i
+
+# target to preprocess a source file
+MagicCard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\MagicCard.cpp.i
+.PHONY : MagicCard.cpp.i
+
+MagicCard.s: MagicCard.cpp.s
+
+.PHONY : MagicCard.s
+
+# target to generate assembly for a file
+MagicCard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\MagicCard.cpp.s
+.PHONY : MagicCard.cpp.s
+
 MonsterCard.obj: MonsterCard.cpp.obj
 
 .PHONY : MonsterCard.obj
@@ -220,6 +247,9 @@ help:
 	@echo ... Card.obj
 	@echo ... Card.i
 	@echo ... Card.s
+	@echo ... MagicCard.obj
+	@echo ... MagicCard.i
+	@echo ... MagicCard.s
 	@echo ... MonsterCard.obj
 	@echo ... MonsterCard.i
 	@echo ... MonsterCard.s

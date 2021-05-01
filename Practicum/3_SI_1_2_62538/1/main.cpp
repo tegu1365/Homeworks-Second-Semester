@@ -11,18 +11,36 @@
 */
 
 #include <iostream>
+#include <assert.h>
 #include "MonsterCard.h"
+#include "MagicCard.h"
+
+void Test() {
+    MonsterCard m = MonsterCard("Backup Secretary",
+                                "If you control a Cyberse monster, you can Special Summon this card (from your hand).",
+                                1200, 800);
+    assert(m.getName()._Equal("Backup Secretary"));
+    m.setName("Backup Supervisor");
+    assert(m.toString()._Equal(
+            "Backup Supervisor|If you control a Cyberse monster, you can Special Summon this card (from your hand).|1200|800"));
+    MonsterCard k = MonsterCard(
+            "Blue-Eyes White Dragon|This legendary dragon is a powerful engine of destruction.|3000|2500");
+    assert(k.getName()._Equal("Blue-Eyes White Dragon"));
+    assert(k.getDEF() == 2500);
+    assert(k.toString()._Equal(
+            "Blue-Eyes White Dragon|This legendary dragon is a powerful engine of destruction.|3000|2500"));
+
+    MagicCard magicCard = MagicCard("Cynet Recovery",
+                                    "If a Link Monster(s) you control is destroyed by battle or an opponent's card effect: You can target 1 monster in your GY, except a Link Monster;",
+                                    spell);
+    assert(magicCard.getName()._Equal("Cynet Recovery"));
+    MagicCard mc = MagicCard("Swords of Revealing Light|Your opponent's monsters cannot declare an attack.|SPELL");
+    assert(mc.getType() == Type::spell);
+    assert(mc.toString()._Equal("Swords of Revealing Light|Your opponent's monsters cannot declare an attack.|SPELL"));
+}
 
 int main() {
-    MonsterCard m=MonsterCard("Backup Secretary",
-                              "If you control a Cyberse monster, you can Special Summon this card (from your hand).",
-                              1200,800);
-   cout<< m.getName()<<endl;
-   m.setName("Backup Supervisor");
-   cout<<m.toString()<<endl;
- //  string str="Blue-Eyes White Dragon|This legendary dragon is a powerful engine of destruction.|3000|2500";
-   MonsterCard k=MonsterCard("Blue-Eyes White Dragon|This legendary dragon is a powerful engine of destruction.|3000|2500");
-   cout<<k.getName()<<endl;
-   cout<<k.getDEF()<<endl;
+    Test();
+    cout << "Test Successful" << endl;
     return 0;
 }

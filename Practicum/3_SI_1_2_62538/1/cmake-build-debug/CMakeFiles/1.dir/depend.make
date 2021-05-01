@@ -4,11 +4,16 @@
 CMakeFiles\1.dir\Card.cpp.obj: ..\Card.cpp
 CMakeFiles\1.dir\Card.cpp.obj: ..\Card.h
 
+CMakeFiles\1.dir\MagicCard.cpp.obj: ..\Card.h
+CMakeFiles\1.dir\MagicCard.cpp.obj: ..\MagicCard.cpp
+CMakeFiles\1.dir\MagicCard.cpp.obj: ..\MagicCard.h
+
 CMakeFiles\1.dir\MonsterCard.cpp.obj: ..\Card.h
 CMakeFiles\1.dir\MonsterCard.cpp.obj: ..\MonsterCard.cpp
 CMakeFiles\1.dir\MonsterCard.cpp.obj: ..\MonsterCard.h
 
 CMakeFiles\1.dir\main.cpp.obj: ..\Card.h
+CMakeFiles\1.dir\main.cpp.obj: ..\MagicCard.h
 CMakeFiles\1.dir\main.cpp.obj: ..\MonsterCard.h
 CMakeFiles\1.dir\main.cpp.obj: ..\main.cpp
 
