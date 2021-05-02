@@ -75,7 +75,96 @@ void Deck::changePendulumCard(const PendulumCard card, const unsigned int index)
 }
 
 void Deck::clear() {
-    monsterCards.clear();
-    magicCards.clear();
-    pendulumCards.clear();
+    this->monsterCards.clear();
+    this->magicCards.clear();
+    this->pendulumCards.clear();
+}
+
+Deck &Deck::operator=(const Deck &sth) {
+    if(this != &sth){
+      this->name=sth.name;
+      this->magicCards=sth.magicCards;
+      this->monsterCards=sth.monsterCards;
+      this->pendulumCards=sth.pendulumCards;
+    }
+    return *this;
+}
+
+Deck::Deck(const Deck &deck) {
+    this->name=deck.name;
+    this->magicCards=deck.magicCards;
+    this->monsterCards=deck.monsterCards;
+    this->pendulumCards=deck.pendulumCards;
+}
+
+string Deck::toString() const {
+    string result =
+            this->name + "|" + to_string(this->getNumberOfMonsterCards()) + "|" + to_string(this->getNumberOfMagicCards()) +
+            "|" + to_string(this->getNumberOfPendulumCards())+"\n";
+    for(int i=0;i<monsterCards.size();i++){
+        result.append(monsterCards[i].toString()+"\n");
+    }
+    for(int i=0;i<magicCards.size();i++){
+        result.append(magicCards[i].toString()+"\n");
+    }
+    for(int i=0;i<pendulumCards.size();i++){
+        result.append(pendulumCards[i].toString()+"\n");
+    }
+    return result;
+}
+
+Deck::Deck(const char *text) {
+    string str = text;
+    vector<string> list;
+
+    string current = "";
+    for (int i = 0; i < str.size(); i++) {
+        if (str[i] == '\n') {
+            list.push_back(current);
+            current = "";
+        } else {
+            char a = str[i];
+            current.push_back(a);
+        }
+    }
+    list.push_back(current);
+    current="";
+    vector<string> line;
+
+    for (int i = 0; i < list[0].size(); i++) {
+        if (str[i] == '|') {
+            line.push_back(current);
+            current = "";
+        } else {
+            char a = str[i];
+            current.push_back(a);
+        }
+    }
+    line.push_back(current);
+    this->name=line[0];
+    int numOfMonst=stoi(line[1]);
+    int numOfMagic=stoi(line[2]);
+    int numOfPend=stoi(line[3]);
+    line.clear();
+    current="";
+    //cout<<numOfMonst<<"-"<<numOfMagic<<"-"<<numOfPend<<endl;
+    int indexOfLine=1;
+    for(int i=0;i<numOfMonst;i++){
+        MonsterCard m=MonsterCard(list[indexOfLine].c_str());
+        monsterCards.push_back(m);
+        //cout<<indexOfLine<<". "<<m.getName()<<endl;
+        indexOfLine++;
+    }
+    for(int i=0;i<numOfMagic;i++){
+        MagicCard m=MagicCard(list[indexOfLine].c_str());
+        magicCards.push_back(m);
+      //  cout<<indexOfLine<<". "<<m.toString()<<endl;
+        indexOfLine++;
+    }
+    for(int i=0;i<numOfPend;i++){
+        PendulumCard m=PendulumCard(list[indexOfLine].c_str());
+        pendulumCards.push_back(m);
+       // cout<<indexOfLine<<". "<<m.toString()<<endl;
+        indexOfLine++;
+    }
 }

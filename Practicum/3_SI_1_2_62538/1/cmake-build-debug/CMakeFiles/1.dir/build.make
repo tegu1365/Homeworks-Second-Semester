@@ -175,6 +175,25 @@ CMakeFiles\1.dir\Deck.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\1.dir\Deck.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\3_SI_1_2_62538\1\Deck.cpp
 <<
 
+CMakeFiles\1.dir\Duelist.cpp.obj: CMakeFiles\1.dir\flags.make
+CMakeFiles\1.dir\Duelist.cpp.obj: ..\Duelist.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\3_SI_1_2_62538\1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/1.dir/Duelist.cpp.obj"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\1.dir\Duelist.cpp.obj /FdCMakeFiles\1.dir\ /FS -c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\3_SI_1_2_62538\1\Duelist.cpp
+<<
+
+CMakeFiles\1.dir\Duelist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/1.dir/Duelist.cpp.i"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe > CMakeFiles\1.dir\Duelist.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\3_SI_1_2_62538\1\Duelist.cpp
+<<
+
+CMakeFiles\1.dir\Duelist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/1.dir/Duelist.cpp.s"
+	C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\1.dir\Duelist.cpp.s /c C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\3_SI_1_2_62538\1\Duelist.cpp
+<<
+
 # Object files for target 1
 1_OBJECTS = \
 "CMakeFiles\1.dir\main.cpp.obj" \
@@ -182,7 +201,8 @@ CMakeFiles\1.dir\Deck.cpp.s: cmake_force
 "CMakeFiles\1.dir\MonsterCard.cpp.obj" \
 "CMakeFiles\1.dir\MagicCard.cpp.obj" \
 "CMakeFiles\1.dir\PendulumCard.cpp.obj" \
-"CMakeFiles\1.dir\Deck.cpp.obj"
+"CMakeFiles\1.dir\Deck.cpp.obj" \
+"CMakeFiles\1.dir\Duelist.cpp.obj"
 
 # External object files for target 1
 1_EXTERNAL_OBJECTS =
@@ -193,9 +213,10 @@ CMakeFiles\1.dir\Deck.cpp.s: cmake_force
 1.exe: CMakeFiles\1.dir\MagicCard.cpp.obj
 1.exe: CMakeFiles\1.dir\PendulumCard.cpp.obj
 1.exe: CMakeFiles\1.dir\Deck.cpp.obj
+1.exe: CMakeFiles\1.dir\Duelist.cpp.obj
 1.exe: CMakeFiles\1.dir\build.make
 1.exe: CMakeFiles\1.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\3_SI_1_2_62538\1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable 1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\3_SI_1_2_62538\1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable 1.exe"
 	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\1.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~4\2019\COMMUN~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\1.dir\objects1.rsp @<<
  /out:1.exe /implib:1.lib /pdb:C:\Users\Tegu\Desktop\Programming\Homeworks\Homeworks-Second-Semester\Practicum\3_SI_1_2_62538\1\cmake-build-debug\1.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

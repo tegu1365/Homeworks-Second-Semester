@@ -16,6 +16,7 @@
 #include "MagicCard.h"
 #include "PendulumCard.h"
 #include "Deck.h"
+#include "Duelist.h"
 
 void Test() {
     MonsterCard m = MonsterCard("Backup Secretary",
@@ -42,7 +43,7 @@ void Test() {
 
     PendulumCard p = PendulumCard("Speedroid Dominobutterfly",
                                   "You cannot Pendulum Summon monsters, except WIND monsters. This effect cannot be negated.",
-                                  100, 300, spell, 8);
+                                  100, 300, 8, spell);
     assert(p.getScale() == 8);
 
     PendulumCard pc = PendulumCard(
@@ -52,12 +53,26 @@ void Test() {
     assert(p.toString()._Equal(
             "Speedroid Dominobutterfly|You cannot Pendulum Summon monsters, except WIND monsters. This effect cannot be negated.|100|300|8|SPELL"));
 
-    Deck deck=Deck("Deck 1");
+    Deck deck = Deck(string("Deck 1"));
     deck.addMonsterCard(m);
-    deck.changeMonsterCard(k,1);
-    assert(deck.getNumberOfMonsterCards()==2);
+    deck.changeMonsterCard(k, 1);
+    assert(deck.getNumberOfMonsterCards() == 2);
+    Deck deck2 = deck;
     deck.clear();
-    assert(deck.getNumberOfMonsterCards()==0);
+    assert(deck.getNumberOfMonsterCards() == 0);
+    assert(deck2.getNumberOfMonsterCards() == 2);
+    //cout << deck2.toString() << endl;
+
+    Deck d2 = Deck(
+            "Deck 2|2|0|0\nBackup Supervisor|If you control a Cyberse monster, you can Special Summon this card (from your hand).|1200|800\nBlue-Eyes White Dragon|This legendary dragon is a powerful engine of destruction.|3000|2500\n");
+   // cout << d2.toString() << endl;
+    Duelist duelist=Duelist(string("Tegu"));
+    duelist.setDeck(d2);
+    duelist.display();
+    assert(duelist.saveDeck("textDeck.txt")==true);
+
+    assert(duelist.loadDeck("magicDeck.txt")==true);
+    duelist.display();
 }
 
 int main() {

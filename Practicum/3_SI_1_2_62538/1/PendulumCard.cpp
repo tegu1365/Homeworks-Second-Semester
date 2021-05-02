@@ -15,7 +15,7 @@
 #include <vector>
 
 PendulumCard::PendulumCard(const string name, const string effect, const unsigned int atk, const unsigned int def,
-                           const Type type, const unsigned short scale) : Card(name, effect),
+                           const unsigned short scale, const Type type) : Card(name, effect),
                                                                           MagicCard(name, effect, type),
                                                                           MonsterCard(name, effect, atk, def) {
     this->setScale(scale);

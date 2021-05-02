@@ -11,6 +11,14 @@ CMakeFiles\1.dir\Deck.cpp.obj: ..\MagicCard.h
 CMakeFiles\1.dir\Deck.cpp.obj: ..\MonsterCard.h
 CMakeFiles\1.dir\Deck.cpp.obj: ..\PendulumCard.h
 
+CMakeFiles\1.dir\Duelist.cpp.obj: ..\Card.h
+CMakeFiles\1.dir\Duelist.cpp.obj: ..\Deck.h
+CMakeFiles\1.dir\Duelist.cpp.obj: ..\Duelist.cpp
+CMakeFiles\1.dir\Duelist.cpp.obj: ..\Duelist.h
+CMakeFiles\1.dir\Duelist.cpp.obj: ..\MagicCard.h
+CMakeFiles\1.dir\Duelist.cpp.obj: ..\MonsterCard.h
+CMakeFiles\1.dir\Duelist.cpp.obj: ..\PendulumCard.h
+
 CMakeFiles\1.dir\MagicCard.cpp.obj: ..\Card.h
 CMakeFiles\1.dir\MagicCard.cpp.obj: ..\MagicCard.cpp
 CMakeFiles\1.dir\MagicCard.cpp.obj: ..\MagicCard.h
@@ -27,6 +35,7 @@ CMakeFiles\1.dir\PendulumCard.cpp.obj: ..\PendulumCard.h
 
 CMakeFiles\1.dir\main.cpp.obj: ..\Card.h
 CMakeFiles\1.dir\main.cpp.obj: ..\Deck.h
+CMakeFiles\1.dir\main.cpp.obj: ..\Duelist.h
 CMakeFiles\1.dir\main.cpp.obj: ..\MagicCard.h
 CMakeFiles\1.dir\main.cpp.obj: ..\MonsterCard.h
 CMakeFiles\1.dir\main.cpp.obj: ..\PendulumCard.h

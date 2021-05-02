@@ -24,7 +24,7 @@ private:
     unsigned short scale;
 public:
     PendulumCard(const string name = "", const string effect = "", const unsigned int atk = 0,
-                 const unsigned int def = 0, const Type type = NT, const unsigned short scale = 1);
+                 const unsigned int def = 0, const unsigned short scale = 1, const Type type = NT);
 
     PendulumCard(const char *text);
 

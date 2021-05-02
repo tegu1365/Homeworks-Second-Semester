@@ -27,6 +27,8 @@ private:
     vector<PendulumCard> pendulumCards;
 public:
     Deck(const string name="");
+    Deck(const Deck& deck);
+    Deck(const char* text);
     unsigned int getNumberOfMagicCards()const;
     unsigned int getNumberOfMonsterCards()const;
     unsigned int getNumberOfPendulumCards()const;
@@ -37,6 +39,8 @@ public:
     void changeMonsterCard(const MonsterCard card,const unsigned int index);
     void changePendulumCard(const PendulumCard card,const unsigned int index);
     void clear();
+    Deck& operator=(const Deck& sth);
+    string toString()const;
 };
 
 

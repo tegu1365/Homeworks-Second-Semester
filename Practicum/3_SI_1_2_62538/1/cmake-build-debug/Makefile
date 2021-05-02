@@ -181,6 +181,33 @@ Deck.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Deck.cpp.s
 .PHONY : Deck.cpp.s
 
+Duelist.obj: Duelist.cpp.obj
+
+.PHONY : Duelist.obj
+
+# target to build an object file
+Duelist.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Duelist.cpp.obj
+.PHONY : Duelist.cpp.obj
+
+Duelist.i: Duelist.cpp.i
+
+.PHONY : Duelist.i
+
+# target to preprocess a source file
+Duelist.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Duelist.cpp.i
+.PHONY : Duelist.cpp.i
+
+Duelist.s: Duelist.cpp.s
+
+.PHONY : Duelist.s
+
+# target to generate assembly for a file
+Duelist.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Duelist.cpp.s
+.PHONY : Duelist.cpp.s
+
 MagicCard.obj: MagicCard.cpp.obj
 
 .PHONY : MagicCard.obj
@@ -304,6 +331,9 @@ help:
 	@echo ... Deck.obj
 	@echo ... Deck.i
 	@echo ... Deck.s
+	@echo ... Duelist.obj
+	@echo ... Duelist.i
+	@echo ... Duelist.s
 	@echo ... MagicCard.obj
 	@echo ... MagicCard.i
 	@echo ... MagicCard.s
