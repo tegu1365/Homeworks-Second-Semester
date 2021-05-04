@@ -1,6 +1,15 @@
-//
-// Created by Tegu on 2.5.2021 г..
-//
+/**
+*	Solution to homework assignment 3
+*	Object Oriented Programming Course
+*	Faculty of Mathematics and Informatics of Sofia University
+*	Summer semester 2020/2021
+*
+*	@author Teodora Dimitrova Petkova
+*	@idnumber 62538
+*	@task 1
+*	@compiler VC
+*/
+
 
 #ifndef INC_1_DUELIST_H
 #define INC_1_DUELIST_H

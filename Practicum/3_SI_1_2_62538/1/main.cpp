@@ -68,11 +68,11 @@ void Test() {
    // cout << d2.toString() << endl;
     Duelist duelist=Duelist(string("Tegu"));
     duelist.setDeck(d2);
-    duelist.display();
+   // duelist.display();
     assert(duelist.saveDeck("textDeck.txt")==true);
 
     assert(duelist.loadDeck("magicDeck.txt")==true);
-    duelist.display();
+   // duelist.display();
 }
 
 int main() {
