@@ -8,10 +8,10 @@
 #include "TwowayCounter.hpp"
 
 class LimitedTwowayCounter: public TwowayCounter, public LimitedCounter {
-private:
-    int min;
+protected:
+    int _min;
 public:
-    LimitedTwowayCounter(const int min,const int max,const int initial=0,const unsigned int step=1);
+    LimitedTwowayCounter(const int _min,const int _max,const int initial=0,const unsigned int step=1);
     void increment();
     void decrement();
     int getMin()const;

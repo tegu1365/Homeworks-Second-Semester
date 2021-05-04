@@ -7,10 +7,10 @@
 #include "Counter.hpp"
 
 class LimitedCounter:virtual public Counter{
-private:
-    int max;
+protected:
+    int _max;
 public:
-    LimitedCounter(const int max,const int initial=0,const unsigned int step=1);
+    LimitedCounter(const int _max,const int initial=0,const unsigned int step=1);
     void increment();
     int getMax()const;
 };

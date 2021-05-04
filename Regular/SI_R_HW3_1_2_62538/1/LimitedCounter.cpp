@@ -4,16 +4,16 @@
 
 #include "LimitedCounter.hpp"
 
-LimitedCounter::LimitedCounter(const int max, const int initial, const unsigned int step):Counter(initial, step) {
-    this->max=max;
+LimitedCounter::LimitedCounter(const int _max, const int initial, const unsigned int step):Counter(initial, step) {
+    this->_max=_max;
 }
 
 void LimitedCounter::increment() {
-    if(total<max) {
+    if((total+step)<=_max) {
         Counter::increment();
     }
 }
 
 int LimitedCounter::getMax() const {
-    return max;
+    return _max;
 }

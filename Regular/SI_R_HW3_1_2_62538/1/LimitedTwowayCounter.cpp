@@ -4,9 +4,9 @@
 
 #include "LimitedTwowayCounter.hpp"
 
-LimitedTwowayCounter::LimitedTwowayCounter(const int min, const int max, const int initial, const unsigned int step)
-        : Counter(initial, step), LimitedCounter(max, initial, step), TwowayCounter(initial, step) {
-    this->min = min;
+LimitedTwowayCounter::LimitedTwowayCounter(const int _min, const int _max, const int initial, const unsigned int step)
+        : Counter(initial, step), LimitedCounter(_max, initial, step), TwowayCounter(initial, step) {
+    this->_min = _min;
 }
 
 void LimitedTwowayCounter::increment() {
@@ -14,11 +14,11 @@ void LimitedTwowayCounter::increment() {
 }
 
 void LimitedTwowayCounter::decrement() {
-    if(total>min) {
+    if((total-step)>=_min) {
         TwowayCounter::decrement();
     }
 }
 
 int LimitedTwowayCounter::getMin() const {
-    return min;
+    return _min;
 }
