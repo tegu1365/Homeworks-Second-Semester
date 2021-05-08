@@ -4,7 +4,7 @@
 
 #include "Worker.hpp"
 
-Worker::Worker(const string &name, const double salary) {
+Worker::Worker(const string &name,const double salary) {
     this->name=name;
     this->salary=salary;
 }
@@ -21,4 +21,8 @@ void Worker::setInitialSalary(const double amount) {
     if(salary==0){
         salary=amount;
     }
+}
+
+void Worker::setSalary(const double salary) {
+    this->salary=salary;
 }

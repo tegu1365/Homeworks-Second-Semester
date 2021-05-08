@@ -8,10 +8,15 @@
 #include "Worker.hpp"
 using namespace std;
 
-class Developer:virtual public Worker {
+class Developer: public Worker {
 private:
-//    TeamLead teamLead;
+    TeamLead *teamLead;
 public:
+    Developer(const string& name="");
+    TeamLead* getTeamLead()const;
+    void setTeamLead(TeamLead* teamLead);
+    void sendLeavingRequest();
+    void sendPromotionRequest(double amount);
 };
 
 
