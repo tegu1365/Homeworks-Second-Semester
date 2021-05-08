@@ -3,7 +3,6 @@
 //
 
 #include "Developer.hpp"
-#include "TeamLead.hpp"
 
 
 Developer::Developer(const string &name){
@@ -46,14 +45,10 @@ void Developer::sendPromotionRequest(double amount) {
 }
 
 void Developer::setTeamLead(TeamLead *teamLead) {
-    delete this->teamLead;
+ //   delete this->teamLead;
     this->teamLead = teamLead;
 }
 
 void Developer::removeTeamLead() {
     this->teamLead= nullptr;
 }
-
-//Developer::~Developer() {
-//    delete this->teamLead;
-//}

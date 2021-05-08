@@ -3,18 +3,11 @@
 //
 
 #include "TeamLead.hpp"
-#include "Developer.hpp"
 
 TeamLead::TeamLead(const string &name, double salary):Developer(name) {
     this->salary=salary;
     this->setTeamLead(this);
 }
-
-//TeamLead::~TeamLead() {
-//    for (int i = 0; i < this->developers.size(); i++) {
-//        delete this->developers[i];
-//    }
-//}
 
 vector<Developer *> TeamLead::getTeam() {
     return developers;
@@ -37,9 +30,22 @@ int TeamLead::developerExist(Developer *developer) {
     }
     return -1;
 }
+
+bool equal(string a,string b){
+    if(a.size()==b.size()){
+        for(int i=0;i<a.size();i++){
+            if(a[i]!=b[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+    return false;
+}
+
 int TeamLead::developerExist(const string &name) {
-    for (unsigned int i = this->developers.size()-1; i >=0 ; i--) {
-        if(name._Equal(developers[i]->getName())){
+    for (int i = this->developers.size()-1; i >=0 ; i--) {
+        if(equal(name,developers[i]->getName())){
             return i;
         }
     }
@@ -56,14 +62,14 @@ void TeamLead::removeDeveloperFromTeam(const string &name) {
 
 void TeamLead::increaseTeamSalariesBy(double amount) {
     for (unsigned int i = 0; i < this->developers.size(); i++) {
-        int newSalary=developers[i]->getSalary()+amount;
+        double newSalary=developers[i]->getSalary()+amount;
         developers[i]->setSalary(newSalary);
     }
 }
 
 void TeamLead::decreaseTeamSalariesBy(double amount) {
     for (unsigned int i = 0; i < this->developers.size(); i++) {
-        int newSalary=developers[i]->getSalary()-amount;
+        double newSalary=developers[i]->getSalary()-amount;
         developers[i]->setSalary(newSalary);
     }
 }
@@ -78,7 +84,7 @@ void TeamLead::addPromotionRequest(const PromotionRequest &promotionRequest) {
 
 void TeamLead::fulfillLeavingRequests() {
     for(unsigned int i=0;i<leavingRequests.size();i++){
-        removeDeveloperFromTeam(leavingRequests[i].getSender());
+        this->removeDeveloperFromTeam(this->leavingRequests[i].getSender());
     }
     leavingRequests.clear();
 }
@@ -89,6 +95,7 @@ void TeamLead::fulfillPromotionRequests() {
         if(index!=-1){
             double newSalary=developers[i]->getSalary()+promotionRequests[i].getAmount();
             developers[i]->setSalary(newSalary);
+  //          cout<<promotionRequests[i].getID()<<endl;
         }
     }
     promotionRequests.clear();

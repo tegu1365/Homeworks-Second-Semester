@@ -18,7 +18,7 @@ public:
     Request(const string message="", const string sender="");
     string getMessage()const;
     string getSender()const;
-    static int getCount();
+    int getCount()const;
     int getID()const;
 };
 

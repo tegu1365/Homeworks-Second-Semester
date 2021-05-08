@@ -25,6 +25,6 @@ int Request::getID() const {
     return ID;
 }
 
-int Request::getCount() {
+int Request::getCount()const {
     return counter;
 }

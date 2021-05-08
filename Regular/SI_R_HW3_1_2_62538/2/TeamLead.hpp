@@ -10,9 +10,8 @@
 
 #include "LeavingRequest.hpp"
 #include "PromotionRequest.hpp"
-#include "TeamLead.hpp"
 
-
+#include <iostream>
 #include <vector>
 using namespace std;
 
@@ -44,7 +43,7 @@ private:
     int developerExist(Developer * developer);
     int developerExist(const string& name);
 public:
-    TeamLead(const string& name="", double salary=0);
+    TeamLead(const string& name="",const double salary=0);
 
 //    TeamLead* getTeamLead()const;
 //    void sendLeavingRequest();
@@ -60,9 +59,6 @@ public:
     void addPromotionRequest(const PromotionRequest& promotionRequest);
     void fulfillLeavingRequests();
     void fulfillPromotionRequests();
-
-
-   // ~TeamLead();
 };
 
 
