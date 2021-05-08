@@ -6,7 +6,7 @@
 
 int Request::counter=0;
 
-Request::Request(const string message, const string sender) {
+Request::Request(const string& message, const string& sender) {
     this->message=message;
     this->sender=sender;
     Request::counter++;
@@ -25,6 +25,6 @@ int Request::getID() const {
     return ID;
 }
 
-int Request::getCount()const {
+int Request::getCount() {
     return counter;
 }

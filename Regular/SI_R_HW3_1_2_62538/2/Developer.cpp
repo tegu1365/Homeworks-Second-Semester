@@ -36,12 +36,12 @@ TeamLead *Developer::getTeamLead() const {
 
 void Developer::sendLeavingRequest() {
     LeavingRequest l=LeavingRequest(this->name);
-    teamLead->addLeavingRequest(l);
+    this->teamLead->addLeavingRequest(l);
 }
 
 void Developer::sendPromotionRequest(double amount) {
     PromotionRequest p=PromotionRequest(this->name,amount);
-    teamLead->addPromotionRequest(p);
+    this->teamLead->addPromotionRequest(p);
 }
 
 void Developer::setTeamLead(TeamLead *teamLead) {

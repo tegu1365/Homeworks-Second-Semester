@@ -15,10 +15,10 @@ protected:
     string sender;
     int ID;
 public:
-    Request(const string message="", const string sender="");
+    Request(const string& message="", const string& sender="");
     string getMessage()const;
     string getSender()const;
-    int getCount()const;
+    static int getCount();
     int getID()const;
 };
 
