@@ -4,27 +4,51 @@
 
 #ifndef INC_2_TEAMLEAD_HPP
 #define INC_2_TEAMLEAD_HPP
+
+//This is the ugliest code that I have wrote for the last 2 years
+//WHY?
+
 #include "LeavingRequest.hpp"
 #include "PromotionRequest.hpp"
-#include "Worker.hpp"
+#include "TeamLead.hpp"
+
 
 #include <vector>
 using namespace std;
 
-class Developer;
+class TeamLead;
 
-class TeamLead: public Worker{
+class Developer{
+protected:
+    string name;
+    double salary;
+    TeamLead *teamLead;
+public:
+    Developer(const string& name="");
+    TeamLead* getTeamLead()const;
+    void setTeamLead(TeamLead* teamLead);
+    void removeTeamLead();
+    void sendLeavingRequest();
+    void sendPromotionRequest(double amount);
+    string getName()const;
+    double getSalary()const;
+    void setSalary(const double salary);
+    void setInitialSalary(const double amount);
+};
+
+class TeamLead: public Developer{
 private:
-    TeamLead* teamLead;
     vector<Developer*> developers;
     vector<LeavingRequest> leavingRequests;
     vector<PromotionRequest> promotionRequests;
+    int developerExist(Developer * developer);
+    int developerExist(const string& name);
 public:
     TeamLead(const string& name="", double salary=0);
 
-    TeamLead* getTeamLead()const;
-    void sendLeavingRequest();
-    void sendPromotionRequest(double amount);
+//    TeamLead* getTeamLead()const;
+//    void sendLeavingRequest();
+//    void sendPromotionRequest(double amount);
 
     vector<Developer*> getTeam();
     void addDeveloperToTeam(Developer * developer, double salary);
@@ -37,8 +61,7 @@ public:
     void fulfillLeavingRequests();
     void fulfillPromotionRequests();
 
-    int developerExist(Developer * developer);
-    int developerExist(const string& name);
+
    // ~TeamLead();
 };
 

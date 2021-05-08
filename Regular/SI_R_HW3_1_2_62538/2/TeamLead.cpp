@@ -5,8 +5,9 @@
 #include "TeamLead.hpp"
 #include "Developer.hpp"
 
-TeamLead::TeamLead(const string &name, double salary):Worker(name,salary) {
-    this->teamLead=this;
+TeamLead::TeamLead(const string &name, double salary):Developer(name) {
+    this->salary=salary;
+    this->setTeamLead(this);
 }
 
 //TeamLead::~TeamLead() {
@@ -14,10 +15,6 @@ TeamLead::TeamLead(const string &name, double salary):Worker(name,salary) {
 //        delete this->developers[i];
 //    }
 //}
-
-TeamLead *TeamLead::getTeamLead() const {
-    return teamLead;
-}
 
 vector<Developer *> TeamLead::getTeam() {
     return developers;
@@ -33,7 +30,7 @@ void TeamLead::addDeveloperToTeam(Developer *developer, double salary) {
 }
 
 int TeamLead::developerExist(Developer *developer) {
-    for (int i = 0; i < this->developers.size(); i++) {
+    for (unsigned int i = 0; i < this->developers.size(); i++) {
        if(developer==developers[i]){
            return i;
        }
@@ -41,7 +38,7 @@ int TeamLead::developerExist(Developer *developer) {
     return -1;
 }
 int TeamLead::developerExist(const string &name) {
-    for (int i = this->developers.size()-1; i >=0 ; i--) {
+    for (unsigned int i = this->developers.size()-1; i >=0 ; i--) {
         if(name._Equal(developers[i]->getName())){
             return i;
         }
@@ -52,20 +49,20 @@ int TeamLead::developerExist(const string &name) {
 void TeamLead::removeDeveloperFromTeam(const string &name) {
     int index=this->developerExist(name);
     if(index!=-1){
-        //developers[index]->setTeamLead(nullptr);
+        developers[index]->removeTeamLead();
         developers.erase(developers.cbegin()+index);
     }
 }
 
 void TeamLead::increaseTeamSalariesBy(double amount) {
-    for (int i = 0; i < this->developers.size(); i++) {
+    for (unsigned int i = 0; i < this->developers.size(); i++) {
         int newSalary=developers[i]->getSalary()+amount;
         developers[i]->setSalary(newSalary);
     }
 }
 
 void TeamLead::decreaseTeamSalariesBy(double amount) {
-    for (int i = 0; i < this->developers.size(); i++) {
+    for (unsigned int i = 0; i < this->developers.size(); i++) {
         int newSalary=developers[i]->getSalary()-amount;
         developers[i]->setSalary(newSalary);
     }
@@ -80,19 +77,20 @@ void TeamLead::addPromotionRequest(const PromotionRequest &promotionRequest) {
 }
 
 void TeamLead::fulfillLeavingRequests() {
-
+    for(unsigned int i=0;i<leavingRequests.size();i++){
+        removeDeveloperFromTeam(leavingRequests[i].getSender());
+    }
+    leavingRequests.clear();
 }
 
 void TeamLead::fulfillPromotionRequests() {
-
+    for(unsigned int i=0;i<promotionRequests.size();i++){
+        int index=developerExist(promotionRequests[i].getSender());
+        if(index!=-1){
+            double newSalary=developers[i]->getSalary()+promotionRequests[i].getAmount();
+            developers[i]->setSalary(newSalary);
+        }
+    }
+    promotionRequests.clear();
 }
 
-void TeamLead::sendLeavingRequest() {
-    LeavingRequest l=LeavingRequest(this->name);
-    teamLead->addLeavingRequest(l);
-}
-
-void TeamLead::sendPromotionRequest(double amount) {
-    PromotionRequest p=PromotionRequest(this->name,amount);
-    teamLead->addPromotionRequest(p);
-}

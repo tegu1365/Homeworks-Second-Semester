@@ -3,11 +3,33 @@
 //
 
 #include "Developer.hpp"
+#include "TeamLead.hpp"
 
-Developer::Developer(const string &name):Worker(name){
+
+Developer::Developer(const string &name){
+    this->name=name;
     this->salary=0;
     this->teamLead= nullptr;
 }
+
+string Developer::getName() const {
+    return name;
+}
+
+double Developer::getSalary() const {
+    return salary;
+}
+
+void Developer::setInitialSalary(const double amount) {
+    if(salary==0){
+        salary=amount;
+    }
+}
+
+void Developer::setSalary(const double salary) {
+    this->salary=salary;
+}
+
 
 TeamLead *Developer::getTeamLead() const {
     return teamLead;
@@ -26,6 +48,10 @@ void Developer::sendPromotionRequest(double amount) {
 void Developer::setTeamLead(TeamLead *teamLead) {
     delete this->teamLead;
     this->teamLead = teamLead;
+}
+
+void Developer::removeTeamLead() {
+    this->teamLead= nullptr;
 }
 
 //Developer::~Developer() {
