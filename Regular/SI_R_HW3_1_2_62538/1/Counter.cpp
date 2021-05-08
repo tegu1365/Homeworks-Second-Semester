@@ -11,7 +11,7 @@ Counter::Counter(const int initial, const unsigned int step) {
 }
 
 void Counter::increment() {
-    this->total+=step;
+    this->total+=this->step;
 }
 
 int Counter::getTotal() const {

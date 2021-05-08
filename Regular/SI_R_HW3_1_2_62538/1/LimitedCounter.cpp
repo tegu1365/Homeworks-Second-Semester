@@ -9,8 +9,9 @@ LimitedCounter::LimitedCounter(const int _max, const int initial, const unsigned
 }
 
 void LimitedCounter::increment() {
-    if((total+step)<=_max) {
-        Counter::increment();
+    int newTotal=this->total+this->step;
+    if(newTotal<=_max) {
+        this->total=newTotal;
     }
 }
 

@@ -21,10 +21,10 @@ bool Semaphore::isAvailable() const {
 }
 
 void Semaphore::signal() {
-    LimitedTwowayCounter::increment();
+    this->LimitedTwowayCounter::increment();
 }
 
 void Semaphore::wait() {
-    LimitedTwowayCounter::decrement();
+    this->LimitedTwowayCounter::decrement();
 }
 
