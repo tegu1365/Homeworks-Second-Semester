@@ -29,6 +29,7 @@ public:
     bool saveDeck(const char* filename);
     bool loadDeck(const char* filename);
     void display()const;
+    void duel(const Duelist& enemy);
 };
 
 

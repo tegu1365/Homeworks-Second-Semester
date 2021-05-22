@@ -51,6 +51,8 @@ public:
 
     string toString() const;
 
+    Card* operator[](unsigned int index)const;
+
     ~Deck();
 };
 

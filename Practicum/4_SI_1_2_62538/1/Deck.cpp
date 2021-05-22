@@ -236,3 +236,9 @@ void Deck::shuffle() {
 //    }
 //    cout<<result;
 }
+
+Card *Deck::operator[](unsigned int index) const {
+    if(index<numOfCards) {
+        return cards[index];
+    }
+}
