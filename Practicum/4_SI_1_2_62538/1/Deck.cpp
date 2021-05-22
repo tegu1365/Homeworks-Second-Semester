@@ -11,105 +11,94 @@
 */
 
 #include "Deck.hpp"
+#include <algorithm>
+#include <random>
 
 Deck::Deck(const string name) {
-    this->name=name;
+    this->name = name;
+    numOfMagic = 0;
+    numOfMonsters = 0;
+    numOfCards = 0;
+    numOfPendulum = 0;
 }
 
 unsigned int Deck::getNumberOfMagicCards() const {
-    return magicCards.size();
+    return numOfMagic;
 }
 
 unsigned int Deck::getNumberOfMonsterCards() const {
-    return monsterCards.size();
+    return numOfMonsters;
 }
 
 unsigned int Deck::getNumberOfPendulumCards() const {
-    return pendulumCards.size();
-}
-
-void Deck::addMagicCard(const MagicCard card) {
-    magicCards.push_back(card);
-}
-
-void Deck::addMonsterCard(const MonsterCard card) {
-    monsterCards.push_back(card);
-}
-
-void Deck::addPendulumCard(const PendulumCard card) {
-    pendulumCards.push_back(card);
-}
-
-void Deck::changeMagicCard(const MagicCard card, const unsigned int index) {
-    if(index<magicCards.size()){
-        magicCards[index].setName(card.getName());
-        magicCards[index].setEffect(card.getEffect());
-        magicCards[index].setType(card.getType());
-    }else{
-        magicCards.push_back(card);
-    }
-}
-
-void Deck::changeMonsterCard(const MonsterCard card, const unsigned int index) {
-    if(index<monsterCards.size()){
-        monsterCards[index].setName(card.getName());
-        monsterCards[index].setEffect(card.getEffect());
-        monsterCards[index].setATK(card.getATK());
-        monsterCards[index].setDEF(card.getDEF());
-    }else{
-        monsterCards.push_back(card);
-    }
-}
-
-void Deck::changePendulumCard(const PendulumCard card, const unsigned int index) {
-    if(index<pendulumCards.size()){
-        pendulumCards[index].setName(card.getName());
-        pendulumCards[index].setEffect(card.getEffect());
-        pendulumCards[index].setATK(card.getATK());
-        pendulumCards[index].setDEF(card.getDEF());
-        pendulumCards[index].setType(card.getType());
-        pendulumCards[index].setScale(card.getScale());
-    }else{
-        pendulumCards.push_back(card);
-    }
+    return numOfPendulum;
 }
 
 void Deck::clear() {
-    this->monsterCards.clear();
-    this->magicCards.clear();
-    this->pendulumCards.clear();
+    for (auto x : cards) {
+        delete x;
+    }
+    this->cards.clear();
+
+    numOfPendulum = 0;
+    numOfMonsters = 0;
+    numOfMagic = 0;
+    numOfCards = 0;
 }
 
 Deck &Deck::operator=(const Deck &sth) {
-    if(this != &sth){
-        this->name=sth.name;
-        this->magicCards=sth.magicCards;
-        this->monsterCards=sth.monsterCards;
-        this->pendulumCards=sth.pendulumCards;
+    if (this != &sth) {
+        this->name = sth.name;
+        this->numOfCards = sth.numOfCards;
+        this->numOfMonsters = sth.numOfMonsters;
+        this->numOfMagic = sth.numOfMagic;
+        this->numOfPendulum = sth.numOfPendulum;
+
+        for (auto x : cards) {
+            delete x;
+        }
+        cards.clear();
+
+        for (auto x : sth.cards) {
+            cards.push_back(x->clone());
+        }
     }
     return *this;
 }
 
 Deck::Deck(const Deck &deck) {
-    this->name=deck.name;
-    this->magicCards=deck.magicCards;
-    this->monsterCards=deck.monsterCards;
-    this->pendulumCards=deck.pendulumCards;
+    this->name = deck.name;
+    this->numOfCards = deck.numOfCards;
+    this->numOfMonsters = deck.numOfMonsters;
+    this->numOfMagic = deck.numOfMagic;
+    this->numOfPendulum = deck.numOfPendulum;
+    for (auto x : deck.cards) {
+        cards.push_back(x->clone());
+    }
 }
 
 string Deck::toString() const {
     string result =
-            this->name + "|" + to_string(this->getNumberOfMonsterCards()) + "|" + to_string(this->getNumberOfMagicCards()) +
-            "|" + to_string(this->getNumberOfPendulumCards())+"\n";
-    for(int i=0;i<monsterCards.size();i++){
-        result.append(monsterCards[i].toString()+"\n");
+            this->name + "|" + to_string(this->getNumberOfCards()) + "|" + to_string(this->getNumberOfMonsterCards()) +
+            "|" + to_string(this->getNumberOfMagicCards()) +
+            "|" + to_string(this->getNumberOfPendulumCards()) + "\n";
+    string monsters = "";
+    string magic = "";
+    string pendulum = "";
+    for (auto x : cards) {
+        if (x->getCardType() == MONSTER) {
+            monsters.append(x->toString() + "\n");
+        }
+        if (x->getCardType() == MAGIC) {
+            magic.append(x->toString() + "\n");
+        }
+        if (x->getCardType() == PENDULUM) {
+            pendulum.append(x->toString() + "\n");
+        }
     }
-    for(int i=0;i<magicCards.size();i++){
-        result.append(magicCards[i].toString()+"\n");
-    }
-    for(int i=0;i<pendulumCards.size();i++){
-        result.append(pendulumCards[i].toString()+"\n");
-    }
+    result.append(monsters);
+    result.append(magic);
+    result.append(pendulum);
     return result;
 }
 
@@ -128,7 +117,7 @@ Deck::Deck(const char *text) {
         }
     }
     list.push_back(current);
-    current="";
+    current = "";
     vector<string> line;
 
     for (int i = 0; i < list[0].size(); i++) {
@@ -141,30 +130,109 @@ Deck::Deck(const char *text) {
         }
     }
     line.push_back(current);
-    this->name=line[0];
-    int numOfMonst=stoi(line[1]);
-    int numOfMagic=stoi(line[2]);
-    int numOfPend=stoi(line[3]);
+    this->name = line[0];
+    numOfCards = stoi(line[1]);
+    numOfMonsters = stoi(line[2]);
+    numOfMagic = stoi(line[3]);
+    numOfPendulum = stoi(line[4]);
     line.clear();
-    current="";
-    //cout<<numOfMonst<<"-"<<numOfMagic<<"-"<<numOfPend<<endl;
-    int indexOfLine=1;
-    for(int i=0;i<numOfMonst;i++){
-        MonsterCard m=MonsterCard(list[indexOfLine].c_str());
-        monsterCards.push_back(m);
+    current = "";
+    //cout<<numOfMonsters<<"-"<<numOfMagic<<"-"<<numOfPendulum<<endl;
+    int indexOfLine = 1;
+    for (int i = 0; i < numOfMonsters; i++) {
+        MonsterCard m = MonsterCard(list[indexOfLine].c_str());
+        cards.push_back(m.clone());
         //cout<<indexOfLine<<". "<<m.getName()<<endl;
         indexOfLine++;
     }
-    for(int i=0;i<numOfMagic;i++){
-        MagicCard m=MagicCard(list[indexOfLine].c_str());
-        magicCards.push_back(m);
+    for (int i = 0; i < numOfMagic; i++) {
+        MagicCard m = MagicCard(list[indexOfLine].c_str());
+        cards.push_back(m.clone());
         //  cout<<indexOfLine<<". "<<m.toString()<<endl;
         indexOfLine++;
     }
-    for(int i=0;i<numOfPend;i++){
-        PendulumCard m=PendulumCard(list[indexOfLine].c_str());
-        pendulumCards.push_back(m);
+    for (int i = 0; i < numOfPendulum; i++) {
+        PendulumCard m = PendulumCard(list[indexOfLine].c_str());
+        cards.push_back(m.clone());
         // cout<<indexOfLine<<". "<<m.toString()<<endl;
         indexOfLine++;
     }
+}
+
+unsigned int Deck::getNumberOfCards() const {
+    return numOfCards;
+}
+
+Deck::~Deck() {
+    for (auto x : cards) {
+        delete x;
+    }
+}
+
+void Deck::addCard(Card *card) {
+    cards.push_back(card->clone());
+    numOfCards++;
+    if (card->getCardType() == MAGIC) {
+        numOfMagic++;
+    } else {
+        if (card->getCardType() == MONSTER) {
+            numOfMonsters++;
+        } else {
+            numOfPendulum++;
+        }
+    }
+}
+
+void Deck::setCard(const unsigned int index, Card *card) {
+    if (index < numOfCards) {
+        if (cards[index]->getCardType() == card->getCardType()) {
+            cards[index]->setName(card->getName());
+            cards[index]->setEffect(card->getEffect());
+            cards[index]->setRarity(card->getRarity());
+
+            MonsterCard *monsterCard = dynamic_cast<MonsterCard *>(cards[index]);
+            MonsterCard *monsterCard1 = dynamic_cast<MonsterCard *>(card);
+            if (monsterCard) {
+                monsterCard->setDEF(monsterCard1->getDEF());
+                monsterCard->setATK(monsterCard1->getATK());
+            }
+
+            MagicCard *magicCard = dynamic_cast<MagicCard *>(cards[index]);
+            MagicCard *magicCard1 = dynamic_cast<MagicCard *>(card);
+            if (magicCard) {
+                magicCard->setType(magicCard1->getType());
+            }
+
+            PendulumCard *pendulumCard = dynamic_cast<PendulumCard *>(cards[index]);
+            PendulumCard *pendulumCard1 = dynamic_cast<PendulumCard *>(card);
+            if (pendulumCard) {
+                pendulumCard->setDEF(pendulumCard1->getDEF());
+                pendulumCard->setATK(pendulumCard1->getATK());
+                pendulumCard->setType(pendulumCard1->getType());
+                pendulumCard->setScale(pendulumCard1->getScale());
+            }
+        }
+    } else {
+        cards.push_back(card->clone());
+        numOfCards++;
+        if (card->getCardType() == MAGIC) {
+            numOfMagic++;
+        } else {
+            if (card->getCardType() == MONSTER) {
+                numOfMonsters++;
+            } else {
+                numOfPendulum++;
+            }
+        }
+    }
+}
+
+void Deck::shuffle() {
+    auto rng = std::default_random_engine{};
+    ::shuffle(cards.begin(), cards.end(), rng);
+//    string result="";
+//    for (auto x : cards) {
+//            result.append(x->toString() + "\n");
+//    }
+//    cout<<result;
 }

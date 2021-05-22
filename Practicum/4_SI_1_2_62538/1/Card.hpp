@@ -48,7 +48,7 @@ public:
     void setRarity(const unsigned int rarity);
     void setCardType(const CardType type);
 
-    string toString() const;
+    virtual string toString() const;
 
     friend bool operator>(const Card& lhs, const Card& rhs);
     friend bool operator<(const Card& lhs, const Card& rhs);

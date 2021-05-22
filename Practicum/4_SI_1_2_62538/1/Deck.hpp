@@ -10,8 +10,8 @@
 *	@compiler VC
 */
 
-#ifndef INC_1_DECK_H
-#define INC_1_DECK_H
+#ifndef INC_1_DECK_HPP
+#define INC_1_DECK_HPP
 
 #include "Card.hpp"
 #include "MagicCard.hpp"
@@ -22,26 +22,37 @@
 class Deck {
 private:
     string name;
-    vector<MagicCard> magicCards;
-    vector<MonsterCard> monsterCards;
-    vector<PendulumCard> pendulumCards;
+    vector<Card *> cards;
+    unsigned int numOfMonsters, numOfMagic, numOfPendulum, numOfCards;
 public:
-    Deck(const string name="");
-    Deck(const Deck& deck);
-    Deck(const char* text);
-    unsigned int getNumberOfMagicCards()const;
-    unsigned int getNumberOfMonsterCards()const;
-    unsigned int getNumberOfPendulumCards()const;
-    void addMagicCard(const MagicCard card);
-    void addMonsterCard(const MonsterCard card);
-    void addPendulumCard(const PendulumCard card);
-    void changeMagicCard(const MagicCard card, const unsigned int index);
-    void changeMonsterCard(const MonsterCard card,const unsigned int index);
-    void changePendulumCard(const PendulumCard card,const unsigned int index);
+    Deck(const string name = "");
+
+    Deck(const Deck &deck);
+
+    Deck(const char *text);
+
+    unsigned int getNumberOfMagicCards() const;
+
+    unsigned int getNumberOfMonsterCards() const;
+
+    unsigned int getNumberOfPendulumCards() const;
+
+    unsigned int getNumberOfCards() const;
+
+    void addCard(Card *card);
+
+    void setCard(const unsigned int index, Card *card);
+
+    void shuffle();
+
     void clear();
-    Deck& operator=(const Deck& sth);
-    string toString()const;
+
+    Deck &operator=(const Deck &sth);
+
+    string toString() const;
+
+    ~Deck();
 };
 
 
-#endif //INC_1_DECK_H
+#endif //INC_1_DECK_HPP
