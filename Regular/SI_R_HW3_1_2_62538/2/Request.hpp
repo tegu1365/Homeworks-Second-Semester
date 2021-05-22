@@ -9,17 +9,17 @@
 using namespace std;
 
 class Request {
-protected:
-    static int counter;
+private:
+    static unsigned int counter;
     string message;
     string sender;
-    int ID;
+    unsigned int ID;
 public:
-    Request(const string& message="", const string& sender="");
+    Request(const string& message= "", const string& sender= "");
     string getMessage()const;
     string getSender()const;
-    static int getCount();
-    int getID()const;
+    static unsigned int getCount();
+   unsigned int getID()const;
 };
 
 

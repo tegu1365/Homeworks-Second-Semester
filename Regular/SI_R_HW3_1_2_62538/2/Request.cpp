@@ -4,13 +4,13 @@
 
 #include "Request.hpp"
 
-int Request::counter=0;
+unsigned int Request::counter = 0;
 
-Request::Request(const string& message, const string& sender) {
-    this->message=message;
-    this->sender=sender;
-    Request::counter++;
-    this->ID=counter;
+Request::Request(const string &message, const string &sender) {
+    this->message = message;
+    this->sender = sender;
+    counter++;
+    this->ID = counter;
 }
 
 string Request::getMessage() const {
@@ -21,10 +21,10 @@ string Request::getSender() const {
     return sender;
 }
 
-int Request::getID() const {
+unsigned int Request::getID() const {
     return ID;
 }
 
-int Request::getCount() {
+unsigned int Request::getCount() {
     return counter;
 }

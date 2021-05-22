@@ -8,7 +8,7 @@
 
 class LeavingRequest: public Request {
 public:
-    LeavingRequest(const string& sender);
+    LeavingRequest(const string& sender= "");
 };
 
 

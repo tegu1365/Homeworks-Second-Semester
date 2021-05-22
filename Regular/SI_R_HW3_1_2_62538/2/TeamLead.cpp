@@ -5,7 +5,7 @@
 #include "TeamLead.hpp"
 
 TeamLead::TeamLead(const string &name, double salary):Developer(name) {
-    this->salary=salary;
+    this->setSalary(salary);
     this->setTeamLead(this);
 }
 
@@ -100,4 +100,51 @@ void TeamLead::fulfillPromotionRequests() {
     }
     promotionRequests.clear();
 }
+
+TeamLead::TeamLead(const TeamLead &teamLead) {
+    this->name=teamLead.name;
+    this->salary=teamLead.salary;
+    this->teamLead=teamLead.teamLead;
+    for(int i=0;i<teamLead.developers.size();i++){
+        this->developers.push_back(teamLead.developers[i]);
+    }
+    for(int i=0;i<teamLead.promotionRequests.size();i++){
+        this->promotionRequests.push_back(teamLead.promotionRequests[i]);
+    }
+    for(int i=0;i<teamLead.leavingRequests.size();i++){
+        this->leavingRequests.push_back(teamLead.leavingRequests[i]);
+    }
+}
+
+TeamLead &TeamLead::operator=(const TeamLead &other) {
+    if(this!=&other){
+        for(int i=0;i< this->developers.size();i++){
+          delete this->developers[i];
+        }
+        this->leavingRequests.clear();
+        this->promotionRequests.clear();
+        delete this->teamLead;
+
+
+        this->name=other.name;
+        this->salary=other.salary;
+        this->teamLead=other.teamLead;
+        for(int i=0;i<other.developers.size();i++){
+            this->developers.push_back(other.developers[i]);
+        }
+        for(int i=0;i<other.promotionRequests.size();i++){
+            this->promotionRequests.push_back(other.promotionRequests[i]);
+        }
+        for(int i=0;i<other.leavingRequests.size();i++){
+            this->leavingRequests.push_back(other.leavingRequests[i]);
+        }
+    }
+    return *this;
+}
+//
+//TeamLead::~TeamLead() {
+//    for(int i=0;i< this->developers.size();i++){
+//        delete this->developers[i];
+//    }
+//}
 

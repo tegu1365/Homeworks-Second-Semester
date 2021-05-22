@@ -17,22 +17,37 @@ using namespace std;
 
 class TeamLead;
 
-class Developer{
+class Developer {
 protected:
     string name;
     double salary;
     TeamLead *teamLead;
 public:
-    Developer(const string& name="");
-    TeamLead* getTeamLead()const;
-    void setTeamLead(TeamLead* teamLead);
+    Developer(const string &name="");
+
+    TeamLead *getTeamLead() const;
+
+    void setTeamLead(TeamLead *teamLead);
+
     void removeTeamLead();
+
     void sendLeavingRequest();
+
     void sendPromotionRequest(double amount);
-    string getName()const;
-    double getSalary()const;
+
+    string getName() const;
+
+    double getSalary() const;
+
     void setSalary(const double salary);
+
     void setInitialSalary(const double amount);
+
+    Developer(const Developer &developer);
+
+    Developer &operator=(const Developer &other);
+
+   // ~Developer();
 };
 
 class TeamLead: public Developer{
@@ -45,10 +60,6 @@ private:
 public:
     TeamLead(const string& name="",const double salary=0);
 
-//    TeamLead* getTeamLead()const;
-//    void sendLeavingRequest();
-//    void sendPromotionRequest(double amount);
-
     vector<Developer*> getTeam();
     void addDeveloperToTeam(Developer * developer, double salary);
     void removeDeveloperFromTeam(const string& name);
@@ -59,6 +70,10 @@ public:
     void addPromotionRequest(const PromotionRequest& promotionRequest);
     void fulfillLeavingRequests();
     void fulfillPromotionRequests();
+
+    TeamLead(const TeamLead & teamLead);
+    TeamLead& operator=(const TeamLead& other);
+    //~TeamLead();
 };
 
 

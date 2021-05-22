@@ -10,7 +10,8 @@ class PromotionRequest: public Request {
 private:
     double amount;
 public:
-    PromotionRequest(const string& sender="",const double amount=0);
+    PromotionRequest(const double  amount);
+    PromotionRequest(const string& sender= "",const double amount=0);
     double getAmount()const;
 };
 

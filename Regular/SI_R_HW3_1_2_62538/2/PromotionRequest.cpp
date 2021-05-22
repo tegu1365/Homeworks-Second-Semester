@@ -11,3 +11,7 @@ PromotionRequest::PromotionRequest(const string &sender, const double amount):Re
 double PromotionRequest::getAmount() const {
     return amount;
 }
+
+PromotionRequest::PromotionRequest(const double amount):Request() {
+    this->amount=amount;
+}

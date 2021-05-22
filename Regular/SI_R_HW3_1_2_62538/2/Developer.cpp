@@ -3,6 +3,7 @@
 //
 
 #include "Developer.hpp"
+#include "TeamLead.hpp"
 
 
 Developer::Developer(const string &name){
@@ -35,20 +36,47 @@ TeamLead *Developer::getTeamLead() const {
 }
 
 void Developer::sendLeavingRequest() {
-    LeavingRequest l=LeavingRequest(this->name);
-    this->teamLead->addLeavingRequest(l);
+    if(this->teamLead!= nullptr) {
+        LeavingRequest l = LeavingRequest(this->name);
+        this->teamLead->addLeavingRequest(l);
+    }
 }
 
 void Developer::sendPromotionRequest(double amount) {
-    PromotionRequest p=PromotionRequest(this->name,amount);
-    this->teamLead->addPromotionRequest(p);
+    if(this->teamLead!= nullptr) {
+        PromotionRequest p = PromotionRequest(this->name, amount);
+        this->teamLead->addPromotionRequest(p);
+    }
 }
 
 void Developer::setTeamLead(TeamLead *teamLead) {
- //   delete this->teamLead;
-    this->teamLead = teamLead;
+    if(this->teamLead!=teamLead) {
+        delete this->teamLead;
+        this->teamLead = teamLead;
+    }
 }
 
 void Developer::removeTeamLead() {
     this->teamLead= nullptr;
 }
+
+Developer::Developer(const Developer &developer) {
+    this->teamLead=developer.teamLead;
+    this->salary=developer.salary;
+    this->name=developer.name;
+}
+
+Developer &Developer::operator=(const Developer &other) {
+    if(this != &other){
+        delete this->teamLead;
+        this->teamLead = other.teamLead;
+        this->name=other.name;
+        this->salary=other.salary;
+    }
+    return *this;
+}
+
+/*Developer::~Developer() {
+    delete this->teamLead;
+}*/
+
