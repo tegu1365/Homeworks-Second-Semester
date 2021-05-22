@@ -22,22 +22,39 @@ enum Type {
     trap, buff, spell, NT
 };
 
+enum CardType{
+    MAGIC,
+    MONSTER,
+    PENDULUM,
+    NoType
+};
+
 class Card {
 protected:
+    CardType type;
     string name;
     string effect;
+    unsigned int rarity;
 public:
-    Card(const string name = "", const string effect = "");
+    Card(const CardType type=NoType,const string name = "", const string effect = "", const unsigned int rarity=0);
 
     string getName() const;
-
     string getEffect() const;
+    unsigned int getRarity() const;
+    CardType getCardType() const;
 
     void setName(const string name);
-
     void setEffect(const string effect);
+    void setRarity(const unsigned int rarity);
+    void setCardType(const CardType type);
 
     string toString() const;
+
+    friend bool operator>(const Card& lhs, const Card& rhs);
+    friend bool operator<(const Card& lhs, const Card& rhs);
+
+    virtual Card* clone()=0;
+    virtual ~Card()=default;
 };
 
 

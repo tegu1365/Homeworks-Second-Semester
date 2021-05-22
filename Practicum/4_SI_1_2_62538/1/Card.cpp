@@ -12,9 +12,11 @@
 
 #include "Card.hpp"
 
-Card::Card(const string name, const string effect) {
+Card::Card(const CardType type,const string name, const string effect, const unsigned int rarity) {
+    this->type=type;
     this->name = name;
     this->effect = effect;
+    this->rarity=rarity;
 }
 
 string Card::getName() const {
@@ -34,6 +36,30 @@ void Card::setEffect(const string effect) {
 }
 
 string Card::toString() const {
-    string result = name + "|" + effect;
+    string result = name + "|" + effect+"|"+to_string(rarity);
     return result;
+}
+
+unsigned int Card::getRarity() const {
+    return rarity;
+}
+
+void Card::setRarity(const unsigned int rarity) {
+    this->rarity=rarity;
+}
+
+bool operator>(const Card &lhs, const Card &rhs) {
+    return lhs.rarity>rhs.rarity;
+}
+
+bool operator<(const Card &lhs, const Card &rhs) {
+    return lhs.rarity<rhs.rarity;
+}
+
+CardType Card::getCardType() const {
+    return type;
+}
+
+void Card::setCardType(const CardType type) {
+    this->type=type;
 }

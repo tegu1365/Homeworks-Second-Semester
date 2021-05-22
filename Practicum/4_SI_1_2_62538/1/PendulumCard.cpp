@@ -14,15 +14,15 @@
 #include "PendulumCard.hpp"
 #include <vector>
 
-PendulumCard::PendulumCard(const string name, const string effect, const unsigned int atk, const unsigned int def,
-                           const unsigned short scale, const Type type) : Card(name, effect),
-                                                                          MagicCard(name, effect, type),
-                                                                          MonsterCard(name, effect, atk, def) {
+PendulumCard::PendulumCard(const string name, const string effect, const unsigned int rarity,const unsigned int atk, const unsigned int def,
+                           const unsigned short scale, const Type type) : Card(PENDULUM,name, effect,rarity),
+                                                                          MagicCard(name,effect,rarity,type),
+                                                                          MonsterCard(name,effect,rarity,atk,def) {
     this->setScale(scale);
 }
 
 PendulumCard::PendulumCard(const char *text) {
-    //<name>|<effect>|<attackPoints>|<defencePoints>|<pendulumScale>|<type>
+    //<name>|<effect>|<rarity>|<attackPoints>|<defencePoints>|<pendulumScale>|<type>
     string str = text;
     vector<string> list;
 
@@ -39,22 +39,25 @@ PendulumCard::PendulumCard(const char *text) {
     list.push_back(current);
     this->setName(list[0]);
     this->setEffect(list[1]);
-    this->setATK(stoi(list[2]));
-    this->setDEF(stoi(list[3]));
-    this->setScale(stoi(list[4]));
-    if (list[5]._Equal("SPELL")) {
+    this->setRarity(stoi(list[2]));
+    this->setATK(stoi(list[3]));
+    this->setDEF(stoi(list[4]));
+    this->setScale(stoi(list[5]));
+    if (list[6]._Equal("SPELL")) {
         this->setType(spell);
     } else {
-        if (list[2]._Equal("TRAP")) {
+        if (list[6]._Equal("TRAP")) {
             this->setType(trap);
         } else {
-            if (list[2]._Equal("BUFF")) {
+            if (list[6]._Equal("BUFF")) {
                 this->setType(buff);
             } else {
                 this->setType(NT);
             }
         }
     }
+
+    this->setCardType(PENDULUM);
 
 }
 
@@ -71,7 +74,7 @@ void PendulumCard::setScale(const unsigned short scale) {
 }
 
 string PendulumCard::toString() const {
-    string result = name + "|" + effect + "|" + to_string(this->getATK()) + "|" + to_string(this->getDEF()) + "|" +
+    string result = name + "|" + effect + "|" +to_string(rarity) + "|" + to_string(this->getATK()) + "|" + to_string(this->getDEF()) + "|" +
                     to_string(scale) + "|";
     switch (this->getType()) {
         case buff:
@@ -88,4 +91,8 @@ string PendulumCard::toString() const {
             break;
     }
     return result;
+}
+
+Card *PendulumCard::clone() {
+    return new PendulumCard(*this);
 }

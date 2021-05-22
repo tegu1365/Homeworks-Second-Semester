@@ -20,7 +20,7 @@ private:
     unsigned int atk;
     unsigned int def;
 public:
-    MonsterCard(const string name = "", const string effect = "", const unsigned int atk = 0,
+    MonsterCard(const string name = "", const string effect = "",const unsigned int rarity=0, const unsigned int atk = 0,
                 const unsigned int def = 0);
 
     MonsterCard(const char *text);
@@ -34,6 +34,8 @@ public:
     void setDEF(const unsigned int def);
 
     string toString() const;
+
+    Card* clone();
 };
 
 

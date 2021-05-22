@@ -14,7 +14,7 @@
 #include "MagicCard.hpp"
 #include <vector>
 
-MagicCard::MagicCard(const string name, const string effect, const Type type) : Card(name, effect) {
+MagicCard::MagicCard(const string name, const string effect, const unsigned int rarity, const Type type) : Card(MAGIC,name, effect,rarity) {
     this->type = type;
 }
 
@@ -35,13 +35,15 @@ MagicCard::MagicCard(const char *text) : Card() {
     list.push_back(current);
     Card::setName(list[0]);
     Card::setEffect(list[1]);
-    if (list[2]._Equal("SPELL")) {
+    Card::setCardType(MAGIC);
+    Card::setRarity( stoi(list[2]));
+    if (list[3]._Equal("SPELL")) {
         this->type = spell;
     } else {
-        if (list[2]._Equal("TRAP")) {
+        if (list[3]._Equal("TRAP")) {
             this->type = trap;
         } else {
-            if (list[2]._Equal("BUFF")) {
+            if (list[3]._Equal("BUFF")) {
                 this->type = buff;
             } else {
                 this->type = NT;
@@ -51,7 +53,7 @@ MagicCard::MagicCard(const char *text) : Card() {
 }
 
 string MagicCard::toString() const {
-    string result = name + "|" + effect + "|";
+    string result = name + "|" + effect + "|"+to_string(rarity)+"|";
     switch (type) {
         case buff:
             result.append("BUFF");
@@ -75,4 +77,8 @@ void MagicCard::setType(const Type type) {
 
 Type MagicCard::getType() const {
     return type;
+}
+
+Card *MagicCard::clone() {
+    return new MagicCard(*this);
 }

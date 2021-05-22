@@ -19,7 +19,7 @@ class MagicCard : virtual public Card {
 private:
     Type type;
 public:
-    MagicCard(const string name = "", const string effect = "", const Type type = NT);
+    MagicCard(const string name = "", const string effect = "", const unsigned int rarity=0, const Type type = NT);
 
     MagicCard(const char *text);
 
@@ -28,6 +28,8 @@ public:
     void setType(const Type type);
 
     string toString() const;
+
+    Card* clone();
 };
 
 

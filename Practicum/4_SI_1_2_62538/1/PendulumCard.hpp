@@ -23,7 +23,7 @@ class PendulumCard : virtual public MagicCard, virtual public MonsterCard {
 private:
     unsigned short scale;
 public:
-    PendulumCard(const string name = "", const string effect = "", const unsigned int atk = 0,
+    PendulumCard(const string name = "", const string effect = "",const unsigned int rarity=0, const unsigned int atk = 0,
                  const unsigned int def = 0, const unsigned short scale = 1, const Type type = NT);
 
     PendulumCard(const char *text);
@@ -33,6 +33,8 @@ public:
     void setScale(const unsigned short scale);
 
     string toString() const;
+
+    Card* clone();
 };
 
 

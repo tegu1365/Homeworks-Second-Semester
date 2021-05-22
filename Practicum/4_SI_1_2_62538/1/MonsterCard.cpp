@@ -13,8 +13,9 @@
 #include "MonsterCard.hpp"
 #include <vector>
 
-MonsterCard::MonsterCard(const string name, const string effect, const unsigned int atk, const unsigned int def)
-        : Card(name, effect) {
+MonsterCard::MonsterCard(const string name, const string effect, const unsigned int rarity, const unsigned int atk,
+                         const unsigned int def)
+        : Card(MONSTER, name, effect, rarity) {
     this->atk = atk;
     this->def = def;
 }
@@ -36,7 +37,7 @@ void MonsterCard::setDEF(const unsigned int def) {
 }
 
 string MonsterCard::toString() const {
-    string result = name + "|" + effect + "|" + to_string(atk) + "|" + to_string(def);
+    string result = name + "|" + effect + "|"  + to_string(rarity) + "|" + to_string(atk) + "|" + to_string(def);
     return result;
 }
 
@@ -57,7 +58,12 @@ MonsterCard::MonsterCard(const char *text) : Card() {
     list.push_back(current);
     Card::setName(list[0]);
     Card::setEffect(list[1]);
-    this->atk = stoi(list[2]);
-    this->def = stoi(list[3]);
+    Card::setCardType(MONSTER);
+    Card::setRarity(stoi(list[2]));
+    this->atk = stoi(list[3]);
+    this->def = stoi(list[4]);
 }
 
+Card *MonsterCard::clone() {
+    return new MonsterCard(*this);
+}
