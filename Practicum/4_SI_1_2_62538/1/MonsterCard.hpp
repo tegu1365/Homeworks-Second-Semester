@@ -39,4 +39,4 @@ public:
 };
 
 
-#endif //INC_1_MONSTERCARD_H
+#endif //INC_1_MONSTERCARD_HPP

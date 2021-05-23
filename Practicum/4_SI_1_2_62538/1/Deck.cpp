@@ -186,7 +186,8 @@ void Deck::addCard(Card *card) {
 void Deck::setCard(const unsigned int index, Card *card) {
     if (index < numOfCards) {
         if (cards[index]->getCardType() == card->getCardType()) {
-            cards[index]->setName(card->getName());
+            cards[index]=card->clone();
+           /* cards[index]->setName(card->getName());
             cards[index]->setEffect(card->getEffect());
             cards[index]->setRarity(card->getRarity());
 
@@ -210,7 +211,7 @@ void Deck::setCard(const unsigned int index, Card *card) {
                 pendulumCard->setATK(pendulumCard1->getATK());
                 pendulumCard->setType(pendulumCard1->getType());
                 pendulumCard->setScale(pendulumCard1->getScale());
-            }
+            }*/
         }
     } else {
         cards.push_back(card->clone());

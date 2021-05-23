@@ -10,8 +10,8 @@
 *	@compiler VC
 */
 
-#ifndef INC_1_CARD_H
-#define INC_1_CARD_H
+#ifndef INC_1_CARD_HPP
+#define INC_1_CARD_HPP
 
 #include <iostream>
 #include <string>
@@ -58,4 +58,4 @@ public:
 };
 
 
-#endif //INC_1_CARD_H
+#endif //INC_1_CARD_HPP

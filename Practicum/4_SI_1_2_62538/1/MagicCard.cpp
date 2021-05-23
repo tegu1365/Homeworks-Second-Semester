@@ -37,13 +37,13 @@ MagicCard::MagicCard(const char *text) : Card() {
     Card::setEffect(list[1]);
     Card::setCardType(MAGIC);
     Card::setRarity( stoi(list[2]));
-    if (list[3]._Equal("SPELL")) {
+    if (list[3]=="SPELL") {
         this->type = spell;
     } else {
-        if (list[3]._Equal("TRAP")) {
+        if (list[3]=="TRAP") {
             this->type = trap;
         } else {
-            if (list[3]._Equal("BUFF")) {
+            if (list[3]=="BUFF") {
                 this->type = buff;
             } else {
                 this->type = NT;

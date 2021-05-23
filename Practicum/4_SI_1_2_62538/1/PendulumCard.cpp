@@ -43,13 +43,13 @@ PendulumCard::PendulumCard(const char *text) {
     this->setATK(stoi(list[3]));
     this->setDEF(stoi(list[4]));
     this->setScale(stoi(list[5]));
-    if (list[6]._Equal("SPELL")) {
+    if (list[6]=="SPELL") {
         this->setType(spell);
     } else {
-        if (list[6]._Equal("TRAP")) {
+        if (list[6]=="TRAP") {
             this->setType(trap);
         } else {
-            if (list[6]._Equal("BUFF")) {
+            if (list[6]=="BUFF") {
                 this->setType(buff);
             } else {
                 this->setType(NT);

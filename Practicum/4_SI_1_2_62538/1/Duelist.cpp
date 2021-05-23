@@ -13,7 +13,6 @@
 
 #include "Duelist.hpp"
 #include "fstream"
-#include <stdlib.h>
 
 Duelist::Duelist(const string name, const Deck deck) {
     this->name = name;
@@ -80,36 +79,26 @@ void Duelist::duel(const Duelist &enemy) {
             cout<<"ROUND "<<i+1<<endl;
             if(this->getDeck()[i]>enemy.getDeck()[i]){
                 score++;
-               // system("Color 0A");//green
-                //cout<<"ROUND "<<i+1<<endl;
                 cout<<"-> Score for "<<this->name<<endl;
             }else{
                 if(this->getDeck()[i]<enemy.getDeck()[i]){
                     enemyScore++;
-                   // system("Color 0C");//red
-                    //cout<<"ROUND "<<i+1<<endl;
                     cout<<"-> Score for "<<enemy.name<<endl;
                 }else{
-                   // system("Color 0F");//white
-                   // cout<<"ROUND "<<i+1<<endl;
                     cout<<"-> A draw"<<endl;
                 }
             }
         }
         cout<<endl;
         if(score>enemyScore){
-           // system("Color 0A");
             cout<<this->name<<" WINS\n";
         }else{
             if(score<enemyScore) {
-             //   system("Color 0C");
                 cout << enemy.name << " WINS\n";
             } else{
-               // system("Color 0F");
                 cout<<"A DRAW\n";
             }
         }
-        //system("Color 0F");
         cout<<"_____________________________________________\n ";
         cout<<score<<" points for "<<this->name<<endl<<" ";
         cout<<enemyScore<<" points for "<<enemy.name<<endl;
