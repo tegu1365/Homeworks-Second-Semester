@@ -6,8 +6,13 @@
 #define INC_1_MOVINGAVERAGER_HPP
 #include "Message.hpp"
 #include <string>
+#include <vector>
 
 class MovingAverager {
+public:
+    vector<Message> signals;
+    double average();
+
 public:
     string id;
     size_t windowSize;
@@ -17,6 +22,8 @@ public:
     void signal(Message);
 
     int read();
+
+
 };
 
 

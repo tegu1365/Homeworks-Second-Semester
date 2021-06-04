@@ -6,9 +6,12 @@
 #define INC_1_AVERAGER_HPP
 #include "Message.hpp"
 #include <string>
+#include <vector>
 
 class Averager {
-
+private:
+    vector<Message> signals;
+    double average();
 public:
     string id;
 
