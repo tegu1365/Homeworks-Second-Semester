@@ -17,7 +17,7 @@ void Repository::add(PeriodicSampler * periodicSampler) {
     subs.push_back(periodicSampler->clone());
 }
 
-void *Repository::get(std::string id) {
+Subscribers *Repository::get(std::string id) {
     for(auto x:subs) {
         if(id==x->id) {
             return x;

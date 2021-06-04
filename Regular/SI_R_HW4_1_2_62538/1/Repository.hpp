@@ -17,7 +17,7 @@ public:
     void add(MovingAverager *);
     void add(PeriodicSampler *);
 
-    void *get(std::string id);
+    Subscribers *get(std::string id);
 };
 
 

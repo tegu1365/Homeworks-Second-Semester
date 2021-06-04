@@ -27,8 +27,8 @@ public:
     void signal(Message);
 
     //SimplePublisher(const SimplePublisher& simplePublisher);
-    SimplePublisher& operator=(const SimplePublisher& rhs);
-    ~SimplePublisher();
+//    SimplePublisher& operator=(const SimplePublisher& rhs);
+//    ~SimplePublisher();
 };
 
 

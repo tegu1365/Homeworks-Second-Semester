@@ -11,7 +11,6 @@
 
 class Averager: public Subscribers {
 private:
-    vector<Message> signals;
     double sample();
 public:
     string id;

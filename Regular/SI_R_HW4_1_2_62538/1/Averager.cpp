@@ -9,10 +9,10 @@ Averager::Averager(string id):Subscribers(id) {
 
 double Averager::sample() {
     double ave=0;
-    for(int i=0;i<signals.size();i++){
-        ave+=signals[i].data;
+    for(auto x:this->signals){
+        ave=ave+x.data;
     }
-    return ave/signals.size();
+    return ave/this->signals.size();
 }
 
 Averager *Averager::clone() const {
