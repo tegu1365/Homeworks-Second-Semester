@@ -7,7 +7,7 @@
 Averager::Averager(string id):Subscribers(id) {
 }
 
-double Averager::sample() {
+double Averager::sample()const {
     double ave=0;
     for(auto x:this->signals){
         ave=ave+x.data;
@@ -17,4 +17,12 @@ double Averager::sample() {
 
 Averager *Averager::clone() const {
     return new Averager(*this);
+}
+
+void Averager::signal(Message toAdd) {
+    Subscribers::signal( toAdd);
+}
+
+int Averager::read()const {
+    return Subscribers::read();
 }

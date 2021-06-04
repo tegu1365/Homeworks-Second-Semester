@@ -24,3 +24,9 @@ Subscribers *Repository::get(std::string id) {
         }
     }
 }
+
+Repository::~Repository() {
+    for(auto x:subs){
+        delete x;
+    }
+}

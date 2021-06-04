@@ -25,9 +25,8 @@ public:
 
     void signal(Message);
 
-    //BacklogPublisher(const BacklogPublisher& backlogPublisher);
-    BacklogPublisher& operator=(const BacklogPublisher& rhs);
-    ~BacklogPublisher();
+//    BacklogPublisher& operator=(const BacklogPublisher& rhs);
+//    ~BacklogPublisher();
 };
 
 

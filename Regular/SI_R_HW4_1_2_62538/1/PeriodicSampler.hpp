@@ -12,10 +12,13 @@
 class PeriodicSampler: public Subscribers {
 private:
     size_t period;
-    double sample();
+    double sample()const;
 public:
     PeriodicSampler(string id, size_t period);
     PeriodicSampler * clone() const ;
+
+    void signal(Message);
+    int read()const;
 };
 
 

@@ -17,26 +17,29 @@ void SimplePublisher::subscribe(PeriodicSampler *periodicSampler) {
 }
 
 void SimplePublisher::unsubscribe(Averager * averager) {
-    for(int i=0;i<subs.size();i++){
+    int size=subs.size();
+    for(int i=0;i<size;i++){
         if(subs[i]->id==averager->id){
-            delete this->subs[i];
+          //  delete this->subs[i];
             subs.erase(subs.begin() + i);
         }
     }
 }
 void SimplePublisher::unsubscribe(MovingAverager *movingAverager) {
-    for(int i=0;i<subs.size();i++){
+    int size=subs.size();
+    for(int i=0;i<size;i++){
         if(subs[i]->id==movingAverager->id){
-            delete this->subs[i];
+        //    delete this->subs[i];
             subs.erase(subs.begin() + i);
         }
     }
 }
 
 void SimplePublisher::unsubscribe(PeriodicSampler * periodicSampler) {
-    for(int i=0;i<subs.size();i++){
+    int size=subs.size();
+    for(int i=0;i<size;i++){
         if(subs[i]==periodicSampler){
-            delete this->subs[i];
+         //   delete this->subs[i];
             subs.erase(subs.begin() + i);
         }
     }
@@ -44,7 +47,8 @@ void SimplePublisher::unsubscribe(PeriodicSampler * periodicSampler) {
 
 
 void SimplePublisher::signal(Message message) {
-    for(int i=0;i<subs.size();i++){
+    int size=subs.size();
+    for(int i=0;i<size;i++){
       subs[i]->signal(message);
     }
 }
@@ -54,12 +58,6 @@ void SimplePublisher::signal(Message message) {
 //        delete x;
 //    }
 //}
-////
-////SimplePublisher::SimplePublisher(const SimplePublisher &simplePublisher) {
-////    for (auto x : simplePublisher.subs) {
-////        this->subs.push_back(x->clone());
-////    }
-////}
 //
 //SimplePublisher &SimplePublisher::operator=(const SimplePublisher &rhs) {
 //    if (this != &rhs) {
@@ -74,5 +72,3 @@ void SimplePublisher::signal(Message message) {
 //    }
 //    return *this;
 //}
-
-

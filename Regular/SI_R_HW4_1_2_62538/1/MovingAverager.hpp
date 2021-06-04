@@ -8,13 +8,15 @@
 
 class MovingAverager:public Subscribers {
 public:
-    double sample();
+    double sample()const;
 public:
     size_t windowSize;
 
     MovingAverager(string id, size_t windowSize);
     MovingAverager * clone() const ;
 
+    void signal(Message);
+    int read()const;
 };
 
 

@@ -42,6 +42,7 @@ void testBacklogPublisher() {
 
     bp.subscribe(static_cast<Averager*>(repo.get("avg1")));
     assert(static_cast<Averager*>(repo.get("avg1"))->read() == 5);
+    assert(dynamic_cast<Averager*>(repo.get("avg1"))->read() == 5);
 }
 
 void testMovingAverager() {

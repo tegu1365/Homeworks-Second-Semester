@@ -11,13 +11,14 @@
 
 class Averager: public Subscribers {
 private:
-    double sample();
+    double sample()const;
 public:
-    string id;
-
     Averager(string id);
 
     Averager * clone() const ;
+    void signal(Message);
+
+    int read()const;
 };
 
 

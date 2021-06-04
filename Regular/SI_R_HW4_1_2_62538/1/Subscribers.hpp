@@ -12,12 +12,12 @@
 class Subscribers {
 protected:
     vector<Message> signals;
-    virtual double sample()=0;
+    virtual double sample()const=0;
 public:
-    Subscribers(string id);
     string id;
+    Subscribers(string id);
     void signal(Message toAdd);
-    int read();
+    int read()const;
     friend bool operator==(const Subscribers& rhs,const Subscribers& lhs);
     virtual Subscribers * clone() const = 0;
 };

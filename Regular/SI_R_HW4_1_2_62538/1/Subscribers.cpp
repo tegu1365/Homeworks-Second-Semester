@@ -12,7 +12,7 @@ void Subscribers::signal(Message toAdd) {
     this->signals.push_back(toAdd);
 }
 
-int Subscribers::read() {
+int Subscribers::read()const {
     if(signals.size()==0){return 0;}
     return this->sample();
 }

@@ -18,6 +18,7 @@ public:
     void add(PeriodicSampler *);
 
     Subscribers *get(std::string id);
+    ~Repository();
 };
 
 

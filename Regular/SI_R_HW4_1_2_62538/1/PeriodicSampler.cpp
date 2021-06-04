@@ -8,9 +8,10 @@ PeriodicSampler::PeriodicSampler(string id, size_t period):Subscribers(id) {
     this->period=period;
 }
 
-double PeriodicSampler::sample() {
+double PeriodicSampler::sample() const{
     double last=0;
-    for(int i=0;i<signals.size();i++){
+    int size=signals.size();
+    for(int i=0;i<size;i++){
         if((i+1) % period != 0) {
             last = signals[i].data;
         }
@@ -20,5 +21,13 @@ double PeriodicSampler::sample() {
 
 PeriodicSampler *PeriodicSampler::clone() const {
     return new PeriodicSampler(*this);
+}
+
+void PeriodicSampler::signal(Message toAdd) {
+    Subscribers::signal(toAdd);
+}
+
+int PeriodicSampler::read()const {
+    return Subscribers::read();
 }
 
