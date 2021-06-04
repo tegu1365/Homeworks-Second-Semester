@@ -4,21 +4,11 @@
 
 #include "MovingAverager.hpp"
 
-MovingAverager::MovingAverager(string id, size_t windowSize) {
-    this->id=id;
+MovingAverager::MovingAverager(string id, size_t windowSize):Subscribers(id) {
     this->windowSize=windowSize;
 }
 
-void MovingAverager::signal(Message toAdd) {
-    signals.push_back(toAdd);
-}
-
-int MovingAverager::read() {
-    if(signals.size()==0){return 0;}
-    return this->average();
-}
-
-double MovingAverager::average() {
+double MovingAverager::sample() {
     double ave=0;
     int size=signals.size();
     for(int i=1;i<=windowSize;i++){

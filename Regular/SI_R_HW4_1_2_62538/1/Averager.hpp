@@ -5,20 +5,18 @@
 #ifndef INC_1_AVERAGER_HPP
 #define INC_1_AVERAGER_HPP
 #include "Message.hpp"
+#include "Subscribers.hpp"
 #include <string>
 #include <vector>
 
-class Averager {
+class Averager: public Subscribers {
 private:
     vector<Message> signals;
-    double average();
+    double sample();
 public:
     string id;
 
     Averager(string id);
-
-    void signal(Message);
-    int read();
 };
 
 

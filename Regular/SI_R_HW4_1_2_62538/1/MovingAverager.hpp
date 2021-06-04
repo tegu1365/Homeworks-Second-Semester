@@ -4,26 +4,15 @@
 
 #ifndef INC_1_MOVINGAVERAGER_HPP
 #define INC_1_MOVINGAVERAGER_HPP
-#include "Message.hpp"
-#include <string>
-#include <vector>
+#include "Subscribers.hpp"
 
-class MovingAverager {
+class MovingAverager:public Subscribers {
 public:
-    vector<Message> signals;
-    double average();
-
+    double sample();
 public:
-    string id;
     size_t windowSize;
 
     MovingAverager(string id, size_t windowSize);
-
-    void signal(Message);
-
-    int read();
-
-
 };
 
 
