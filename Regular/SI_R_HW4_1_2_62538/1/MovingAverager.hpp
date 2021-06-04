@@ -13,6 +13,8 @@ public:
     size_t windowSize;
 
     MovingAverager(string id, size_t windowSize);
+    MovingAverager * clone() const ;
+
 };
 
 

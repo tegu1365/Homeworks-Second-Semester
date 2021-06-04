@@ -17,3 +17,7 @@ double MovingAverager::sample() {
     return ave/windowSize;
 }
 
+MovingAverager *MovingAverager::clone() const {
+    return new MovingAverager(*this);
+}
+

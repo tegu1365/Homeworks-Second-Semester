@@ -9,7 +9,6 @@
 #include <string>
 #include <vector>
 
-
 class Subscribers {
 protected:
     vector<Message> signals;
@@ -19,6 +18,8 @@ public:
     string id;
     void signal(Message toAdd);
     int read();
+    friend bool operator==(const Subscribers& rhs,const Subscribers& lhs);
+    virtual Subscribers * clone() const = 0;
 };
 
 

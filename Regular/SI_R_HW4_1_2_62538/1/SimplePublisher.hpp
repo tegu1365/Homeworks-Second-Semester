@@ -8,8 +8,13 @@
 #include "Message.hpp"
 #include "MovingAverager.hpp"
 #include "PeriodicSampler.hpp"
+#include <vector>
 
 class SimplePublisher {
+public:
+    vector<Subscribers*> subs;
+   // void subscribeSub(Subscribers* sub);
+  //  void unsubscribeSub(Subscribers* sub);
 public:
     void subscribe(Averager *);
     void subscribe(MovingAverager *);
@@ -20,6 +25,10 @@ public:
     void unsubscribe(PeriodicSampler *);
 
     void signal(Message);
+
+    //SimplePublisher(const SimplePublisher& simplePublisher);
+    SimplePublisher& operator=(const SimplePublisher& rhs);
+    ~SimplePublisher();
 };
 
 

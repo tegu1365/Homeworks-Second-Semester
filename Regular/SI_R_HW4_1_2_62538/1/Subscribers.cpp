@@ -9,10 +9,14 @@ this->id=id;
 }
 
 void Subscribers::signal(Message toAdd) {
-    signals.push_back(toAdd);
+    this->signals.push_back(toAdd);
 }
 
 int Subscribers::read() {
     if(signals.size()==0){return 0;}
     return this->sample();
+}
+
+bool operator==(const Subscribers &rhs, const Subscribers &lhs) {
+    return rhs.id==lhs.id;
 }

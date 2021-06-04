@@ -18,3 +18,7 @@ double PeriodicSampler::sample() {
     return last;
 }
 
+PeriodicSampler *PeriodicSampler::clone() const {
+    return new PeriodicSampler(*this);
+}
+

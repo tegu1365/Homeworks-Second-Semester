@@ -14,3 +14,7 @@ double Averager::sample() {
     }
     return ave/signals.size();
 }
+
+Averager *Averager::clone() const {
+    return new Averager(*this);
+}

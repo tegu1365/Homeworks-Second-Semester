@@ -10,6 +10,10 @@
 #include "PeriodicSampler.hpp"
 
 class BacklogPublisher {
+private:
+    vector<Subscribers*> subs;
+    vector<Message> signals;
+    void oldSignals(Subscribers* sub);
 public:
     void subscribe(Averager *);
     void subscribe(MovingAverager *);
@@ -20,6 +24,10 @@ public:
     void unsubscribe(PeriodicSampler *);
 
     void signal(Message);
+
+    //BacklogPublisher(const BacklogPublisher& backlogPublisher);
+    BacklogPublisher& operator=(const BacklogPublisher& rhs);
+    ~BacklogPublisher();
 };
 
 

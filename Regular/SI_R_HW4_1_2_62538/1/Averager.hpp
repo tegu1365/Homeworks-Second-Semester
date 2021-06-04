@@ -17,6 +17,8 @@ public:
     string id;
 
     Averager(string id);
+
+    Averager * clone() const ;
 };
 
 

@@ -10,6 +10,8 @@
 #include <string>
 
 class Repository {
+private:
+    vector<Subscribers*> subs;
 public:
     void add(Averager *);
     void add(MovingAverager *);

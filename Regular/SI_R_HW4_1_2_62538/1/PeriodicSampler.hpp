@@ -15,6 +15,7 @@ private:
     double sample();
 public:
     PeriodicSampler(string id, size_t period);
+    PeriodicSampler * clone() const ;
 };
 
 
