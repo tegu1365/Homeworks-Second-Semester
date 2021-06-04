@@ -89,18 +89,17 @@ void testSubs(){
 
     pub.signal(1);
     pub.signal(2);
-    pub.signal(3);
+    pub.signal(3);//
     pub.signal(4);
     pub.signal(5);
-    pub.signal(6);
+    pub.signal(6);//
     pub.signal(7);
     pub.signal(8);
-    pub.signal(9);
+    pub.signal(9);//
 
     assert(avg->read()==5); // трябва да връща 5 (ср. аритм. на 1...9)
     assert(movAvg->read()==7); // трябва да връща 7 (ср. аритм. на 5...9)
-//    assert(perSam->read()==7); // трябва да връща 7 (стойността на шестото съобщение след първото; игнорира стойности 8 и 9)
-
+    assert(perSam->read()==7); // трябва да връща 7 (стойността на шестото съобщение след първото; игнорира стойности 8 и 9)
 }
 
 int main() {
@@ -110,16 +109,16 @@ int main() {
     testPeriodicSampler();
     testSubs();
 
-//    MovingAverager m=MovingAverager("ghrf",7);
-//    m.signal(1);
-//    m.signal(2);
-//    m.signal(3);
-//    m.signal(4);
-//    m.signal(5);
-//    m.signal(6);
-//    m.signal(7);
-//
-//    cout<<m.read()<<endl;
+  //  MovingAverager m=MovingAverager("ghrf",7);
+   // m.signal(1);
+    //m.signal(2);
+    //m.signal(3);
+   // m.signal(4);
+    //m.signal(5);
+   // m.signal(6);
+  //  m.signal(7);
+
+    //cout<<m.read()<<endl;
 //    PeriodicSampler a=PeriodicSampler("k2", 2);
 //    a.signal(1);
 //    assert(a.read()==1);

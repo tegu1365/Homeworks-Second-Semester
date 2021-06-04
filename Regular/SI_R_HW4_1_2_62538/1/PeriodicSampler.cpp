@@ -9,10 +9,11 @@ PeriodicSampler::PeriodicSampler(string id, size_t period):Subscribers(id) {
 }
 
 double PeriodicSampler::sample() const{
-    double last=0;
+    double last=signals[0].data;
     int size=signals.size();
     for(int i=0;i<size;i++){
-        if((i+1) % period != 0) {
+        int n=i+1;
+        if(n % period != 0) {
             last = signals[i].data;
         }
     }

@@ -10,15 +10,19 @@ MovingAverager::MovingAverager(string id, size_t windowSize):Subscribers(id) {
 }
 
 double MovingAverager::sample()const {
-    if(signals.size()<windowSize){return 0;}
+
     double ave=0;
     int size=signals.size();
-    for(unsigned int i=1;i<=windowSize;i++){
+    int num=windowSize;
+    if(signals.size()<windowSize){
+        num=signals.size();
+    }
+    for(unsigned int i=1;i<=num;i++){
         ave+=signals[size-i].data;
        // cout<<size-i<<" ";
     }
     //cout<<endl;
-    return ave/windowSize;
+    return ave/num;
 }
 
 MovingAverager *MovingAverager::clone() const {
