@@ -2,6 +2,7 @@
 // Created by Tegu on 4.6.2021 г..
 //
 
+#include <iostream>
 #include "MovingAverager.hpp"
 
 MovingAverager::MovingAverager(string id, size_t windowSize):Subscribers(id) {
@@ -14,7 +15,9 @@ double MovingAverager::sample()const {
     int size=signals.size();
     for(unsigned int i=1;i<=windowSize;i++){
         ave+=signals[size-i].data;
+       // cout<<size-i<<" ";
     }
+    //cout<<endl;
     return ave/windowSize;
 }
 

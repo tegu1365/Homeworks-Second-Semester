@@ -110,6 +110,16 @@ int main() {
     testPeriodicSampler();
     testSubs();
 
+//    MovingAverager m=MovingAverager("ghrf",7);
+//    m.signal(1);
+//    m.signal(2);
+//    m.signal(3);
+//    m.signal(4);
+//    m.signal(5);
+//    m.signal(6);
+//    m.signal(7);
+//
+//    cout<<m.read()<<endl;
 //    PeriodicSampler a=PeriodicSampler("k2", 2);
 //    a.signal(1);
 //    assert(a.read()==1);
