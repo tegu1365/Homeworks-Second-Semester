@@ -13,7 +13,7 @@ class KeyValueDatabase: public Object {
 private:
   vector<pair<string,int>> entries;
 public:
-    KeyValueDatabase(const string& name, const string& location, const string& extension);
+    KeyValueDatabase(const string& name="", const string& location="", const string& extension="");
 
     void add_entry(const pair<string, int>& entry);
     int get_value(const string& key) const;

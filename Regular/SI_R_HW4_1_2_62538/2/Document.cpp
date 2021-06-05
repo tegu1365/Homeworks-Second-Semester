@@ -33,7 +33,8 @@ std::string Document::read_line(const unsigned int line) {
 }
 
 bool Document::operator!=(const Document *other) const {
-    return !(this==other);
+    bool a=Document::operator==(other);
+    return !a;
 }
 
 bool Document::operator==(const Document *other) const {
@@ -54,7 +55,7 @@ bool Document::operator!=(const Comparable *other) const {
 }
 
 bool Document::operator==(const Comparable *other) const {
-    return Document::operator!=((Document*)other);
+    return Document::operator==((Document*)other);
 }
 
 string Document::to_string() const {

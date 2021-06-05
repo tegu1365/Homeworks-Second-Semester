@@ -32,7 +32,8 @@ int KeyValueDatabase::get_value(const string &key) const {
 }
 
 bool KeyValueDatabase::operator!=(const KeyValueDatabase *other) const {
-    return !(this==other);
+    bool a=KeyValueDatabase::operator==(other);
+    return !a;
 }
 
 bool KeyValueDatabase::operator==(const KeyValueDatabase *other) const {

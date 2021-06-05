@@ -14,7 +14,7 @@ private:
     vector<string> lines;
     int lastRead;
 public:
-    Document(const std::string& name, const std::string& location, const std::string& extension);
+    Document(const std::string& name="", const std::string& location="", const std::string& extension="");
 
     void write_line(const std::string& line);
 
