@@ -17,10 +17,30 @@ void test1(){
 
     std::cout << temp.read_line(1) << std::endl; //This is an example doc
     std::cout << temp.read_line() << std::endl; //This is another example line
+    cout<<"__________________________________\n";
+    Document temp2("t","/l","k");
+    string str="temp\n/tmp\ndoc\nThis is an example doc\nThis is another example line\nThis is a third example line\nThis is a forth example line\n";
+    temp2.from_string(str);
 
+    std::cout << temp2.read_line() << std::endl; //This is an example doc
+    std::cout << temp2.read_line() << std::endl; //This is another example line
+}
+
+void test2(){
+    KeyValueDatabase key=KeyValueDatabase("temp", "/tmp", "doc");
+    key.add_entry({"jsu",2});
+    key.add_entry({"dre",4});
+    key.add_entry({"fre",3});
+    key.add_entry({"hyt",5});
+    cout<<key.to_string()<<endl;
+    string str="temp\n/tmp\ndoc\njsu:2\ndre:4\nfre:3\nhyt:5\n";
+    KeyValueDatabase key2=KeyValueDatabase("a","b","c");
+    key2.from_string(str);
+    cout<<key2.get_value("fre");
 }
 int main() {
     //std::cout << "Hello, World!" << std::endl;
-    test1();
+    //test1();
+    test2();
     return 0;
 }

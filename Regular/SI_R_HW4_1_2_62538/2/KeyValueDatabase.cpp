@@ -65,7 +65,7 @@ void KeyValueDatabase::from_string(const string& str) {
     string current = "";
     for (size_t i = 0; i < str.size(); i++) {
         if (str[i] == '\n') {
-            current.push_back('\n');
+           // current.push_back('\n');
             lines.push_back(current);
             current = "";
         } else {
@@ -85,7 +85,7 @@ void KeyValueDatabase::from_string(const string& str) {
                 key = current;
                 current = "";
             } else {
-                char a = str[i];
+                char a = line[i];
                 current.push_back(a);
             }
         }
@@ -96,6 +96,7 @@ void KeyValueDatabase::from_string(const string& str) {
         entries.push_back(k);
         entry = 0;
         key = "";
+        current="";
     }
 }
 

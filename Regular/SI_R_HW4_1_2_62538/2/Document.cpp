@@ -81,7 +81,7 @@ void Document::from_string(const string& str) {
     this->name=lines[0];
     this->extension=lines[2];
     for (size_t i = 3; i < lines.size(); i++) {
-        lines.push_back(lines[i]);
+        this->lines.push_back(lines[i]);
     }
 }
 
@@ -89,7 +89,7 @@ string Document::debug_print() const {
     string result="";
     int i=1;
     for(auto x:lines){
-        result.append("Line"+std::to_string(i)+":"+x+"\n");
+        result.append("Line "+std::to_string(i)+":"+x+"\n");
         i++;
     }
     return result;
