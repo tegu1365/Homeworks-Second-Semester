@@ -19,9 +19,12 @@ public:
     int get_value(const string& key) const;
 
     bool operator!=(const KeyValueDatabase* other)const;
-    virtual bool operator==(const KeyValueDatabase* other)const;
+    bool operator==(const KeyValueDatabase* other)const;
+
+    bool operator!=(const Comparable* other)const;
+    bool operator==(const Comparable* other)const;
     string to_string()const;
-    virtual void from_string(const string str);
+    void from_string(const string& str);
     string debug_print()const;
 };
 

@@ -29,3 +29,23 @@ std::string Object::get_fullpath() const {
 Object *Object::clone() const {
     return new Object(*this);
 }
+
+bool Object::operator!=(const Comparable *other) const {
+    return false;
+}
+
+bool Object::operator==(const Comparable *other) const {
+    return false;
+}
+
+string Object::to_string() const {
+    return std::string();
+}
+
+void Object::from_string(const string& str) {
+
+}
+
+string Object::debug_print() const {
+    return std::string();
+}

@@ -60,11 +60,12 @@ string KeyValueDatabase::to_string() const {
     return result;
 }
 
-void KeyValueDatabase::from_string(const string str) {
+void KeyValueDatabase::from_string(const string& str) {
     vector<string>lines;
     string current = "";
-    for (int i = 0; i < str.size(); i++) {
+    for (size_t i = 0; i < str.size(); i++) {
         if (str[i] == '\n') {
+            current.push_back('\n');
             lines.push_back(current);
             current = "";
         } else {
@@ -77,25 +78,25 @@ void KeyValueDatabase::from_string(const string str) {
     this->extension=lines[2];
     string key="";
     int entry=0;
-    for (int i = 3; i < lines.size(); i++) {
-        if (str[i] == ':') {
-            key=current;
-            current = "";
-        } else {
-            if(str[i]=='\n'){
-                entry=stoi(current);
-                pair<string,int> k;
-                k.first=key;
-                k.second=entry;
-                entries.push_back(k);
-                entry=0;
-                key="";
+    for(size_t j=3;j<lines.size();j++) {
+        string line=lines[j];
+        for (size_t i =0; i < lines[j].size(); i++) {
+            if (line[i] == ':') {
+                key = current;
+                current = "";
+            } else {
+                char a = str[i];
+                current.push_back(a);
             }
-            char a = str[i];
-            current.push_back(a);
         }
+        entry = stoi(current);
+        pair<string, int> k;
+        k.first = key;
+        k.second = entry;
+        entries.push_back(k);
+        entry = 0;
+        key = "";
     }
-    Object::from_string(str);
 }
 
 string KeyValueDatabase::debug_print() const {
@@ -104,4 +105,12 @@ string KeyValueDatabase::debug_print() const {
         result.append("{"+x.first+":"+std::to_string(x.second)+"}\n");
     }
     return result;
+}
+
+bool KeyValueDatabase::operator!=(const Comparable *other) const {
+    return KeyValueDatabase::operator!=((KeyValueDatabase*)other);
+}
+
+bool KeyValueDatabase::operator==(const Comparable *other) const {
+    return KeyValueDatabase::operator==((KeyValueDatabase*)other);
 }

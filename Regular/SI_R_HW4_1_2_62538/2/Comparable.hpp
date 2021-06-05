@@ -8,8 +8,11 @@
 
 class Comparable {
 public:
+    Comparable()=default;
     virtual bool operator!=(const Comparable* other)const=0;
     virtual bool operator==(const Comparable* other)const=0;
+
+    virtual ~Comparable()=default;
 };
 
 

@@ -10,8 +10,8 @@ using namespace std;
 
 class Serializable {
 public:
-    virtual string to_string()const=0;
-    virtual void from_string(const string str)=0;
+    virtual string to_string()const =0;
+    virtual void from_string(const string& str) =0;
 };
 
 
