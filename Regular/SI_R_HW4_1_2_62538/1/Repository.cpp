@@ -23,6 +23,7 @@ Subscribers *Repository::get(std::string id) {
             return x;
         }
     }
+    return nullptr;
 }
 
 Repository::~Repository() {
@@ -31,7 +32,7 @@ Repository::~Repository() {
     }
 }
 
-Repository &Repository::operator=(const Repository &rhs) {
+Repository &Repository::operator=(const Repository &rhs){
     if (this != &rhs) {
         for (auto x : this->subs) {
             delete x;
