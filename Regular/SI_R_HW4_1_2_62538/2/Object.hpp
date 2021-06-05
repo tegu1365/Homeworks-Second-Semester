@@ -11,7 +11,7 @@
 using namespace std;
 
 class Object: public Debug, public Comparable, public Serializable {
-private:
+protected:
     string name;
     string location;
     string extension;
@@ -29,7 +29,7 @@ public:
     virtual void from_string(const string str);
     string debug_print()const;
 
-    Object* clone();
+    virtual Object* clone()const;
 };
 
 
