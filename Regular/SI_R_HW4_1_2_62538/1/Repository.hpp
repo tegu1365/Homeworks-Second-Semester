@@ -13,11 +13,14 @@ class Repository {
 private:
     vector<Subscribers*> subs;
 public:
+    Repository()=default;
     void add(Averager *);
     void add(MovingAverager *);
     void add(PeriodicSampler *);
 
     Subscribers *get(std::string id);
+    Repository(const Repository& other);
+    Repository& operator=(const Repository& rhs);
     ~Repository();
 };
 

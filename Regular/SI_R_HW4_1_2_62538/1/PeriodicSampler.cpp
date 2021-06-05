@@ -12,8 +12,7 @@ double PeriodicSampler::sample() const{
     double last=signals[0].data;
     int size=signals.size();
     for(int i=0;i<size;i++){
-        int n=i+1;
-        if(n % period != 0) {
+        if(i % period == 0) {
             last = signals[i].data;
         }
     }
