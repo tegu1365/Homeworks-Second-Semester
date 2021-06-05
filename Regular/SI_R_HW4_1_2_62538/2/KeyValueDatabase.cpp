@@ -53,7 +53,7 @@ bool KeyValueDatabase::operator==(const KeyValueDatabase *other) const {
 }
 
 string KeyValueDatabase::to_string() const {
-    string result=location+"\n"+name+"\n"+extension+"\n";
+    string result=name+"\n"+location+"\n"+extension+"\n";
     for(auto x:entries){
         result.append(x.first+":"+std::to_string(x.second)+"\n");
     }
@@ -73,8 +73,8 @@ void KeyValueDatabase::from_string(const string& str) {
             current.push_back(a);
         }
     }
-    this->location=lines[0];
-    this->name=lines[1];
+    this->location=lines[1];
+    this->name=lines[0];
     this->extension=lines[2];
     string key="";
     int entry=0;

@@ -26,6 +26,7 @@ std::string Document::read_line() {
 
 std::string Document::read_line(const unsigned int line) {
     if(line-1<lines.size()&&line!=0){
+        lastRead=line-1;
         return lines[line-1];
     }
     throw out_of_range("");
@@ -57,7 +58,7 @@ bool Document::operator==(const Comparable *other) const {
 }
 
 string Document::to_string() const {
-    string result=location+"\n"+name+"\n"+extension+"\n";
+    string result=name+"\n"+location+"\n"+extension+"\n";
     for(auto x:lines){
         result.append(x+"\n");
     }
@@ -76,9 +77,9 @@ void Document::from_string(const string& str) {
             current.push_back(a);
         }
     }
-    this->location = lines[0];
-    this->name = lines[1];
-    this->extension = lines[2];
+    this->location=lines[1];
+    this->name=lines[0];
+    this->extension=lines[2];
     for (size_t i = 3; i < lines.size(); i++) {
         lines.push_back(lines[i]);
     }
@@ -88,7 +89,7 @@ string Document::debug_print() const {
     string result="";
     int i=1;
     for(auto x:lines){
-        result.append(std::to_string(i)+":"+x+"\n");
+        result.append("Line"+std::to_string(i)+":"+x+"\n");
         i++;
     }
     return result;
