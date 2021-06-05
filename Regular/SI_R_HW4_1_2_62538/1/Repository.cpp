@@ -33,13 +33,13 @@ Repository::~Repository() {
 
 Repository &Repository::operator=(const Repository &rhs) {
     if (this != &rhs) {
-        for (auto x : subs) {
+        for (auto x : this->subs) {
             delete x;
         }
-        subs.clear();
+        this->subs.clear();
 
         for (auto x : rhs.subs) {
-            subs.push_back(x->clone());
+            this->subs.push_back(x->clone());
         }
     }
     return *this;

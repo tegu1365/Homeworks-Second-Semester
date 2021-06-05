@@ -29,6 +29,22 @@ void testSimplePublisher() {
     assert(static_cast<Averager*>(repo.get("avg1"))->read() == 5);
     assert(static_cast<Averager*>(repo.get("avg2"))->read() == 0);
     assert(avg1.read() == 0);
+    Repository repo2;
+    repo2.add(new MovingAverager("ma",5));
+    sp.subscribe(static_cast<MovingAverager*>(repo2.get("ma")));
+    assert(static_cast<MovingAverager*>(repo2.get("ma"))!= nullptr);
+
+    repo2=repo;
+
+    //cout<<repo2.get("avg2")<<"=="<<repo.get("avg2")<<endl;
+    assert(static_cast<Averager*>(repo2.get("avg2"))->read()==0);
+    assert(static_cast<MovingAverager*>(repo2.get("ma"))== nullptr);
+
+    Repository repo3;
+    repo2=repo3;
+    assert(static_cast<Averager*>(repo2.get("avg2"))== nullptr);
+    assert(static_cast<Averager*>(repo2.get("avg2"))==static_cast<Averager*>(repo3.get("avg2")));
+
 }
 
 void testBacklogPublisher() {
